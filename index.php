@@ -1,12 +1,11 @@
-<html lang="<?= $lang['lang'] ?>" class="">
+<html lang="en" class="">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
     <link rel="icon" type="image/x-icon" href="assets/hypnozio.svg" />
-    <title>
-        <?= $lang['website_name'] . ' | ' . $lang['website_title'] ?>
-    </title>
+
+    <title>Hypnozio | Find &amp; fix root cause of overweight using self-hypnosis</title>
 
     <link rel="preload" as="style" href="assets/app-b0fb382d.css" />
     <link rel="stylesheet" href="assets/app-b0fb382d.css" data-navigate-track="reload" />
@@ -38,7 +37,7 @@
 						showWhiteMode: false,
 						}" class="container text-white py-4 md:py-5">
             <div class="flex justify-between items-center">
-                <img src="assets/logo.svg" class="w-[110px] md:w-[108px]" alt="<?= $lang['website_name'] ?>" />
+                <img src="assets/logo.svg" class="w-[110px] md:w-[108px]" alt="" />
                 <div class="flex items-center space-x-4">
                     <div x-show="!navigationIsOpened" x-on:click="navigationIsOpened = !navigationIsOpened" class="lg:hidden">
                         <div x-bind:class="showWhiteMode ? 'text-white' : 'text-onSurface'" class="text-onSurface">
