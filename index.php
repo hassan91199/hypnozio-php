@@ -31,6 +31,19 @@
 </head>
 
 <body class="antialiased bg-surface text-onSurface scroll-smooth">
+    <?php
+    $queryParams = [
+        'sid' => $_GET['sid'] ?? '',
+        'cid' => $_GET['cid'] ?? '',
+    ];
+    $funnelParams = http_build_query($queryParams);
+
+    $quizLink = 'quiz.php' . '?' . $funnelParams;
+
+    $maleQuizLink = "$quizLink&g=m";
+    $femaleQuizLink = "$quizLink&g=f";
+    $otherQuizLink = "$quizLink&g=o";
+    ?>
     <nav class="relative">
         <div x-data="{
             navigationIsOpened: false,
@@ -275,15 +288,15 @@
                             </div>
                             <div class="flex flex-wrap items-center mt-4 md:mt-6 justify-center lg:justify-center gap-4 lg:gap-6">
                                 <!-- assets/test/hypnozio-quiz/vmmab7j.html?gender=female -->
-                                <a class="cursor-pointer link w-[161px] sm:w-[267px] md:w-[275px] lg:w-[204px] xl:w-[246px] h-12 lg:h-16 cursor-pointer btn btn-accent" id="" @click="userGender = 'female'" href="{{ $femaleQuizLink }}" x-on:click="sendHypnozioQuizAnswerClickedEvent('Select your gender', userGender); sendHypnozioQuizStartedEvent()">
+                                <a class="cursor-pointer link w-[161px] sm:w-[267px] md:w-[275px] lg:w-[204px] xl:w-[246px] h-12 lg:h-16 cursor-pointer btn btn-accent" id="" @click="userGender = 'female'" href="<?php echo $femaleQuizLink ?>" x-on:click="sendHypnozioQuizAnswerClickedEvent('Select your gender', userGender); sendHypnozioQuizStartedEvent()">
                                     Female
                                 </a>
                                 <!-- assets/test/hypnozio-quiz/o44x70v.html?gender=male -->
-                                <a class="cursor-pointer link w-[161px] sm:w-[267px] md:w-[275px] lg:w-[204px] xl:w-[246px] h-12 lg:h-16 cursor-pointer btn btn" id="" @click="userGender = 'male'" href="{{ $maleQuizLink }}" x-on:click="sendHypnozioQuizAnswerClickedEvent('Select your gender', userGender); sendHypnozioQuizStartedEvent()">
+                                <a class="cursor-pointer link w-[161px] sm:w-[267px] md:w-[275px] lg:w-[204px] xl:w-[246px] h-12 lg:h-16 cursor-pointer btn btn" id="" @click="userGender = 'male'" href="<?php echo $maleQuizLink ?>" x-on:click="sendHypnozioQuizAnswerClickedEvent('Select your gender', userGender); sendHypnozioQuizStartedEvent()">
                                     Male
                                 </a>
                                 <!-- assets/test/hypnozio-quiz/neebg3r.html?gender=other -->
-                                <a class="cursor-pointer link w-[161px] sm:w-[267px] md:w-[275px] lg:w-[204px] xl:w-[246px] h-12 lg:h-16 cursor-pointer btn btn-outlined" id="" @click="userGender = 'other'" href="{{ $otherQuizLink }}" x-on:click="sendHypnozioQuizAnswerClickedEvent('Select your gender', userGender); sendHypnozioQuizStartedEvent()">
+                                <a class="cursor-pointer link w-[161px] sm:w-[267px] md:w-[275px] lg:w-[204px] xl:w-[246px] h-12 lg:h-16 cursor-pointer btn btn-outlined" id="" @click="userGender = 'other'" href="<?php echo $otherQuizLink ?>" x-on:click="sendHypnozioQuizAnswerClickedEvent('Select your gender', userGender); sendHypnozioQuizStartedEvent()">
                                     Other
                                 </a>
                             </div>
@@ -393,7 +406,7 @@
 
                 </div>
                 <div class="lg:order-1 mt-6 lg:mt-0 text-center text-body-small md:text-body-medium">
-                    {{ date('Y') }} © All rights reserved.
+                    <?php echo date('Y'); ?> © All rights reserved.
                 </div>
             </div>
         </div>
