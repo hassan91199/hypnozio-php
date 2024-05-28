@@ -1,3 +1,18 @@
+<?php
+$queryParams = [
+    'cid' => $_GET['cid'] ?? null,
+    'sid' => $_GET['sid'] ?? null
+];
+
+$funnelParams = http_build_query($queryParams);
+
+$quizLink = 'quiz.php' . '?' . $funnelParams;
+
+$maleQuizLink = "$quizLink&g=m";
+$femaleQuizLink = "$quizLink&g=f";
+$otherQuizLink = "$quizLink&g=o";
+?>
+
 <html lang="en" class="">
 
 <head>
@@ -264,13 +279,13 @@
                                 Select your gender
                             </div>
                             <div class="flex flex-wrap items-center mt-4 md:mt-6 justify-center lg:justify-center gap-4 lg:gap-6">
-                                <a class="cursor-pointer link w-[161px] sm:w-[267px] md:w-[275px] lg:w-[204px] xl:w-[246px] h-12 lg:h-16 cursor-pointer btn btn-accent" id="" @click="userGender = 'female'" href="start-quiz.php?gender=female" x-on:click="sendHypnozioQuizAnswerClickedEvent('Select your gender', userGender); sendHypnozioQuizStartedEvent()">
+                                <a class="cursor-pointer link w-[161px] sm:w-[267px] md:w-[275px] lg:w-[204px] xl:w-[246px] h-12 lg:h-16 cursor-pointer btn btn-accent" id="" @click="userGender = 'female'" href="<?= $femaleQuizLink ?>" x-on:click="sendHypnozioQuizAnswerClickedEvent('Select your gender', userGender); sendHypnozioQuizStartedEvent()">
                                     Female
                                 </a>
-                                <a class="cursor-pointer link w-[161px] sm:w-[267px] md:w-[275px] lg:w-[204px] xl:w-[246px] h-12 lg:h-16 cursor-pointer btn btn" id="" @click="userGender = 'male'" href="start-quiz.php?gender=male" x-on:click="sendHypnozioQuizAnswerClickedEvent('Select your gender', userGender); sendHypnozioQuizStartedEvent()">
+                                <a class="cursor-pointer link w-[161px] sm:w-[267px] md:w-[275px] lg:w-[204px] xl:w-[246px] h-12 lg:h-16 cursor-pointer btn btn" id="" @click="userGender = 'male'" href="<?= $maleQuizLink ?>" x-on:click="sendHypnozioQuizAnswerClickedEvent('Select your gender', userGender); sendHypnozioQuizStartedEvent()">
                                     Male
                                 </a>
-                                <a class="cursor-pointer link w-[161px] sm:w-[267px] md:w-[275px] lg:w-[204px] xl:w-[246px] h-12 lg:h-16 cursor-pointer btn btn-outlined" id="" @click="userGender = 'other'" href="start-quiz?gender=other" x-on:click="sendHypnozioQuizAnswerClickedEvent('Select your gender', userGender); sendHypnozioQuizStartedEvent()">
+                                <a class="cursor-pointer link w-[161px] sm:w-[267px] md:w-[275px] lg:w-[204px] xl:w-[246px] h-12 lg:h-16 cursor-pointer btn btn-outlined" id="" @click="userGender = 'other'" href="<?= $otherQuizLink ?>" x-on:click="sendHypnozioQuizAnswerClickedEvent('Select your gender', userGender); sendHypnozioQuizStartedEvent()">
                                     Other
                                 </a>
                             </div>
