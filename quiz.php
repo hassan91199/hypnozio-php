@@ -61,7 +61,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user = null;
 
     // Create or update the user of quiz
-    $user = updateOrCreate('users', ['email' => $email], ['gender' => $gender]);
+    $user = updateOrCreate(
+        'users',
+        ['email' => $email],
+        ['email' => $email, 'gender' => $gender]
+    );
 
     // Create or update the quiz sumbission for the user
     if (isset($user)) {
