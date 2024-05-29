@@ -1,5 +1,6 @@
 <?php
 include 'utils/db.php';
+$env = include('env.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $requestData = $_POST;
@@ -73,6 +74,57 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $quizSubmission = updateOrCreate('quiz_submissions', ['email' => $email], $data);
 
         if (isset($quizSubmission)) {
+            $convertKitApiKey = $env['CONVERTKIT_API_KEY'];
+            $formId = $env['CONVERTKIT_QUIZ_FORM_ID'];
+
+            // Set ConvertKit API URL
+            $convertKitApiUrl = "https://api.convertkit.com/v3/forms/$formId/subscribe";
+
+            // Set data to be sent in the request body
+            $data = [
+                'api_key' => $convertKitApiKey,
+                'email' => $email,
+                'fields' => [
+                    'cid' => $cid,
+                    'sid' => $sid,
+                ],
+            ];
+
+            // Initialize cURL session
+            $ch = curl_init();
+
+            // Set cURL options
+            curl_setopt_array($ch, [
+                CURLOPT_URL => $convertKitApiUrl,
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_POST => true,
+                CURLOPT_POSTFIELDS => json_encode($data),
+                CURLOPT_HTTPHEADER => [
+                    'Content-Type: application/json',
+                ],
+            ]);
+
+            // Execute cURL request
+            $response = curl_exec($ch);
+
+            // Check for errors
+            if (curl_errno($ch)) {
+                echo 'Error: ' . curl_error($ch);
+            } else {
+                // Decode the response
+                $responseData = json_decode($response, true);
+
+                // Check if the request was successful
+                if (isset($responseData['status']) && $responseData['status'] === 'success') {
+                    echo 'Successfully subscribed!';
+                } else {
+                    echo 'Error: Unable to subscribe. ' . $response;
+                }
+            }
+
+            // Close cURL session
+            curl_close($ch);
+
             header("Location: /summary.php");
             exit();
         }
