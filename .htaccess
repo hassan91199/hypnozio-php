@@ -1,0 +1,3 @@
+<Files "env.php">
+    Deny from all
+</Files>
