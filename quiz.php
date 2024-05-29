@@ -107,21 +107,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Execute cURL request
             $response = curl_exec($ch);
 
-            // Check for errors
-            if (curl_errno($ch)) {
-                echo 'Error: ' . curl_error($ch);
-            } else {
-                // Decode the response
-                $responseData = json_decode($response, true);
-
-                // Check if the request was successful
-                if (isset($responseData['status']) && $responseData['status'] === 'success') {
-                    echo 'Successfully subscribed!';
-                } else {
-                    echo 'Error: Unable to subscribe. ' . $response;
-                }
-            }
-
             // Close cURL session
             curl_close($ch);
 
