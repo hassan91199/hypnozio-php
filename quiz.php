@@ -1,4 +1,6 @@
 <?php
+include 'utils/db.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $requestData = $_POST;
 
@@ -56,10 +58,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $data['cid'] = $cid;
     $data['sid'] = $sid;
 
-    var_dump($data);
-    exit();
+    $user = null;
 
-    header("Location: /summary.php");
+    // Create or update the user of quiz
+    $user = updateOrCreate('users', ['email' => $email], ['gender' => $gender]);
+
+    // Create or update the quiz sumbission for the user
+    if (isset($user)) {
+        $data['user_id'] = $user['id'];
+        $quizSubmission = updateOrCreate('quiz_submissions', ['email' => $email], $data);
+
+        if (isset($quizSubmission)) {
+            header("Location: /summary.php");
+            exit();
+        }
+    }
+
+    // Redirect user back to the quiz if submission wasn't saved
+    $currentUri = $_SERVER['REQUEST_URI'];
+    header("Location: $currentUri");
+
+    exit();
 }
 ?>
 
