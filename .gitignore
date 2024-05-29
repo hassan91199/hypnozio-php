@@ -1,0 +1,34 @@
+# Ignore vendor directories
+/vendor/
+
+# Ignore environment configuration files
+.env
+env.php
+
+# Ignore log files
+*.log
+
+# Ignore database files
+*.sqlite
+*.db
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore compiled files
+*.class
+*.pyc
+*.o
+
+# Ignore npm dependencies
+node_modules/
+
+# Ignore Composer dependencies
+vendor/
+
+# Ignore compiled binaries or executables
+*.exe
+*.out
