@@ -25,8 +25,8 @@
     <script type="module" src="assets/build/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
     <link rel="modulepreload" href="assets/build/input-validation-36ee9ab8.js" />
     <script type="module" src="assets/build/input-validation-36ee9ab8.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="assets/build/audio-player-c450f4f7.js" />
-    <script type="module" src="assets/build/audio-player-c450f4f7.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="assets/build/audio-player.js" />
+    <script type="module" src="assets/build/audio-player.js" data-navigate-track="reload"></script>
     <link rel="modulepreload" href="assets/build/gtm-tags-e2664de5.js" />
     <script type="module" src="assets/build/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
     <div>
