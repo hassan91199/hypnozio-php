@@ -1,3 +1,20 @@
+<?php
+session_start();
+
+$isQuizSumbitted = array_key_exists('summary', $_SESSION);
+
+if (!$isQuizSumbitted) {
+    echo "Please submit the quiz first.";
+    exit();
+}
+
+$summary = $_SESSION['summary'];
+
+$currentWeight = $summary['weight'] ?? '';
+$desiredWeight = $summary['desired_weight'] ?? '';
+$weightDiff = $summary['diff_weight'] ?? '';
+?>
+
 <!DOCTYPE html>
 <html lang="en" class="">
 
@@ -73,7 +90,7 @@
                     </div>
                     <div class="flex flex-col mt-6">
                         <div class="text-body-large lg:text-title-large text-center">
-                            You will lose <span class="text-accent font-bold">120kg</span> by November 2025
+                            You will lose <span class="text-accent font-bold"><?= $weightDiff ?></span> by November 2025
                         </div>
                         <div class="relative p-4 sm:p-9 bg-white shadow sm:shadow-2 mt-6 max-w-[343px] sm:max-w-[744px] mx-auto rounded">
                             <img class="w-[311px] sm:w-[672px] mx-auto" src="https://hypnozio.com/hypnozio/summary/graph.png" alt="Weight loss graph">
@@ -88,7 +105,7 @@
                                             Today
                                         </div>
                                         <div class="text-danger text-[13px] sm:text-[20px] leading-[15.6px] sm:leading-6 font-semibold">
-                                            170kg
+                                            <?= $currentWeight ?>
                                         </div>
                                     </div>
                                     <div class="absolute top-[35px] left-[14px] sm:top-[56px] sm:left-[27px] md:left-[20px]">
@@ -113,7 +130,7 @@
                                             With Hypnozio
                                         </div>
                                         <div class="text-primary text-[13px] sm:text-[20px] leading-[15.6px] sm:leading-6 font-semibold sm:mt-[6px]">
-                                            50kg
+                                            <?= $desiredWeight ?>
                                         </div>
                                     </div>
                                     <div class="absolute top-[33px] left-[26px] sm:top-[62px] sm:left-[62px] md:left-[54px]">

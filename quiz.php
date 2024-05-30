@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 include 'utils/db.php';
 $env = include('env.php');
 
@@ -25,19 +27,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $data = [];
+    $summary = [];
 
     // Handle metric data
     if (!empty($requestData['metrics'])) {
         $metrics = $requestData['metrics'];
         if (isset($metrics['metric_height'])) {
-            $data['height'] = "{$metrics['metric_height']} cm";
-            $data['weight'] = "{$metrics['metric_weight']} kg";
-            $data['desired_weight'] = "{$metrics['metric_desired_weight']} kg";
+            $data['height'] = "{$metrics['metric_height']}cm";
+            $data['weight'] = "{$metrics['metric_weight']}Kg";
+            $data['desired_weight'] = "{$metrics['metric_desired_weight']}Kg";
+
+            $diff = $metrics['metric_weight'] - $metrics['metric_desired_weight'];
+
+            $summary['diff_weight'] = "{$diff}Kg";
         } elseif (isset($metrics['imperial_height_feet'])) {
-            $data['height'] = "{$metrics['imperial_height_feet']} ft {$metrics['imperial_height_inches']} inch";
-            $data['weight'] = "{$metrics['imperial_weight']} lb";
-            $data['desired_weight'] = "{$metrics['imperial_desired_weight']} lb";
+            $data['height'] = "{$metrics['imperial_height_feet']}ft {$metrics['imperial_height_inches']}inch";
+            $data['weight'] = "{$metrics['imperial_weight']}lb";
+            $data['desired_weight'] = "{$metrics['imperial_desired_weight']}lb";
+
+            $diff = $metrics['imperial_weight'] - $metrics['imperial_desired_weight'];
+
+            $summary['diff_weight'] = "{$diff}lb";
         }
+
+        $summary['weight'] = $data['weight'];
+        $summary['desired_weight'] = $data['desired_weight'];
+
+        $_SESSION['summary'] = $summary;
     }
 
     // Decode answers if exists
@@ -681,7 +697,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                         Weight
                                                     </label>
                                                     <div class="absolute right-4 top-4">
-                                                        kg
+                                                        Kg
                                                     </div>
                                                 </div>
                                                 <div class="relative z-0 w-full group bg-inherit input-text">
@@ -701,7 +717,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                                         Desired weight
                                                     </label>
                                                     <div class="absolute right-4 top-4">
-                                                        kg
+                                                        Kg
                                                     </div>
                                                 </div>
                                             </div>
