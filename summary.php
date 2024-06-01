@@ -13,6 +13,9 @@ $summary = $_SESSION['summary'];
 $currentWeight = $summary['weight'] ?? '';
 $desiredWeight = $summary['desired_weight'] ?? '';
 $weightDiff = $summary['diff_weight'] ?? '';
+
+$bmi = $_SESSION['bmi'] ?? 0;
+$metabolicAge = $_SESSION['metabolic_age'] ?? 0;
 ?>
 
 <!DOCTYPE html>
@@ -220,7 +223,7 @@ $weightDiff = $summary['diff_weight'] ?? '';
                 <div class="lg:basis-8/12 mx-auto mt-12 lg:mt-20">
                     <div class="" x-data="{
         userGender: localStorage.getItem('userGender'),
-        bmiScore: '66.40625',
+        bmiScore: '<?= $bmi ?>',
     }">
                         <div class="text-headline-small lg:text-headline-large text-onSurface text-center">Your personal summary</div>
                         <div class="grid md:grid-cols-2 gap-4 lg:gap-6 mt-6 lg:mt-10">
@@ -247,7 +250,7 @@ $weightDiff = $summary['diff_weight'] ?? '';
                                         </svg>
                                     </div>
                                     <div class="flex flex-col space-y-6">
-                                        <div class="text-primary font-semibold text-[90px] leading-6 text-center">26</div>
+                                        <div class="text-primary font-semibold text-[90px] leading-6 text-center"><?= $metabolicAge ?></div>
                                         <div class="text-onSurface font-semibold text-[20px] leading-6 text-center">years old</div>
                                     </div>
                                 </div>
@@ -291,7 +294,7 @@ $weightDiff = $summary['diff_weight'] ?? '';
                                                             <div>
                                                                 <div class="relative px-2.5 py-2 rounded-md bg-white min-w-[80px] shadow">
                                                                     <div class="font-medium text-[18px] tracking-[0.5px] leading-4 text-onSurface text-center">
-                                                                        66.4
+                                                                        <?= $bmi ?>
                                                                         <span class="text-[8px] leading-4 tracking-[0.5px]">BMI</span>
                                                                     </div>
                                                                     <div class="mx-auto mt-1 text-onSurface font-medium text-[8px] leading-[10px] tracking-[0.5px] text-center">

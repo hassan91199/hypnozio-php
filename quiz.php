@@ -2,6 +2,7 @@
 
 session_start();
 include 'utils/db.php';
+include 'utils/functions.php';
 $env = include('env.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -28,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $data = [];
     $summary = [];
+    $bmi = null;
 
     // Handle metric data
     if (!empty($requestData['metrics'])) {
@@ -40,6 +42,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $diff = $metrics['metric_weight'] - $metrics['metric_desired_weight'];
 
             $summary['diff_weight'] = "{$diff}Kg";
+
+            $bmi = calculateBmi(
+                [
+                    'value' => $metrics['metric_weight'],
+                    'unit' => 'kg',
+                ],
+                [
+                    'value' => $metrics['metric_height'],
+                    'unit' => 'cm',
+                ],
+            );
         } elseif (isset($metrics['imperial_height_feet'])) {
             $data['height'] = "{$metrics['imperial_height_feet']}ft {$metrics['imperial_height_inches']}inch";
             $data['weight'] = "{$metrics['imperial_weight']}lb";
@@ -48,12 +61,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $diff = $metrics['imperial_weight'] - $metrics['imperial_desired_weight'];
 
             $summary['diff_weight'] = "{$diff}lb";
+
+            $bmi = calculateBmi(
+                [
+                    'value' => $metrics['imperial_weight'],
+                    'unit' => 'inch',
+                ],
+                [
+                    'value' => ($metrics['imperial_height_feet'] * 12) + $metrics['imperial_height_inches'],
+                    'unit' => 'inch',
+                ],
+            );
         }
 
         $summary['weight'] = $data['weight'];
         $summary['desired_weight'] = $data['desired_weight'];
 
         $_SESSION['summary'] = $summary;
+        $_SESSION['bmi'] = $bmi ?? 0;
     }
 
     // Decode answers if exists
@@ -68,6 +93,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ? array_keys($answer)[0]
             : implode(", ", array_keys($answer));
     }
+
+    // Calculate and set the metabolic age
+    $ageRange = $data['answer_1'];
+    list($lower, $metabolicAge) = explode('-', $ageRange);
+    $metabolicAge = (int)$metabolicAge;
+    $metabolicAge += $env['METABOLIC_AGE_INCREMENT'];
+    $_SESSION['metabolic_age'] = $metabolicAge;
 
     $email = $requestData['email'];
     $data['email'] = $email;
