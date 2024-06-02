@@ -107,6 +107,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $data['cid'] = $cid;
     $data['sid'] = $sid;
 
+    // Setting necessary data to show on checkout and summary page
+    $_SESSION['AGE_RANGE'] = $data['answer_1'];
+    $_SESSION['OVERWEIGHT_REASON'] = $data['answer_6'];
+
     $user = null;
 
     // Create or update the user of quiz

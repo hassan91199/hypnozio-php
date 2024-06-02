@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+$ageRange = $_SESSION['AGE_RANGE'] ?? '';
+$overWeightReason = $_SESSION['OVERWEIGHT_REASON'] ?? '';
+$desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
+?>
+
 <!DOCTYPE html>
 <html lang="en" class="">
 
@@ -79,15 +87,15 @@
                                 <div class="space-y-4">
                                     <div class="text-body-medium lg:text-body-large first:mt-6">
                                         <span class="font-semibold">Age range:</span>
-                                        <span>18-21</span>
+                                        <span><?= $ageRange ?></span>
                                     </div>
                                     <div class="text-body-medium lg:text-body-large first:mt-6">
                                         <span class="font-semibold">Overweight reason:</span>
-                                        <span>Binge eating, Chronic dieting</span>
+                                        <span><?= $overWeightReason ?></span>
                                     </div>
                                     <div class="text-body-medium lg:text-body-large first:mt-6">
                                         <span class="font-semibold">Weight goal:</span>
-                                        <span>50kg</span>
+                                        <span><?= $desiredWeight ?></span>
                                     </div>
                                 </div>
                             </div>
