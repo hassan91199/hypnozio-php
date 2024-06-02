@@ -19,7 +19,7 @@
     <script type="module" src="../assets/app-5f69faf4.js" data-navigate-track="reload"></script>
     <link rel="modulepreload" href="../assets/cookies-ee50a713.js" />
     <script type="module" src="../assets/cookies-ee50a713.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="../assets/alpine-js-2881bf21.   js" />
+    <link rel="modulepreload" href="../assets/alpine-js-2881bf21.js" />
     <link rel="modulepreload" href="../assets/module.esm-958008ac.js" />
     <script type="module" src="../assets/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
     <div>
@@ -204,7 +204,7 @@
                         <div class="flex flex-wrap [&amp;&gt;*:nth-child(3)]:md:-mt-2">
                             <div class="basis-full md:basis-1/2 h-fit rounded border border-primary-70 p-6 text-primary-10 mb-6 md:mb-0 last:mb-0 md:mt-10 first:md:mt-0 md:max-w-[400px] lg:max-w-[428px] xl:max-w-[448px] md:mx-auto">
                                 <div class="flex items-center">
-                                    <img class="w-12 mr-4" src="../assets/summary/beer.svg" alt="" />
+                                    <img class="w-12 mr-4" src="../assets/hypnozio/summary/beer.svg" alt="" />
                                     <div class="text-[20px] lg:text-title-large text-primary-10">Addiction you would like to overcome</div>
                                 </div>
                                 <hr class="w-full text-primary-70 my-4">
@@ -212,7 +212,7 @@
                             </div>
                             <div class="basis-full md:basis-1/2 h-fit rounded border border-primary-70 p-6 text-primary-10 mb-6 md:mb-0 last:mb-0 md:mt-10 first:md:mt-0 md:max-w-[400px] lg:max-w-[428px] xl:max-w-[448px] md:mx-auto">
                                 <div class="flex items-center">
-                                    <img class="w-12 mr-4" src="../assets/summary/calendar.svg" alt="" />
+                                    <img class="w-12 mr-4" src="../assets/hypnozio/summary/calendar.svg" alt="" />
                                     <div class="text-[20px] lg:text-title-large text-primary-10">You engage in your addictive behavior</div>
                                 </div>
                                 <hr class="w-full text-primary-70 my-4">
@@ -220,7 +220,7 @@
                             </div>
                             <div class="basis-full md:basis-1/2 h-fit rounded border border-primary-70 p-6 text-primary-10 mb-6 md:mb-0 last:mb-0 md:mt-10 first:md:mt-0 md:max-w-[400px] lg:max-w-[428px] xl:max-w-[448px] md:mx-auto">
                                 <div class="flex items-center">
-                                    <img class="w-12 mr-4" src="../assets/summary/trophy.svg" alt="" />
+                                    <img class="w-12 mr-4" src="../assets/hypnozio/summary/trophy.svg" alt="" />
                                     <div class="text-[20px] lg:text-title-large text-primary-10">Your primary goal is</div>
                                 </div>
                                 <hr class="w-full text-primary-70 my-4">
@@ -228,7 +228,7 @@
                             </div>
                             <div class="basis-full md:basis-1/2 h-fit rounded border border-primary-70 p-6 text-primary-10 mb-6 md:mb-0 last:mb-0 md:mt-10 first:md:mt-0 md:max-w-[400px] lg:max-w-[428px] xl:max-w-[448px] md:mx-auto">
                                 <div class="flex items-center">
-                                    <img class="w-12 mr-4" src="../assets/summary/hourglass.svg" alt="" />
+                                    <img class="w-12 mr-4" src="../assets/hypnozio/summary/hourglass.svg" alt="" />
                                     <div class="text-[20px] lg:text-title-large text-primary-10">You&#039;ve been struggling with your addiction for</div>
                                 </div>
                                 <hr class="w-full text-primary-70 my-4">
