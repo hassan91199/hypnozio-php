@@ -44,3 +44,33 @@ function calculateBmi($weight, $height)
     // Calculate and return BMI as an integer
     return (int)round($weightInKg / ($heightInMeters ** 2));
 }
+
+/**
+ * Determines the gender based on the first letter of a given string.
+ *
+ * @param string $firstLetter The first letter indicating gender:
+ *                            - 'm' for male
+ *                            - 'f' for female
+ *                            - 'o' for other
+ *
+ * @return string|null Returns "male", "female", or "other" based on the input letter.
+ *                     Returns null if the input letter does not match any known gender.
+ */
+function getGender($firstLetter)
+{
+    // Switch case to determine gender based on the first letter
+    switch ($firstLetter) {
+        case 'm':
+            // If the first letter is 'm', return "male"
+            return "male";
+        case 'f':
+            // If the first letter is 'f', return "female"
+            return "female";
+        case 'o':
+            // If the first letter is 'o', return "other"
+            return "other";
+        default:
+            // If the first letter does not match any case, return null
+            return null;
+    }
+}
