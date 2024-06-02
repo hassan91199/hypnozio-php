@@ -1,3 +1,103 @@
+<?php
+session_start();
+include '../utils/functions.php';
+include '../utils/db.php';
+$env = include('../env.php');
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $requestData = $_POST;
+
+    $requestData = $_POST;
+
+    $gender = getGender($_GET['g']);
+    $cid = $_GET['cid'] ?? '';
+    $sid = $_GET['sid'] ?? '';
+
+    $data = [];
+
+    // Decode answers if exists
+    $answers = isset($requestData['answers']) ? json_decode($requestData['answers'], true) : [];
+
+    // Organizing the answers
+    foreach ($answers as $index => $answer) {
+        if ($index == 21) break;
+        $questionNumber = $index + 1;
+
+        $data["answer_{$questionNumber}"] = isset($answer['answerText'])
+            ? array_keys($answer)[0]
+            : implode(", ", array_keys($answer));
+    }
+
+    $email = $requestData['email'];
+    $data['email'] = $email;
+    $data['gender'] = $gender;
+    $data['cid'] = $cid;
+    $data['sid'] = $sid;
+
+    $user = null;
+
+    // Create or update the user of quiz
+    $user = updateOrCreate(
+        'users',
+        ['email' => $email],
+        ['email' => $email, 'gender' => $gender]
+    );
+
+    // Create or update the quiz sumbission for the user
+    if (isset($user)) {
+        $data['user_id'] = $user['id'];
+        $quizSubmission = updateOrCreate('alcohol_quiz_submissions', ['email' => $email], $data);
+
+        if (isset($quizSubmission)) {
+            $convertKitApiKey = $env['CONVERTKIT_API_KEY'];
+            $formId = $env['CONVERTKIT_QUIZ_FORM_ID'];
+
+            // Set ConvertKit API URL
+            $convertKitApiUrl = "https://api.convertkit.com/v3/forms/$formId/subscribe";
+
+            // Set data to be sent in the request body
+            $data = [
+                'api_key' => $convertKitApiKey,
+                'email' => $email,
+                'fields' => [
+                    'cid' => $cid,
+                    'sid' => $sid,
+                ],
+            ];
+
+            // Initialize cURL session
+            $ch = curl_init();
+
+            // Set cURL options
+            curl_setopt_array($ch, [
+                CURLOPT_URL => $convertKitApiUrl,
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_POST => true,
+                CURLOPT_POSTFIELDS => json_encode($data),
+                CURLOPT_HTTPHEADER => [
+                    'Content-Type: application/json',
+                ],
+            ]);
+
+            // Execute cURL request
+            $response = curl_exec($ch);
+
+            // Close cURL session
+            curl_close($ch);
+
+            header("Location: /alcohol-hypnotherapy/summary.php");
+            exit();
+        }
+    }
+
+    // Redirect user back to the quiz if submission wasn't saved
+    $currentUri = $_SERVER['REQUEST_URI'];
+    header("Location: $currentUri");
+
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" class="overscroll-none">
 
@@ -63,7 +163,7 @@
                 'https://hypnozio.com/verify/email',
                 false)
             " :key="'test-' + questionKey">
-                    <form action="https://hypnozio.com/test/hypnozio-quiz-alcohol-addiction/b2zz9kn" novalidate method="post" class="" x-data="{ metricSystem: 'metric', bmi }" x-on:submit.prevent="submitForm($event.target, metricSystem, false, true, false, false)" x-ref="form">
+                    <form action="<?= $_SERVER['REQUEST_URI'] ?>" novalidate method="post" class="" x-data="{ metricSystem: 'metric', bmi }" x-on:submit.prevent="submitForm($event.target, metricSystem, false, true, false, false)" x-ref="form">
                         <input type="hidden" name="score" x-bind:value="data.encodedScore">
                         <input type="hidden" name="answers" x-bind:value="data.encodedAnswers">
                         <div class="w-full bg-neutral-95 h-2">
