@@ -1,10 +1,14 @@
 <?php
+session_start();
 
 $currentDate = new DateTime();
 $currentMonth = $currentDate->format('F');
 $futureDate = $currentDate->modify('+3 months');
 $futureMonth = $futureDate->format('F');
 
+$timeOnAddiction = $_SESSION['TIME_ON_ADDICTION'];
+$addictionFrequency = $_SESSION['ADDICTION_FREQUENCY'];
+$primaryGoal = $_SESSION['PRIMARY_GOAL'];
 
 ?>
 
@@ -226,7 +230,7 @@ $futureMonth = $futureDate->format('F');
                                     <div class="text-[20px] lg:text-title-large text-primary-10">You engage in your addictive behavior</div>
                                 </div>
                                 <hr class="w-full text-primary-70 my-4">
-                                <div class="py-4 rounded border border-primary px-6 bg-primary-95">Daily</div>
+                                <div class="py-4 rounded border border-primary px-6 bg-primary-95"><?= $addictionFrequency ?></div>
                             </div>
                             <div class="basis-full md:basis-1/2 h-fit rounded border border-primary-70 p-6 text-primary-10 mb-6 md:mb-0 last:mb-0 md:mt-10 first:md:mt-0 md:max-w-[400px] lg:max-w-[428px] xl:max-w-[448px] md:mx-auto">
                                 <div class="flex items-center">
@@ -234,7 +238,7 @@ $futureMonth = $futureDate->format('F');
                                     <div class="text-[20px] lg:text-title-large text-primary-10">Your primary goal is</div>
                                 </div>
                                 <hr class="w-full text-primary-70 my-4">
-                                <div class="py-4 rounded border border-primary px-6 bg-primary-95">Complete abstinence</div>
+                                <div class="py-4 rounded border border-primary px-6 bg-primary-95"><?= $primaryGoal ?></div>
                             </div>
                             <div class="basis-full md:basis-1/2 h-fit rounded border border-primary-70 p-6 text-primary-10 mb-6 md:mb-0 last:mb-0 md:mt-10 first:md:mt-0 md:max-w-[400px] lg:max-w-[428px] xl:max-w-[448px] md:mx-auto">
                                 <div class="flex items-center">
@@ -242,7 +246,7 @@ $futureMonth = $futureDate->format('F');
                                     <div class="text-[20px] lg:text-title-large text-primary-10">You&#039;ve been struggling with your addiction for</div>
                                 </div>
                                 <hr class="w-full text-primary-70 my-4">
-                                <div class="py-4 rounded border border-primary px-6 bg-primary-95">Less than a year</div>
+                                <div class="py-4 rounded border border-primary px-6 bg-primary-95"><?= $timeOnAddiction ?></div>
                             </div>
                         </div>
                     </div>

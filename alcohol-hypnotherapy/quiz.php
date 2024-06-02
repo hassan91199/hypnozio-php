@@ -34,9 +34,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $data['cid'] = $cid;
     $data['sid'] = $sid;
 
-    // Setting necessary data to show on checkout
+    // Setting necessary data to show on checkout and summary page
     $_SESSION['AGE_RANGE'] = $data['answer_2'];
     $_SESSION['TIME_ON_ADDICTION'] = $data['answer_3'];
+    $_SESSION['ADDICTION_FREQUENCY'] = $data['answer_9'];
+    $_SESSION['PRIMARY_GOAL'] = $data['answer_18'];
 
     $user = null;
 
