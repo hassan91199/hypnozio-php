@@ -2,7 +2,7 @@
 function getDbConnection()
 {
     // Include the database configuration from env
-    $env = include('env.php');
+    $env = include('../env.php');
 
     // Create connection
     $conn = new mysqli(
