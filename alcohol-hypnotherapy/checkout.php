@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+$ageRange = $_SESSION['AGE_RANGE'] ?? '';
+$timeOnAddiction = $_SESSION['TIME_ON_ADDICTION'];
+?>
+
 <!DOCTYPE html>
 <html lang="en" class="">
 
@@ -139,11 +146,11 @@
                                 <div class="space-y-4">
                                     <div class="text-body-medium lg:text-body-large first:mt-6">
                                         <span class="font-semibold">Age range:</span>
-                                        <span>22-30</span>
+                                        <span><?= $ageRange ?></span>
                                     </div>
                                     <div class="text-body-medium lg:text-body-large first:mt-6">
                                         <span class="font-semibold">Time on addiction:</span>
-                                        <span>Less than a year</span>
+                                        <span><?= $timeOnAddiction ?></span>
                                     </div>
                                     <div class="text-body-medium lg:text-body-large first:mt-6">
                                         <span class="font-semibold">Severity:</span>

@@ -19,7 +19,7 @@
     <script type="module" src="../assets/app-5f69faf4.js" data-navigate-track="reload"></script>
     <link rel="modulepreload" href="../assets/cookies-ee50a713.js" />
     <script type="module" src="../assets/cookies-ee50a713.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="../assets/alpine-js-2881bf21.js" />
+    <link rel="modulepreload" href="../assets/alpine-js-2881bf21.   js" />
     <link rel="modulepreload" href="../assets/module.esm-958008ac.js" />
     <script type="module" src="../assets/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
     <div>
