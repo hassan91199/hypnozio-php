@@ -39,6 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION['TIME_ON_ADDICTION'] = $data['answer_3'];
     $_SESSION['ADDICTION_FREQUENCY'] = $data['answer_9'];
     $_SESSION['PRIMARY_GOAL'] = $data['answer_18'];
+    $_SESSION['SEVERITY'] = $data['answer_4'];
 
     $user = null;
 

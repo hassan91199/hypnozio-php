@@ -3,6 +3,8 @@ session_start();
 
 $ageRange = $_SESSION['AGE_RANGE'] ?? '';
 $timeOnAddiction = $_SESSION['TIME_ON_ADDICTION'];
+$severity = $_SESSION['SEVERITY'];
+
 ?>
 
 <!DOCTYPE html>
@@ -154,7 +156,7 @@ $timeOnAddiction = $_SESSION['TIME_ON_ADDICTION'];
                                     </div>
                                     <div class="text-body-medium lg:text-body-large first:mt-6">
                                         <span class="font-semibold">Severity:</span>
-                                        <span>1/10</span>
+                                        <span><?= $severity ?>/10</span>
                                     </div>
                                 </div>
                             </div>
