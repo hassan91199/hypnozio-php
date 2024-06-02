@@ -238,7 +238,7 @@ $otherQuizLink = "$quizLink&g=o";
                                     <a href="" class="no-underline p-4 rounded-l text-white hover:bg-white/20" x-bind:class="activeLanguageCode === 'en' ? (showWhiteMode ? 'bg-secondary-90 !text-onSurface' : 'bg-primary') : ''" x-on:click="languageDesktopNavIsOpened = !languageDesktopNavIsOpened">
                                         <input class="hidden" type="radio" name="language" value="en" x-model="activeLanguageCode" />
                                         <div class="flex items-center">
-                                            <img src="assetshypnozio/flags/united-kingdom.svg" alt="English" />
+                                            <img src="assets/hypnozio/flags/united-kingdom.svg" alt="English" />
                                             <div class="ml-4">English</div>
                                         </div>
                                     </a>
