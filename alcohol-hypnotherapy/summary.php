@@ -1,3 +1,13 @@
+<?php
+
+$currentDate = new DateTime();
+$currentMonth = $currentDate->format('F');
+$futureDate = $currentDate->modify('+3 months');
+$futureMonth = $futureDate->format('F');
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" class="">
 
@@ -80,8 +90,8 @@
                             <div class="relative p-4 sm:p-9 bg-white shadow sm:shadow-2 mt-6 max-w-[343px] sm:max-w-[744px] mx-auto rounded">
                                 <img class="w-[311px] sm:w-[672px] mx-auto" src="../assets/hypnozio/summary/alc-graph.png" alt="Weight loss graph">
                                 <div class="flex flex-row justify-between ml-4 mr-5 sm:mx-12 mt-2.5 text-neutralVariant-60 text-body-small sm:text-body-large">
-                                    <div>June</div>
-                                    <div>September</div>
+                                    <div><?= $currentMonth ?></div>
+                                    <div><?= $futureMonth ?></div>
                                 </div>
                                 <div class="absolute top-[7px] sm:top-[44px] md:top-[57px] lg:top-[53px] xl:top-[57px] left-[22px] sm:left-[44px]">
                                     <div class="flex flex-col relative">
