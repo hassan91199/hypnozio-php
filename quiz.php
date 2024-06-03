@@ -1,9 +1,8 @@
 <?php
-
 session_start();
-include 'utils/db.php';
-include 'utils/functions.php';
-$env = include('env.php');
+
+require_once __DIR__ . '/utils/functions.php';
+require_once __DIR__ . '/utils/db.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $requestData = $_POST;
@@ -98,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $ageRange = $data['answer_1'];
     list($lower, $metabolicAge) = explode('-', $ageRange);
     $metabolicAge = (int)$metabolicAge;
-    $metabolicAge += $env['METABOLIC_AGE_INCREMENT'];
+    $metabolicAge += env('METABOLIC_AGE_INCREMENT');
     $_SESSION['metabolic_age'] = $metabolicAge;
 
     $email = $requestData['email'];
@@ -126,8 +125,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $quizSubmission = updateOrCreate('quiz_submissions', ['email' => $email], $data);
 
         if (isset($quizSubmission)) {
-            $convertKitApiKey = $env['CONVERTKIT_API_KEY'];
-            $formId = $env['CONVERTKIT_QUIZ_FORM_ID'];
+            $convertKitApiKey = env('CONVERTKIT_API_KEY');
+            $formId = env('CONVERTKIT_QUIZ_FORM_ID');
 
             // Set ConvertKit API URL
             $convertKitApiUrl = "https://api.convertkit.com/v3/forms/$formId/subscribe";

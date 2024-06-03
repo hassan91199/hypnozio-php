@@ -1,8 +1,9 @@
 <?php
 session_start();
-include '../utils/functions.php';
-include '../utils/db.php';
-$env = include('../env.php');
+
+require_once __DIR__ . '/../utils/functions.php';
+require_once __DIR__ . '/../utils/db.php';
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $requestData = $_POST;
@@ -56,8 +57,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $quizSubmission = updateOrCreate('alcohol_quiz_submissions', ['email' => $email], $data);
 
         if (isset($quizSubmission)) {
-            $convertKitApiKey = $env['CONVERTKIT_API_KEY'];
-            $formId = $env['CONVERTKIT_QUIZ_FORM_ID'];
+            $convertKitApiKey = env('CONVERTKIT_API_KEY');
+            $formId = env('CONVERTKIT_QUIZ_FORM_ID');
 
             // Set ConvertKit API URL
             $convertKitApiUrl = "https://api.convertkit.com/v3/forms/$formId/subscribe";

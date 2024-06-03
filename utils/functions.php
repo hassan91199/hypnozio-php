@@ -74,3 +74,30 @@ function getGender($firstLetter)
             return null;
     }
 }
+
+/**
+ * Retrieves a specific environment configuration value or the entire configuration.
+ *
+ * This function loads the environment configuration from the `env.php` file
+ * located one directory above the current script's directory. It returns the
+ * value of the specified key from the configuration or the entire configuration
+ * if no key is specified.
+ *
+ * @param string|null $key The key of the configuration value to retrieve. If null,
+ *                         the entire configuration array is returned.
+ * @return mixed The value of the specified configuration key, the entire configuration array,
+ *               or null if the key does not exist or the `env.php` file does not return an array.
+ */
+function env($key = null)
+{
+    // Include the environment configuration file and store the result in $env
+    $env = require_once __DIR__ . '/../env.php';
+
+    // If a key is specified, return the value associated with the key, or null if it does not exist
+    if ($key !== null) {
+        return $env[$key] ?? null;
+    }
+
+    // If no key is specified, return the entire environment configuration array
+    return $env ?? [];
+}

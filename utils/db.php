@@ -1,8 +1,10 @@
 <?php
+require_once __DIR__ . '/functions.php';
+$env = env();
+
 function getDbConnection()
 {
-    // Include the database configuration from env
-    $env = include(__DIR__ . '/../env.php');
+    global $env;
 
     // Create connection
     $conn = new mysqli(
