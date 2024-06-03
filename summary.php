@@ -15,8 +15,17 @@ $desiredWeight = $summary['desired_weight'] ?? '';
 $weightDiff = $summary['diff_weight'] ?? '';
 
 $bmi = $_SESSION['bmi'] ?? 0;
-$metabolicAge = $_SESSION['metabolic_age'] ?? 0;
+$metabolicAge = $_SESSION['metabolic_age']+15 ?? 0;
 ?>
+
+
+<?php
+$siteName = 'Natural Neuro Hypnosis'
+
+ 
+?>
+
+
 
 <!DOCTYPE html>
 <html lang="en" class="">
@@ -25,7 +34,7 @@ $metabolicAge = $_SESSION['metabolic_age'] ?? 0;
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <link rel="icon" type="image/x-icon" href="assets/images/favicons/hypnozio.svg">
-    <title>Hypnozio | Summary</title>
+    <title><?= $siteName ?>  | Summary</title>
 
     <link rel="preload" as="style" href="assets/build/app-824c45d5.css" />
     <link rel="stylesheet" href="assets/build/app-824c45d5.css" data-navigate-track="reload" />
@@ -42,21 +51,7 @@ $metabolicAge = $_SESSION['metabolic_age'] ?? 0;
     <link rel="modulepreload" href="assets/build/module.esm-958008ac.js" />
     <script type="module" src="assets/build/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
     <div>
-        <script>
-            window.fwSettings = {
-                'widget_id': 155000000003
-            };
-            ! function() {
-                if ("function" != typeof window.FreshworksWidget) {
-                    var n = function() {
-                        n.q.push(arguments)
-                    };
-                    n.q = [], window.FreshworksWidget = n
-                }
-            }()
-        </script>
-        <script type='text/javascript' src='https://widget.freshworks.com/widgets/155000000003.js' async defer>
-        </script>
+       
     </div>
 </head>
 
@@ -72,7 +67,7 @@ $metabolicAge = $_SESSION['metabolic_age'] ?? 0;
             showWhiteMode: false,
         }" class="container text-white py-4 md:py-5">
             <div class="flex justify-between items-center">
-                <img src="https://hypnozio.com/hypnozio/logo.svg" class="w-[110px] md:w-[108px]" alt="Hypnozio">
+                <img src="https://nh-special.com/assets/logo.svg" class="" alt="NH">
                 <div class="flex items-center space-x-4">
                 </div>
             </div>
@@ -85,7 +80,7 @@ $metabolicAge = $_SESSION['metabolic_age'] ?? 0;
                 <div class="lg:basis-8/12 mx-auto">
                     <div class="flex flex-col space-y-4 lg:space-y-6 justify-center">
                         <div class="text-headline-large lg:text-display-small text-onSurface text-center">
-                            Hypnozio is likely to work for you!
+                            <?= $siteName ?> is likely to work for you!
                         </div>
                         <div class="text-body-large lg:text-title-large text-onSurface text-center">
                             89% of people similar to you reached their desired weight after finishing the program.
@@ -93,13 +88,21 @@ $metabolicAge = $_SESSION['metabolic_age'] ?? 0;
                     </div>
                     <div class="flex flex-col mt-6">
                         <div class="text-body-large lg:text-title-large text-center">
-                            You will lose <span class="text-accent font-bold"><?= $weightDiff ?></span> by November 2025
+                            We predict that you will lose <span class="text-accent font-bold"><?= $weightDiff ?></span> by <?php
+echo date('F, Y', strtotime('+1 month'));
+?>
                         </div>
                         <div class="relative p-4 sm:p-9 bg-white shadow sm:shadow-2 mt-6 max-w-[343px] sm:max-w-[744px] mx-auto rounded">
-                            <img class="w-[311px] sm:w-[672px] mx-auto" src="https://hypnozio.com/hypnozio/summary/graph.png" alt="Weight loss graph">
+                            <img class="w-[311px] sm:w-[672px] mx-auto" src="http://nh-special.com/assets/summary/graph.png" alt="Weight loss graph">
                             <div class="flex flex-row justify-between mx-4 sm:mx-12 mt-2.5 text-neutralVariant-60 text-body-small sm:text-body-large">
-                                <div>May</div>
-                                <div>November, 2025</div>
+                                <div><?php
+echo date('F, Y');
+?>
+</div>
+                                <div><?php
+echo date('F, Y', strtotime('+1 month'));
+?>
+</div>
                             </div>
                             <div class="absolute top-[9px] sm:top-[40px] md:top-[55px] lg:top-[50px] xl:top-[55px] left-[26px] sm:left-[61px]">
                                 <div class="flex flex-col relative">
@@ -130,7 +133,7 @@ $metabolicAge = $_SESSION['metabolic_age'] ?? 0;
                                 <div class="flex flex-col relative">
                                     <div class="flex flex-col items-center rounded-md bg-primary-90 py-1 sm:py-2 px-2 sm:px-5 shadow-2">
                                         <div class="text-onSurface text-[9px] sm:text-[16px] leading-[11px] sm:leading-4 font-semibold">
-                                            With Hypnozio
+                                            With Your Plan
                                         </div>
                                         <div class="text-primary text-[13px] sm:text-[20px] leading-[15.6px] sm:leading-6 font-semibold sm:mt-[6px]">
                                             <?= $desiredWeight ?>
@@ -165,19 +168,19 @@ $metabolicAge = $_SESSION['metabolic_age'] ?? 0;
                         </div>
                         <div class="flex space-x-4 sm:space-x-0 sm:justify-between bg-white shadow rounded px-[19px] py-4 lg:px-4 lg:py-6">
                             <div class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-2 items-center">
-                                <img src="https://hypnozio.com/hypnozio/summary/hourglass-red.svg" alt="feature" />
+                                <img src="http://nh-special.com/assets/summary/hourglass-red.svg" alt="feature" />
                                 <div class="text-body-small lg:text-body-large text-onSurface text-center">
                                     Only 20 minutes a day
                                 </div>
                             </div>
                             <div class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-2 items-center">
-                                <img src="https://hypnozio.com/hypnozio/summary/graph-green.svg" alt="feature" />
+                                <img src="http://nh-special.com/assets/summary/graph-green.svg" alt="feature" />
                                 <div class="text-body-small lg:text-body-large text-onSurface text-center">
                                     First results after one week
                                 </div>
                             </div>
                             <div class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-2 items-center">
-                                <img src="https://hypnozio.com/hypnozio/summary/approved.svg" alt="feature" />
+                                <img src="http://nh-special.com/assets/summary/approved.svg" alt="feature" />
                                 <div class="text-body-small lg:text-body-large text-onSurface text-center">
                                     Created by experts
                                 </div>
@@ -190,27 +193,27 @@ $metabolicAge = $_SESSION['metabolic_age'] ?? 0;
                         <div class="text-title-large lg:text-headline-large text-onSurface text-center">You will see <span class="text-tertiary-70 font-semibold md:font-normal">improvement</span> in these areas after completing our hypnotherapy course.</div>
                         <div class="grid md:grid-cols-2 gap-4 lg:gap-6">
                             <div class="flex flex-col space-y-2 items-center bg-white rounded shadow p-4">
-                                <img class="w-12 lg:w-14" src="https://hypnozio.com/hypnozio/summary/emotional_eating.svg" alt="Emotional eating Icon" />
+                                <img class="w-12 lg:w-14" src="http://nh-special.com/assets/summary/emotional_eating.svg" alt="Emotional eating Icon" />
                                 <div class="text-[16px] leading-[24px] lg:text-title-large font-semibold lg:font-normal">Emotional eating</div>
                                 <div class="text-body-medium lg:text-body-large text-onSurface text-center">Hypnotherapy can stop emotional eating by finding out why it happens and teaching better ways to cope.</div>
                             </div>
                             <div class="flex flex-col space-y-2 items-center bg-white rounded shadow p-4">
-                                <img class="w-12 lg:w-14" src="https://hypnozio.com/hypnozio/summary/binge_eating.svg" alt="Binge eating Icon" />
+                                <img class="w-12 lg:w-14" src="http://nh-special.com/assets/summary/binge_eating.svg" alt="Binge eating Icon" />
                                 <div class="text-[16px] leading-[24px] lg:text-title-large font-semibold lg:font-normal">Binge eating</div>
                                 <div class="text-body-medium lg:text-body-large text-onSurface text-center">Hypnotherapy tackles emotional triggers and promotes healthier eating habits to overcome binge eating.</div>
                             </div>
                             <div class="flex flex-col space-y-2 items-center bg-white rounded shadow p-4">
-                                <img class="w-12 lg:w-14" src="https://hypnozio.com/hypnozio/summary/poor_digestion.svg" alt="Poor digestion Icon" />
+                                <img class="w-12 lg:w-14" src="http://nh-special.com/assets/summary/poor_digestion.svg" alt="Poor digestion Icon" />
                                 <div class="text-[16px] leading-[24px] lg:text-title-large font-semibold lg:font-normal">Poor digestion</div>
                                 <div class="text-body-medium lg:text-body-large text-onSurface text-center">Hypnotherapy improves poor digestion by reducing stress, promoting relaxation, and addressing underlying emotional factors.</div>
                             </div>
                             <div class="flex flex-col space-y-2 items-center bg-white rounded shadow p-4">
-                                <img class="w-12 lg:w-14" src="https://hypnozio.com/hypnozio/summary/will_power.svg" alt="Willpower Icon" />
+                                <img class="w-12 lg:w-14" src="http://nh-special.com/assets/summary/will_power.svg" alt="Willpower Icon" />
                                 <div class="text-[16px] leading-[24px] lg:text-title-large font-semibold lg:font-normal">Willpower</div>
                                 <div class="text-body-medium lg:text-body-large text-onSurface text-center">Hypnotherapy boosts weight loss willpower by promoting positive habits, reducing cravings, and addressing psychological barriers.</div>
                             </div>
                             <div class="flex flex-col space-y-2 items-center bg-white rounded shadow p-4">
-                                <img class="w-12 lg:w-14" src="https://hypnozio.com/hypnozio/summary/chronic_dieting.svg" alt="Chronic dieting Icon" />
+                                <img class="w-12 lg:w-14" src="http://nh-special.com/assets/summary/chronic_dieting.svg" alt="Chronic dieting Icon" />
                                 <div class="text-[16px] leading-[24px] lg:text-title-large font-semibold lg:font-normal">Chronic dieting</div>
                                 <div class="text-body-medium lg:text-body-large text-onSurface text-center">Hypnotherapy can break the cycle of chronic dieting by addressing emotional and psychological causes, promoting a healthy relationship with food and body.</div>
                             </div>
@@ -326,7 +329,7 @@ $metabolicAge = $_SESSION['metabolic_age'] ?? 0;
                         <div class="text-headline-small md:text-headline-medium lg:text-headline-large text-onSurface text-center">Your plan includes:</div>
                         <div class="flex flex-wrap gap-8 md:gap-10">
                             <div class="md:basis-3/12 mx-auto">
-                                <img class="max-w-[178px] md:max-w-[199px]" src="https://hypnozio.com/hypnozio/summary/wl/iphone-wl-en.png" alt="Image of an Iphone playing an audio course">
+                                <img class="max-w-[178px] md:max-w-[199px]" src="http://nh-special.com/assets/summary/iphone-wl-en.png" alt="Image of an Iphone playing an audio course">
                             </div>
                             <div class="md:basis-8/12 ">
                                 <div class="flex flex-col space-y-4 lg:space-y-5 ">
@@ -388,7 +391,7 @@ $metabolicAge = $_SESSION['metabolic_age'] ?? 0;
                         <div class="text-headline-small md:text-headline-medium text-center mb-6">Our promise</div>
                         <p class="mb-6 text-body-medium md:text-body-large text-onSurface ">We promise to provide you with the highest quality hypnotherapy sessions that are specifically designed to support your weight loss efforts. Our team of experienced hypnotherapists has carefully crafted each session to address the root causes of weight gain and help you build healthy habits for sustainable weight loss.</p>
                         <p class="mb-0 text-body-medium md:text-body-large text-onSurface ">We are confident that you will see results with our product, and we are here to support you every step of the way. If you ever have any questions or concerns, please do not hesitate to reach out to us.<br />We promise to continue delivering exceptional products and services to help you achieve your weight loss goals.</p>
-                        <div class="text-body-medium md:text-body-large text-onSurface mt-3">Hypnozio team</div>
+                        <div class="text-body-medium md:text-body-large text-onSurface mt-3"><?= $siteName ?> team</div>
                     </div>
                 </div>
             </div>

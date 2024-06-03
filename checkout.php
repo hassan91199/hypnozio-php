@@ -13,8 +13,8 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="icon" type="image/x-icon" href="assets/images/favicons/hypnozio.svg">
-    <title>Hypnozio | Checkout</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicons/nh.svg">
+    <title>Natural Neuro Hypnosis | Checkout</title>
 
     <link rel="preload" as="style" href="assets/build/app-824c45d5.css" />
     <link rel="stylesheet" href="assets/build/app-824c45d5.css" data-navigate-track="reload" />
@@ -38,21 +38,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
     <link rel="modulepreload" href="assets/build/gtm-tags-e2664de5.js" />
     <script type="module" src="assets/build/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
     <div>
-        <script>
-            window.fwSettings = {
-                'widget_id': 155000000003
-            };
-            ! function() {
-                if ("function" != typeof window.FreshworksWidget) {
-                    var n = function() {
-                        n.q.push(arguments)
-                    };
-                    n.q = [], window.FreshworksWidget = n
-                }
-            }()
-        </script>
-        <script type='text/javascript' src='https://widget.freshworks.com/widgets/155000000003.js' async defer>
-        </script>
+     
     </div>
 </head>
 
@@ -68,7 +54,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
             showWhiteMode: false,
         }" class="container text-white py-4 md:py-5">
             <div class="flex justify-between items-center">
-                <img src="assets/hypnozio/logo.svg" class="w-[110px] md:w-[108px]" alt="Hypnozio">
+                <img src="assets/logo.svg" class="" alt="NH">
                 <div class="flex items-center space-x-4">
                 </div>
             </div>
@@ -79,7 +65,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="basis-full lg:basis-1/2 mx-auto">
-                    <div class="text-headline-large text-center">Here’s your Hypnozio program</div>
+                    <div class="text-headline-large text-center">Here’s your Natural Neuro Hypnosis program</div>
                     <div class="mt-6 lg:mt-10 max-w-[552px] mx-auto lg:mr-0">
                         <div class="rounded shadow overflow-hidden">
                             <div class="bg-primary-95 p-4">
@@ -199,7 +185,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                                     <path d="M9.44961 17.85L3.84961 12.25L4.92461 11.175L9.44961 15.7L19.0496 6.09998L20.1246 7.17498L9.44961 17.85Z" fill="#3A5BA9" />
                                                 </svg>
                                             </div>
-                                            <div>Full access to Hypnozio audio library</div>
+                                            <div>Full access to Natural Neuro Hypnosis audio library</div>
                                         </div>
                                         <div class="flex">
                                             <div class="mr-2">
@@ -241,7 +227,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                             <div class="mt-6 lg:mt-0 lg:min-w-[396px]" x-data="{
         tableComponentCount: 1,
         checkedTos: false,
-        orderUrl: 'https://hypnozio.com/order/hypnozio-monthly-6-months/mmm5mx5?disc=75&amp;c=USD',
+        orderUrl: 'https://paymentgateway.thrivecart.com/neuro-weight-loss-6-months/',
         disableCta: false,
         showModal: false,
         formattedPrice: '$66.00',
@@ -252,7 +238,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
         taboolaEvtData: {
             notify: 'event',
             name: 'start_checkout',
-            id: 1521676,
+            id: 111111,
             revenue: 66,
             currency: 'USD',
             quantity: 1,
@@ -261,7 +247,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                 <h2 class="text-title-large text-center lg:hidden mb-6">Select your plan</h2>
                                 <div class="flex flex-col items-center max-w-[503px] mx-auto">
                                     <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === 'hypnozio-monthly-2-months' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
-            orderUrl = 'https://hypnozio.com/order/hypnozio-monthly-2-months/mmm5mx5?disc=50&amp;c=USD';
+            orderUrl = 'https://paymentgateway.thrivecart.com/neuro-weight-loss-2-months/';
             checked = 'hypnozio-monthly-2-months';
             formattedPrice = '$33.00',
             subscriptionPrice = '$33.00',
@@ -272,7 +258,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
             taboolaEvtData = {
                 notify: 'event',
                 name: 'start_checkout',
-                id: 1521676,
+                id: 11111,
                 revenue: 33,
                 currency: 'USD',
                 quantity: 1,
@@ -306,7 +292,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                         </div>
                                     </label>
                                     <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === 'hypnozio-monthly-6-months' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
-            orderUrl = 'https://hypnozio.com/order/hypnozio-monthly-6-months/mmm5mx5?disc=75&amp;c=USD';
+            orderUrl = 'https://paymentgateway.thrivecart.com/neuro-weight-loss-6-months/';
             checked = 'hypnozio-monthly-6-months';
             formattedPrice = '$66.00',
             subscriptionPrice = '$66.00',
@@ -317,7 +303,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
             taboolaEvtData = {
                 notify: 'event',
                 name: 'start_checkout',
-                id: 1521676,
+                id: 1111,
                 revenue: 66,
                 currency: 'USD',
                 quantity: 1,
@@ -354,7 +340,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                         </div>
                                     </label>
                                     <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === 'hypnozio-monthly-4-months-5394' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
-            orderUrl = 'https://hypnozio.com/order/hypnozio-monthly-4-months-5394/mmm5mx5?disc=50&amp;c=USD';
+            orderUrl = 'https://paymentgateway.thrivecart.com/neuro-weight-loss-4-month-plan-bonus/hy';
             checked = 'hypnozio-monthly-4-months-5394';
             formattedPrice = '$53.94',
             subscriptionPrice = '$53.94',
@@ -365,7 +351,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
             taboolaEvtData = {
                 notify: 'event',
                 name: 'start_checkout',
-                id: 1521676,
+                id: 111111,
                 revenue: 53.94,
                 currency: 'USD',
                 quantity: 1,
@@ -439,7 +425,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                         Cancel anytime | No hidden fees
                                     </div>
                                     <div class="mt-8 max-w-[359px] mx-auto">
-                                        <img src="assets/hypnozio/checkouts/safe-checkout/safe-checkout-en.png" alt="" />
+                                        <img src="assets/checkouts/safe-checkout/safe-checkout-en.png" alt="" />
                                     </div>
                                     <div x-cloak x-show="showModal" class="fixed left-0 top-0 w-full h-full flex justify-center items-center bg-modal z-10">
                                         <div x-on:click.outside="showModal = false; event.preventDefault()" class="bg-white w-[343px] md:w-[456px] p-6 rounded text-center">
@@ -447,10 +433,10 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                                 <div>Pay for 4 months.</div>
                                                 <div>We’ll give you <span class="text-primary">2 for free.</span></div>
                                             </div>
-                                            <a class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large" id="" href="" x-on:click="_tfa.push({
+                                            <a class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large" id="" href="https://paymentgateway.thrivecart.com/neuro-weight-loss-4-month-plan-bonus/" x-on:click="_tfa.push({
                                 notify: 'event',
                                 name: 'start_checkout',
-                                id: 1521676,
+                                id: 111111,
                                 revenue: 53.94,
                                 currency: 'USD',
                                 quantity: 1,
@@ -486,7 +472,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                     }
                 })">
                             <div class="flex flex-col relative max-w-[344px] h-full mx-auto min-h-[480px]">
-                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="assets/hypnozio/checkouts/client1.png" alt="" />
+                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="assets/checkouts/client1.png" alt="" />
                                 <div class="p-4 pt-2 h-full flex flex-col">
                                     <img class="w-[102px] mx-auto" src="assets/theme/detoxety/upsells/all-filled-stars.svg" alt="">
                                     <div class="text-centerfont-normal text-body-medium mt-2">
@@ -495,7 +481,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                 </div>
                             </div>
                             <div class="flex flex-col relative max-w-[344px] h-full mx-auto min-h-[480px]">
-                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="assets/hypnozio/checkouts/client2.png" alt="" />
+                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="assets/checkouts/client2.png" alt="" />
                                 <div class="p-4 pt-2 h-full flex flex-col">
                                     <img class="w-[102px] mx-auto" src="assets/theme/detoxety/upsells/all-filled-stars.svg" alt="">
                                     <div class="text-centerfont-normal text-body-medium mt-2">
@@ -504,7 +490,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                 </div>
                             </div>
                             <div class="flex flex-col relative max-w-[344px] h-full mx-auto min-h-[480px]">
-                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="assets/hypnozio/checkouts/client3.png" alt="" />
+                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="assets/checkouts/client3.png" alt="" />
                                 <div class="p-4 pt-2 h-full flex flex-col">
                                     <img class="w-[102px] mx-auto" src="assets/theme/detoxety/upsells/all-filled-stars.svg" alt="">
                                     <div class="text-centerfont-normal text-body-medium mt-2">
@@ -518,7 +504,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                 <div class="container">
                     <div class="hidden md:flex justify-between md:space-x-12 py-8">
                         <div class="flex flex-col">
-                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="assets/hypnozio/checkouts/client1.png" alt="" />
+                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="assets/checkouts/client1.png" alt="" />
                             <div class="pt-2 flex flex-col space-y-2 px-4">
                                 <img class="w-[120px] mx-auto" src="assets/theme/detoxety/upsells/all-filled-stars.svg" alt="">
                                 <div class="text-center font-normal text-body-medium mb-2 max-w-[343px]">
@@ -527,7 +513,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                             </div>
                         </div>
                         <div class="flex flex-col">
-                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="assets/hypnozio/checkouts/client2.png" alt="" />
+                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="assets/checkouts/client2.png" alt="" />
                             <div class="pt-2 flex flex-col space-y-2 px-4">
                                 <img class="w-[120px] mx-auto" src="assets/theme/detoxety/upsells/all-filled-stars.svg" alt="">
                                 <div class="text-center font-normal text-body-medium mb-2 max-w-[343px]">
@@ -536,7 +522,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                             </div>
                         </div>
                         <div class="flex flex-col">
-                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="assets/hypnozio/checkouts/client3.png" alt="" />
+                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="assets/checkouts/client3.png" alt="" />
                             <div class="pt-2 flex flex-col space-y-2 px-4">
                                 <img class="w-[120px] mx-auto" src="assets/theme/detoxety/upsells/all-filled-stars.svg" alt="">
                                 <div class="text-center font-normal text-body-medium mb-2 max-w-[343px]">
@@ -555,10 +541,10 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
             <div class="container flex flex-wrap items-center">
                 <div class="basis-full sm:basis-10/12 md:basis-8/12 lg:basis-10/12 xl:basis-8/12 mx-auto">
                     <div class="flex items-center justify-between">
-                        <img class="w-[72px] lg:w-[210px]" src="assets/hypnozio/checkouts/bloomberg-logo.svg" alt="" />
-                        <img class="w-[74px] lg:w-[125px]" src="assets/hypnozio/checkouts/business-insider-logo.svg" alt="" />
-                        <img class="w-[69px] lg:w-[105px]" src="assets/hypnozio/checkouts/yahoo-logo.svg" alt="" />
-                        <img class="w-[64px] lg:w-[131px]" src="assets/hypnozio/checkouts/cbs-logo.svg" alt="" />
+                        <img class="w-[72px] lg:w-[210px]" src="assets/checkouts/bloomberg-logo.svg" alt="" />
+                        <img class="w-[74px] lg:w-[125px]" src="assets/checkouts/business-insider-logo.svg" alt="" />
+                        <img class="w-[69px] lg:w-[105px]" src="assets/checkouts/yahoo-logo.svg" alt="" />
+                        <img class="w-[64px] lg:w-[131px]" src="assets/checkouts/cbs-logo.svg" alt="" />
                     </div>
                 </div>
             </div>
@@ -606,12 +592,12 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                             <div class="flex justify-between items-center">
                                 <div data-audio-player-button="NbvYIuGp7" class="w-14 h-14 bg-play bg-cover shrink-0 mr-0.5 md:mr-0"></div>
                                 <div class="text-[18px] leading-6 md:text-title-large sm:text-headline-medium text-primary text-center w-full">
-                                    Changing Outlook
+                                   Self Love
                                 </div>
                             </div>
                             <div class="audio-wrapper">
                                 <audio data-audio-player="NbvYIuGp7" preload="auto" ontimeupdate="updateProgressBar(document.querySelector(`[data-audio-player='NbvYIuGp7']`), null)">
-                                    <source src="https://storage.googleapis.com/digital-audio-files/hypnozio-courses/changing-relationship-with-food/en/courses-hypnozio-main-program-1.mp3" type="audio/mpeg">
+                                    <source src="https://download.naturalhypnosis.com/a66dbe674428b3882b48a3befebe8af260f9ce9bd736c541a1d135e26c702662/Self%20Belief%20-%20Natural%20Hypnosis.mp3" type="audio/mpeg">
                                 </audio>
                             </div>
                             <div class="player-controls scrubber mt-4">
@@ -705,7 +691,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                                     <path d="M9.44961 17.85L3.84961 12.25L4.92461 11.175L9.44961 15.7L19.0496 6.09998L20.1246 7.17498L9.44961 17.85Z" fill="#3A5BA9" />
                                                 </svg>
                                             </div>
-                                            <div>Full access to Hypnozio audio library</div>
+                                            <div>Full access to Natural Neuro Hypnosis audio library</div>
                                         </div>
                                         <div class="flex">
                                             <div class="mr-2">
@@ -747,7 +733,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                             <div class="mt-6 lg:mt-0 lg:min-w-[396px] lg:w-full" x-data="{
         tableComponentCount: 2,
         checkedTos: false,
-        orderUrl: 'https://hypnozio.com/order/hypnozio-monthly-6-months/mmm5mx5?disc=75&amp;c=USD',
+        orderUrl: 'https://paymentgateway.thrivecart.com/neuro-weight-loss-6-months/',
         disableCta: false,
         showModal: false,
         formattedPrice: '$66.00',
@@ -758,7 +744,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
         taboolaEvtData: {
             notify: 'event',
             name: 'start_checkout',
-            id: 1521676,
+            id: 1111,
             revenue: 66,
             currency: 'USD',
             quantity: 1,
@@ -767,7 +753,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                 <h2 class="text-title-large text-center lg:hidden mb-6">Select your plan</h2>
                                 <div class="flex flex-col items-center max-w-[503px] mx-auto">
                                     <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === 'hypnozio-monthly-2-months' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
-            orderUrl = 'https://hypnozio.com/order/hypnozio-monthly-2-months/mmm5mx5?disc=50&amp;c=USD';
+            orderUrl = 'https://paymentgateway.thrivecart.com/neuro-weight-loss-2-months/';
             checked = 'hypnozio-monthly-2-months';
             formattedPrice = '$33.00',
             subscriptionPrice = '$33.00',
@@ -778,7 +764,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
             taboolaEvtData = {
                 notify: 'event',
                 name: 'start_checkout',
-                id: 1521676,
+                id: 11111,
                 revenue: 33,
                 currency: 'USD',
                 quantity: 1,
@@ -812,7 +798,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                         </div>
                                     </label>
                                     <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === 'hypnozio-monthly-6-months' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
-            orderUrl = 'https://hypnozio.com/order/hypnozio-monthly-6-months/mmm5mx5?disc=75&amp;c=USD';
+            orderUrl = 'https://paymentgateway.thrivecart.com/neuro-weight-loss-6-months/';
             checked = 'hypnozio-monthly-6-months';
             formattedPrice = '$66.00',
             subscriptionPrice = '$66.00',
@@ -823,7 +809,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
             taboolaEvtData = {
                 notify: 'event',
                 name: 'start_checkout',
-                id: 1521676,
+                id: 1111,
                 revenue: 66,
                 currency: 'USD',
                 quantity: 1,
@@ -860,7 +846,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                         </div>
                                     </label>
                                     <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === 'hypnozio-monthly-4-months-5394' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
-            orderUrl = 'https://hypnozio.com/order/hypnozio-monthly-4-months-5394/mmm5mx5?disc=50&amp;c=USD';
+            orderUrl = 'https://paymentgateway.thrivecart.com/neuro-weight-loss-4-month-plan-bonus/';
             checked = 'hypnozio-monthly-4-months-5394';
             formattedPrice = '$53.94',
             subscriptionPrice = '$53.94',
@@ -871,7 +857,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
             taboolaEvtData = {
                 notify: 'event',
                 name: 'start_checkout',
-                id: 1521676,
+                id: 11111,
                 revenue: 53.94,
                 currency: 'USD',
                 quantity: 1,
@@ -945,7 +931,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                         Cancel anytime | No hidden fees
                                     </div>
                                     <div class="mt-8 max-w-[359px] mx-auto">
-                                        <img src="assets/hypnozio/checkouts/safe-checkout/safe-checkout-en.png" alt="" />
+                                        <img src="assets/checkouts/safe-checkout/safe-checkout-en.png" alt="" />
                                     </div>
                                     <div x-cloak x-show="showModal" class="fixed left-0 top-0 w-full h-full flex justify-center items-center bg-modal z-10">
                                         <div x-on:click.outside="showModal = false; event.preventDefault()" class="bg-white w-[343px] md:w-[456px] p-6 rounded text-center">
@@ -956,7 +942,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                             <a class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large" id="" href="" x-on:click="_tfa.push({
                                 notify: 'event',
                                 name: 'start_checkout',
-                                id: 1521676,
+                                id: 1111,
                                 revenue: 53.94,
                                 currency: 'USD',
                                 quantity: 1,

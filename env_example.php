@@ -8,6 +8,6 @@ return [
     'CONVERTKIT_API_KEY' => '',
     'CONVERTKIT_API_SECRET' => '',
     'CONVERTKIT_QUIZ_FORM_ID' => '',
-
+    
     'METABOLIC_AGE_INCREMENT' => '',
 ];

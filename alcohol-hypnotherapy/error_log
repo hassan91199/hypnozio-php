@@ -1,0 +1,18 @@
+[02-Jun-2024 21:21:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'nhspecial_hypnozio.alcohol_quiz_submissions' doesn't exist in /home/nhspecial/public_html/utils/db.php:45
+Stack trace:
+#0 /home/nhspecial/public_html/utils/db.php(45): mysqli->query('SELECT * FROM a...')
+#1 /home/nhspecial/public_html/alcohol-hypnotherapy/quiz.php(56): updateOrCreate('alcohol_quiz_su...', Array, Array)
+#2 {main}
+  thrown in /home/nhspecial/public_html/utils/db.php on line 45
+[03-Jun-2024 08:34:12 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'nhspecial_hypnozio.alcohol_quiz_submissions' doesn't exist in /home/nhspecial/public_html/utils/db.php:47
+Stack trace:
+#0 /home/nhspecial/public_html/utils/db.php(47): mysqli->query('SELECT * FROM a...')
+#1 /home/nhspecial/public_html/alcohol-hypnotherapy/quiz.php(57): updateOrCreate('alcohol_quiz_su...', Array, Array)
+#2 {main}
+  thrown in /home/nhspecial/public_html/utils/db.php on line 47
+[03-Jun-2024 08:45:07 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'nhspecial_hypnozio.alcohol_quiz_submissions' doesn't exist in /home/nhspecial/public_html/utils/db.php:47
+Stack trace:
+#0 /home/nhspecial/public_html/utils/db.php(47): mysqli->query('SELECT * FROM a...')
+#1 /home/nhspecial/public_html/alcohol-hypnotherapy/quiz.php(57): updateOrCreate('alcohol_quiz_su...', Array, Array)
+#2 {main}
+  thrown in /home/nhspecial/public_html/utils/db.php on line 47

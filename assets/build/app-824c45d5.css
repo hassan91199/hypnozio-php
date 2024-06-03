@@ -2359,7 +2359,7 @@ body {
 }
 
 .mt-8 {
-    margin-top: 2rem
+   /* margin-top: 2rem */
 }
 
 .mt-6 {
@@ -10443,7 +10443,7 @@ progress::-webkit-progress-value {
     }
 
     .md\:w-\[108px\] {
-        width: 108px
+      /*  width: 108px  */
     }
 
     .md\:w-8 {

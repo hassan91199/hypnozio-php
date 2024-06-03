@@ -11,6 +11,7 @@ $quizLink = 'quiz.php' . '?' . $funnelParams;
 $maleQuizLink = "$quizLink&g=m";
 $femaleQuizLink = "$quizLink&g=f";
 $otherQuizLink = "$quizLink&g=o";
+$siteName = 'Natural Neuro Hypnosis'
 ?>
 
 <html lang="en" class="">
@@ -18,9 +19,9 @@ $otherQuizLink = "$quizLink&g=o";
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
-    <link rel="icon" type="image/x-icon" href="assets/hypnozio.svg" />
+    <link rel="icon" type="image/x-icon" href="assets/logo.svg" />
 
-    <title>Hypnozio | Find &amp; fix root cause of overweight using self-hypnosis</title>
+    <title><?= $siteName ?> | Find &amp; fix root cause of overweight using self-hypnosis</title>
 
     <link rel="preload" as="style" href="assets/app-b0fb382d.css" />
     <link rel="stylesheet" href="assets/app-b0fb382d.css" data-navigate-track="reload" />
@@ -52,7 +53,7 @@ $otherQuizLink = "$quizLink&g=o";
 						showWhiteMode: false,
 						}" class="container text-white py-4 md:py-5">
             <div class="flex justify-between items-center">
-                <img src="assets/logo.svg" class="w-[110px] md:w-[108px]" alt="" />
+                <img src="assets/logo.svg" class="" alt="" />
                 <div class="flex items-center space-x-4">
                     <div x-show="!navigationIsOpened" x-on:click="navigationIsOpened = !navigationIsOpened" class="lg:hidden">
                         <div x-bind:class="showWhiteMode ? 'text-white' : 'text-onSurface'" class="text-onSurface">
@@ -83,7 +84,7 @@ $otherQuizLink = "$quizLink&g=o";
                                         Have any questions?
                                     </div>
                                     <div class="text-body-medium text-primary font-normal mt-2">
-                                        support@hypnozio.com
+                                        support@nh-special.com
                                     </div>
                                 </div>
                                 <div class="mt-8" x-show="languageMobileNavIsOpened" style="display: none">
@@ -171,7 +172,7 @@ $otherQuizLink = "$quizLink&g=o";
                                         </div>
                                         <div class="text-body-medium">Have any questions?</div>
                                         <div class="text-body-medium text-secondary-blue font-normal">
-                                            support@hypnozio.com
+                                            support@nh-special.com
                                         </div>
                                     </div>
                                 </div>
@@ -321,7 +322,7 @@ $otherQuizLink = "$quizLink&g=o";
         <div class="container">
             <div class="lg:flex lg:justify-between lg:items-center">
                 <div>
-                    <img class="mx-auto" src="assets/logo-white.svg" alt="hypnozio" />
+                    <img class="mx-auto" src="assets/logo.svg" alt="nh" />
                 </div>
                 <div class="lg:flex space-y-6 lg:space-y-0 lg:space-x-10 mt-6 lg:mt-0">
                     <a class="cursor-pointer link block text-center text-body-medium md:text-body-large text-footer-text hover:!text-footer-light no-underline" id="" target="_blank" href="contacts.php">
