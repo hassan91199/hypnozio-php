@@ -25,20 +25,20 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
     <link rel="modulepreload" href="assets/build/_commonjsHelpers-de833af9.js" />
     <link rel="modulepreload" href="assets/build/jquery-68c15ecd.js" />
     <script type="module" src="assets/build/app-5f69faf4.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="assets/build/cookies-ee50a713.js" />
-    <script type="module" src="assets/build/cookies-ee50a713.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="assets/js/cookies-ee50a713.js" />
+    <script type="module" src="assets/js/cookies-ee50a713.js" data-navigate-track="reload"></script>
     <link rel="modulepreload" href="assets/build/alpine-splide-54756862.js" />
     <link rel="modulepreload" href="assets/build/module.esm-958008ac.js" />
     <link rel="modulepreload" href="assets/build/alpine-splide.esm-09083027.js" />
-    <script type="module" src="assets/build/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
+    <script type="module" src="assets/js/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
     <link rel="modulepreload" href="assets/build/input-validation-36ee9ab8.js" />
     <script type="module" src="assets/build/input-validation-36ee9ab8.js" data-navigate-track="reload"></script>
     <link rel="modulepreload" href="assets/build/audio-player.js" />
     <script type="module" src="assets/build/audio-player.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="assets/build/gtm-tags-e2664de5.js" />
-    <script type="module" src="assets/build/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="assets/js/gtm-tags-e2664de5.js" />
+    <script type="module" src="assets/js/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
     <div>
-     
+
     </div>
 </head>
 
@@ -54,7 +54,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
             showWhiteMode: false,
         }" class="container text-white py-4 md:py-5">
             <div class="flex justify-between items-center">
-                <img src="assets/logo.svg" class="" alt="NH">
+                <img src="assets/icons/logo.svg" class="" alt="NH">
                 <div class="flex items-center space-x-4">
                 </div>
             </div>
@@ -592,7 +592,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                             <div class="flex justify-between items-center">
                                 <div data-audio-player-button="NbvYIuGp7" class="w-14 h-14 bg-play bg-cover shrink-0 mr-0.5 md:mr-0"></div>
                                 <div class="text-[18px] leading-6 md:text-title-large sm:text-headline-medium text-primary text-center w-full">
-                                   Self Love
+                                    Self Love
                                 </div>
                             </div>
                             <div class="audio-wrapper">

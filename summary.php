@@ -15,14 +15,14 @@ $desiredWeight = $summary['desired_weight'] ?? '';
 $weightDiff = $summary['diff_weight'] ?? '';
 
 $bmi = $_SESSION['bmi'] ?? 0;
-$metabolicAge = $_SESSION['metabolic_age']+15 ?? 0;
+$metabolicAge = $_SESSION['metabolic_age'] + 15 ?? 0;
 ?>
 
 
 <?php
 $siteName = 'Natural Neuro Hypnosis'
 
- 
+
 ?>
 
 
@@ -34,7 +34,7 @@ $siteName = 'Natural Neuro Hypnosis'
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
     <link rel="icon" type="image/x-icon" href="assets/images/favicons/hypnozio.svg">
-    <title><?= $siteName ?>  | Summary</title>
+    <title><?= $siteName ?> | Summary</title>
 
     <link rel="preload" as="style" href="assets/build/app-824c45d5.css" />
     <link rel="stylesheet" href="assets/build/app-824c45d5.css" data-navigate-track="reload" />
@@ -45,13 +45,13 @@ $siteName = 'Natural Neuro Hypnosis'
     <link rel="modulepreload" href="assets/build/_commonjsHelpers-de833af9.js" />
     <link rel="modulepreload" href="assets/build/jquery-68c15ecd.js" />
     <script type="module" src="assets/build/app-5f69faf4.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="assets/build/cookies-ee50a713.js" />
-    <script type="module" src="assets/build/cookies-ee50a713.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="assets/build/alpine-js-2881bf21.js" />
+    <link rel="modulepreload" href="assets/js/cookies-ee50a713.js" />
+    <script type="module" src="assets/js/cookies-ee50a713.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="assets/js/alpine-js-2881bf21.js" />
     <link rel="modulepreload" href="assets/build/module.esm-958008ac.js" />
-    <script type="module" src="assets/build/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
+    <script type="module" src="assets/js/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
     <div>
-       
+
     </div>
 </head>
 
@@ -67,7 +67,7 @@ $siteName = 'Natural Neuro Hypnosis'
             showWhiteMode: false,
         }" class="container text-white py-4 md:py-5">
             <div class="flex justify-between items-center">
-                <img src="https://nh-special.com/assets/logo.svg" class="" alt="NH">
+                <img src="https://nh-special.com/assets/icons/logo.svg" class="" alt="NH">
                 <div class="flex items-center space-x-4">
                 </div>
             </div>
@@ -89,20 +89,20 @@ $siteName = 'Natural Neuro Hypnosis'
                     <div class="flex flex-col mt-6">
                         <div class="text-body-large lg:text-title-large text-center">
                             We predict that you will lose <span class="text-accent font-bold"><?= $weightDiff ?></span> by <?php
-echo date('F, Y', strtotime('+1 month'));
-?>
+                                                                                                                            echo date('F, Y', strtotime('+1 month'));
+                                                                                                                            ?>
                         </div>
                         <div class="relative p-4 sm:p-9 bg-white shadow sm:shadow-2 mt-6 max-w-[343px] sm:max-w-[744px] mx-auto rounded">
                             <img class="w-[311px] sm:w-[672px] mx-auto" src="http://nh-special.com/assets/summary/graph.png" alt="Weight loss graph">
                             <div class="flex flex-row justify-between mx-4 sm:mx-12 mt-2.5 text-neutralVariant-60 text-body-small sm:text-body-large">
                                 <div><?php
-echo date('F, Y');
-?>
-</div>
+                                        echo date('F, Y');
+                                        ?>
+                                </div>
                                 <div><?php
-echo date('F, Y', strtotime('+1 month'));
-?>
-</div>
+                                        echo date('F, Y', strtotime('+1 month'));
+                                        ?>
+                                </div>
                             </div>
                             <div class="absolute top-[9px] sm:top-[40px] md:top-[55px] lg:top-[50px] xl:top-[55px] left-[26px] sm:left-[61px]">
                                 <div class="flex flex-col relative">

@@ -22,23 +22,23 @@ $otherQuizLink = "$quizLink&g=o";
     <link rel="icon" type="image/x-icon" href="../assets/hypnozio.svg">
     <title>Hypnozio | Find &amp; fix root cause of alcohol addiction using self-hypnosis</title>
 
-    <link rel="preload" as="style" href="../assets/app-b0fb382d.css" />
-    <link rel="modulepreload" href="../assets/app-5f69faf4.js" />
-    <link rel="modulepreload" href="../assets/bootstrap-214fcc70.js" />
-    <link rel="modulepreload" href="../assets/jquery-2c3981e2.js" />
-    <link rel="modulepreload" href="../assets/module.esm-958008ac.js" />
+    <link rel="preload" as="style" href="../assets/css/app-b0fb382d.css" />
+    <link rel="modulepreload" href="../assets/js/app-5f69faf4.js" />
+    <link rel="modulepreload" href="../assets/js/bootstrap-214fcc70.js" />
+    <link rel="modulepreload" href="../assets/js/jquery-2c3981e2.js" />
+    <link rel="modulepreload" href="../assets/js/module.esm-958008ac.js" />
     <link rel="modulepreload" href="../assets/module.esm-21387d6f.js" />
-    <link rel="modulepreload" href="../assets/_commonjsHelpers-de833af9.js" />
-    <link rel="modulepreload" href="../assets/jquery-68c15ecd.js" />
-    <link rel="stylesheet" href="../assets/app-b0fb382d.css" data-navigate-track="reload" />
-    <script type="module" src="../assets/app-5f69faf4.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="../assets/cookies-ee50a713.js" />
-    <script type="module" src="../assets/cookies-ee50a713.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="../assets/gtm-tags-e2664de5.js" />
-    <script type="module" src="../assets/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="../assets/alpine-js-2881bf21.js" />
-    <link rel="modulepreload" href="../assets/module.esm-958008ac.js" />
-    <script type="module" src="../assets/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="../assets/js/_commonjsHelpers-de833af9.js" />
+    <link rel="modulepreload" href="../assets/js/jquery-68c15ecd.js" />
+    <link rel="stylesheet" href="../assets/css/app-b0fb382d.css" data-navigate-track="reload" />
+    <script type="module" src="../assets/js/app-5f69faf4.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="../assets/js/cookies-ee50a713.js" />
+    <script type="module" src="../assets/js/cookies-ee50a713.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="../assets/js/gtm-tags-e2664de5.js" />
+    <script type="module" src="../assets/js/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="../assets/js/alpine-js-2881bf21.js" />
+    <link rel="modulepreload" href="../assets/js/module.esm-958008ac.js" />
+    <script type="module" src="../assets/js/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
 </head>
 
 <body class="antialiased bg-surface text-onSurface scroll-smooth">
@@ -110,7 +110,7 @@ $otherQuizLink = "$quizLink&g=o";
                                                                : (showWhiteMode ? 'text-onSurface hover:text-secondary-90' : 'text-onSurface')" x-on:click="languageDesktopNavIsOpened = !languageDesktopNavIsOpened">
                                                             <input class="hidden" type="radio" name="language" value="de" x-model="activeLanguageCode" />
                                                             <div class="flex items-center">
-                                                                <img src="../assets/hypnozio/flags/german.svg" alt="Deutsch" />
+                                                                <img src="../assets/icons/german.svg" alt="Deutsch" />
                                                                 <div class="ml-4">Deutsch</div>
                                                             </div>
 
@@ -121,7 +121,7 @@ $otherQuizLink = "$quizLink&g=o";
                                                                : (showWhiteMode ? 'text-onSurface hover:text-secondary-90' : 'text-onSurface')" x-on:click="languageDesktopNavIsOpened = !languageDesktopNavIsOpened">
                                                             <input class="hidden" type="radio" name="language" value="en" x-model="activeLanguageCode" />
                                                             <div class="flex items-center">
-                                                                <img src="../assets/hypnozio/flags/united-kingdom.svg" alt="English" />
+                                                                <img src="../assets/icons/united-kingdom.svg" alt="English" />
                                                                 <div class="ml-4">English</div>
                                                             </div>
 
@@ -132,7 +132,7 @@ $otherQuizLink = "$quizLink&g=o";
                                                                : (showWhiteMode ? 'text-onSurface hover:text-secondary-90' : 'text-onSurface')" x-on:click="languageDesktopNavIsOpened = !languageDesktopNavIsOpened">
                                                             <input class="hidden" type="radio" name="language" value="es" x-model="activeLanguageCode" />
                                                             <div class="flex items-center">
-                                                                <img src="../assets/hypnozio/flags/spain.svg" alt="Español" />
+                                                                <img src="../assets/icons/spain.svg" alt="Español" />
                                                                 <div class="ml-4">Español</div>
                                                             </div>
 
@@ -143,7 +143,7 @@ $otherQuizLink = "$quizLink&g=o";
                                                                : (showWhiteMode ? 'text-onSurface hover:text-secondary-90' : 'text-onSurface')" x-on:click="languageDesktopNavIsOpened = !languageDesktopNavIsOpened">
                                                             <input class="hidden" type="radio" name="language" value="fr" x-model="activeLanguageCode" />
                                                             <div class="flex items-center">
-                                                                <img src="../assets/hypnozio/flags/france.svg" alt="Française" />
+                                                                <img src="../assets/icons/france.svg" alt="Française" />
                                                                 <div class="ml-4">Française</div>
                                                             </div>
 
@@ -154,7 +154,7 @@ $otherQuizLink = "$quizLink&g=o";
                                                                : (showWhiteMode ? 'text-onSurface hover:text-secondary-90' : 'text-onSurface')" x-on:click="languageDesktopNavIsOpened = !languageDesktopNavIsOpened">
                                                             <input class="hidden" type="radio" name="language" value="it" x-model="activeLanguageCode" />
                                                             <div class="flex items-center">
-                                                                <img src="../assets/hypnozio/flags/italy.svg" alt="Italiano" />
+                                                                <img src="../assets/icons/italy.svg" alt="Italiano" />
                                                                 <div class="ml-4">Italiano</div>
                                                             </div>
 
@@ -165,7 +165,7 @@ $otherQuizLink = "$quizLink&g=o";
                                                                : (showWhiteMode ? 'text-onSurface hover:text-secondary-90' : 'text-onSurface')" x-on:click="languageDesktopNavIsOpened = !languageDesktopNavIsOpened">
                                                             <input class="hidden" type="radio" name="language" value="nl" x-model="activeLanguageCode" />
                                                             <div class="flex items-center">
-                                                                <img src="../assets/hypnozio/flags/nederlands.svg" alt="Nederlands" />
+                                                                <img src="../assets/icons/nederlands.svg" alt="Nederlands" />
                                                                 <div class="ml-4">Nederlands</div>
                                                             </div>
 
@@ -176,7 +176,7 @@ $otherQuizLink = "$quizLink&g=o";
                                                                : (showWhiteMode ? 'text-onSurface hover:text-secondary-90' : 'text-onSurface')" x-on:click="languageDesktopNavIsOpened = !languageDesktopNavIsOpened">
                                                             <input class="hidden" type="radio" name="language" value="pl" x-model="activeLanguageCode" />
                                                             <div class="flex items-center">
-                                                                <img src="../assets/hypnozio/flags/poland.svg" alt="Polski" />
+                                                                <img src="../assets/icons/poland.svg" alt="Polski" />
                                                                 <div class="ml-4">Polski</div>
                                                             </div>
 
@@ -187,7 +187,7 @@ $otherQuizLink = "$quizLink&g=o";
                                                                : (showWhiteMode ? 'text-onSurface hover:text-secondary-90' : 'text-onSurface')" x-on:click="languageDesktopNavIsOpened = !languageDesktopNavIsOpened">
                                                             <input class="hidden" type="radio" name="language" value="ro" x-model="activeLanguageCode" />
                                                             <div class="flex items-center">
-                                                                <img src="../assets/hypnozio/flags/romania.svg" alt="Românesc" />
+                                                                <img src="../assets/icons/romania.svg" alt="Românesc" />
                                                                 <div class="ml-4">Românesc</div>
                                                             </div>
 
@@ -230,7 +230,7 @@ $otherQuizLink = "$quizLink&g=o";
                                     <a href="" class="no-underline p-4 rounded-l text-white hover:bg-white/20" x-bind:class="activeLanguageCode === 'de' ? (showWhiteMode ? 'bg-secondary-90 !text-onSurface' : 'bg-primary') : ''" x-on:click="languageDesktopNavIsOpened = !languageDesktopNavIsOpened">
                                         <input class="hidden" type="radio" name="language" value="de" x-model="activeLanguageCode" />
                                         <div class="flex items-center">
-                                            <img src="../assets/hypnozio/flags/german.svg" alt="Deutsch" />
+                                            <img src="../assets/icons/german.svg" alt="Deutsch" />
                                             <div class="ml-4">Deutsch</div>
                                         </div>
                                     </a>
@@ -238,7 +238,7 @@ $otherQuizLink = "$quizLink&g=o";
                                     <a href="" class="no-underline p-4 rounded-l text-white hover:bg-white/20" x-bind:class="activeLanguageCode === 'en' ? (showWhiteMode ? 'bg-secondary-90 !text-onSurface' : 'bg-primary') : ''" x-on:click="languageDesktopNavIsOpened = !languageDesktopNavIsOpened">
                                         <input class="hidden" type="radio" name="language" value="en" x-model="activeLanguageCode" />
                                         <div class="flex items-center">
-                                            <img src="../assets/hypnozio/flags/united-kingdom.svg" alt="English" />
+                                            <img src="../assets/icons/united-kingdom.svg" alt="English" />
                                             <div class="ml-4">English</div>
                                         </div>
                                     </a>
@@ -246,7 +246,7 @@ $otherQuizLink = "$quizLink&g=o";
                                     <a href="" class="no-underline p-4 rounded-l text-white hover:bg-white/20" x-bind:class="activeLanguageCode === 'es' ? (showWhiteMode ? 'bg-secondary-90 !text-onSurface' : 'bg-primary') : ''" x-on:click="languageDesktopNavIsOpened = !languageDesktopNavIsOpened">
                                         <input class="hidden" type="radio" name="language" value="es" x-model="activeLanguageCode" />
                                         <div class="flex items-center">
-                                            <img src="../assets/hypnozio/flags/spain.svg" alt="Español" />
+                                            <img src="../assets/icons/spain.svg" alt="Español" />
                                             <div class="ml-4">Español</div>
                                         </div>
                                     </a>
@@ -254,7 +254,7 @@ $otherQuizLink = "$quizLink&g=o";
                                     <a href="" class="no-underline p-4 rounded-l text-white hover:bg-white/20" x-bind:class="activeLanguageCode === 'fr' ? (showWhiteMode ? 'bg-secondary-90 !text-onSurface' : 'bg-primary') : ''" x-on:click="languageDesktopNavIsOpened = !languageDesktopNavIsOpened">
                                         <input class="hidden" type="radio" name="language" value="fr" x-model="activeLanguageCode" />
                                         <div class="flex items-center">
-                                            <img src="../assets/hypnozio/flags/france.svg" alt="Française" />
+                                            <img src="../assets/icons/france.svg" alt="Française" />
                                             <div class="ml-4">Française</div>
                                         </div>
                                     </a>
@@ -262,7 +262,7 @@ $otherQuizLink = "$quizLink&g=o";
                                     <a href="" class="no-underline p-4 rounded-l text-white hover:bg-white/20" x-bind:class="activeLanguageCode === 'it' ? (showWhiteMode ? 'bg-secondary-90 !text-onSurface' : 'bg-primary') : ''" x-on:click="languageDesktopNavIsOpened = !languageDesktopNavIsOpened">
                                         <input class="hidden" type="radio" name="language" value="it" x-model="activeLanguageCode" />
                                         <div class="flex items-center">
-                                            <img src="../assets/hypnozio/flags/italy.svg" alt="Italiano" />
+                                            <img src="../assets/icons/italy.svg" alt="Italiano" />
                                             <div class="ml-4">Italiano</div>
                                         </div>
                                     </a>
@@ -270,7 +270,7 @@ $otherQuizLink = "$quizLink&g=o";
                                     <a href="" class="no-underline p-4 rounded-l text-white hover:bg-white/20" x-bind:class="activeLanguageCode === 'nl' ? (showWhiteMode ? 'bg-secondary-90 !text-onSurface' : 'bg-primary') : ''" x-on:click="languageDesktopNavIsOpened = !languageDesktopNavIsOpened">
                                         <input class="hidden" type="radio" name="language" value="nl" x-model="activeLanguageCode" />
                                         <div class="flex items-center">
-                                            <img src="../assets/hypnozio/flags/nederlands.svg" alt="Nederlands" />
+                                            <img src="../assets/icons/nederlands.svg" alt="Nederlands" />
                                             <div class="ml-4">Nederlands</div>
                                         </div>
                                     </a>
@@ -278,7 +278,7 @@ $otherQuizLink = "$quizLink&g=o";
                                     <a href="" class="no-underline p-4 rounded-l text-white hover:bg-white/20" x-bind:class="activeLanguageCode === 'pl' ? (showWhiteMode ? 'bg-secondary-90 !text-onSurface' : 'bg-primary') : ''" x-on:click="languageDesktopNavIsOpened = !languageDesktopNavIsOpened">
                                         <input class="hidden" type="radio" name="language" value="pl" x-model="activeLanguageCode" />
                                         <div class="flex items-center">
-                                            <img src="../assets/hypnozio/flags/poland.svg" alt="Polski" />
+                                            <img src="../assets/icons/poland.svg" alt="Polski" />
                                             <div class="ml-4">Polski</div>
                                         </div>
                                     </a>
@@ -286,7 +286,7 @@ $otherQuizLink = "$quizLink&g=o";
                                     <a href="" class="no-underline p-4 rounded-l text-white hover:bg-white/20" x-bind:class="activeLanguageCode === 'ro' ? (showWhiteMode ? 'bg-secondary-90 !text-onSurface' : 'bg-primary') : ''" x-on:click="languageDesktopNavIsOpened = !languageDesktopNavIsOpened">
                                         <input class="hidden" type="radio" name="language" value="ro" x-model="activeLanguageCode" />
                                         <div class="flex items-center">
-                                            <img src="../assets/hypnozio/flags/romania.svg" alt="Românesc" />
+                                            <img src="../assets/icons/romania.svg" alt="Românesc" />
                                             <div class="ml-4">Românesc</div>
                                         </div>
                                     </a>
@@ -337,10 +337,10 @@ $otherQuizLink = "$quizLink&g=o";
                         <div class="mt-6 md:mt-10">
                             <div class="flex items-center">
                                 <div class="text-body-medium text-black font-semibold mr-2 pt-1">Excellent client reviews:</div>
-                                <img src="../assets/images/brainety/sections/reviews/stars-55.svg" alt="">
+                                <img src="../assets/icons/stars-55.svg" alt="">
                             </div>
                             <div class="flex mt-4">
-                                <img class="w-[50px] h-[50px] rounded-full mr-4" src="../assets/images/brainety/sections/reviews/quiz/1.png" alt="">
+                                <img class="w-[50px] h-[50px] rounded-full mr-4" src="../assets/images/1.png" alt="">
                                 <div class="text-body-medium text-gray-80 font-normal">
                                     <div>What a discovery. I didn’t know I was even receptive to hypnotherapy! Helped me after couple of sessions.</div>
                                     <div class="font-semibold  mt-2">Jane W.</div>

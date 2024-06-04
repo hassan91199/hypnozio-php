@@ -195,7 +195,7 @@ $siteName = 'Natural Neuro Hypnosis'
 
     <link rel="stylesheet" href="assets/build/app-824c45d5.css" data-navigate-track="reload" />
     <script type="module" src="assets/build/nh-quiz-1f23fa02.js" data-navigate-track="reload"></script>
-    <script type="module" src="assets/build/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
+    <script type="module" src="assets/js/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
 </head>
 
 <body class="antialiased bg-surface text-onSurface scroll-auto">
@@ -210,7 +210,7 @@ $siteName = 'Natural Neuro Hypnosis'
             showWhiteMode: false,
         }" class="container text-white py-4 md:py-5">
             <div class="flex justify-between items-center">
-                <img src="assets/logo.svg" class="" alt="<?= $siteName ?>">
+                <img src="assets/icons/logo.svg" class="" alt="<?= $siteName ?>">
                 <div class="flex items-center space-x-4">
                 </div>
             </div>
