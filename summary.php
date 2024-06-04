@@ -33,22 +33,22 @@ $siteName = 'Natural Neuro Hypnosis'
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="icon" type="image/x-icon" href="assets/images/favicons/hypnozio.svg">
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.svg">
     <title><?= $siteName ?> | Summary</title>
 
-    <link rel="preload" as="style" href="assets/build/app-824c45d5.css" />
-    <link rel="stylesheet" href="assets/build/app-824c45d5.css" data-navigate-track="reload" />
-    <link rel="modulepreload" href="assets/build/app-5f69faf4.js" />
-    <link rel="modulepreload" href="assets/build/bootstrap-214fcc70.js" />
-    <link rel="modulepreload" href="assets/build/jquery-2c3981e2.js" />
-    <link rel="modulepreload" href="assets/build/module.esm-958008ac.js" />
-    <link rel="modulepreload" href="assets/build/_commonjsHelpers-de833af9.js" />
-    <link rel="modulepreload" href="assets/build/jquery-68c15ecd.js" />
-    <script type="module" src="assets/build/app-5f69faf4.js" data-navigate-track="reload"></script>
+    <link rel="preload" as="style" href="assets/css/app-824c45d5.css" />
+    <link rel="stylesheet" href="assets/css/app-824c45d5.css" data-navigate-track="reload" />
+    <link rel="modulepreload" href="assets/js/app-5f69faf4.js" />
+    <link rel="modulepreload" href="assets/js/bootstrap-214fcc70.js" />
+    <link rel="modulepreload" href="assets/js/jquery-2c3981e2.js" />
+    <link rel="modulepreload" href="assets/js/module.esm-958008ac.js" />
+    <link rel="modulepreload" href="assets/js/_commonjsHelpers-de833af9.js" />
+    <link rel="modulepreload" href="assets/js/jquery-68c15ecd.js" />
+    <script type="module" src="assets/js/app-5f69faf4.js" data-navigate-track="reload"></script>
     <link rel="modulepreload" href="assets/js/cookies-ee50a713.js" />
     <script type="module" src="assets/js/cookies-ee50a713.js" data-navigate-track="reload"></script>
     <link rel="modulepreload" href="assets/js/alpine-js-2881bf21.js" />
-    <link rel="modulepreload" href="assets/build/module.esm-958008ac.js" />
+    <link rel="modulepreload" href="assets/js/module.esm-958008ac.js" />
     <script type="module" src="assets/js/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
     <div>
 
@@ -67,7 +67,7 @@ $siteName = 'Natural Neuro Hypnosis'
             showWhiteMode: false,
         }" class="container text-white py-4 md:py-5">
             <div class="flex justify-between items-center">
-                <img src="https://nh-special.com/assets/icons/logo.svg" class="" alt="NH">
+                <img src="assets/icons/logo.svg" class="" alt="NH">
                 <div class="flex items-center space-x-4">
                 </div>
             </div>

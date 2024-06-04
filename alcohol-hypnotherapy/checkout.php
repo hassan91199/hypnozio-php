@@ -13,7 +13,7 @@ $severity = $_SESSION['SEVERITY'];
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicons/hypnozio.svg">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.svg">
     <title>Hypnozio | Checkout</title>
 
     <link rel="preload" as="style" href="../assets/css/app-b0fb382d.css" />
@@ -32,8 +32,8 @@ $severity = $_SESSION['SEVERITY'];
     <link rel="modulepreload" href="../assets/js/module.esm-958008ac.js" />
     <link rel="modulepreload" href="../assets/alpine-splide.esm-09083027.js" />
     <script type="module" src="../assets/alpine-splide-54756862.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="../assets/build/input-validation-36ee9ab8.js" />
-    <script type="module" src="../assets/build/input-validation-36ee9ab8.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="../assets/js/input-validation-36ee9ab8.js" />
+    <script type="module" src="../assets/js/input-validation-36ee9ab8.js" data-navigate-track="reload"></script>
     <link rel="modulepreload" href="../assets/audio-player-c450f4f7.js" />
     <script type="module" src="../assets/audio-player-c450f4f7.js" data-navigate-track="reload"></script>
     <link rel="modulepreload" href="../assets/js/gtm-tags-e2664de5.js" />

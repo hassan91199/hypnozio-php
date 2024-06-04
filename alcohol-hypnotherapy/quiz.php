@@ -112,7 +112,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="icon" type="image/x-icon" href="../assets/images/favicons/hypnozio.svg">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.svg">
     <title>Hypnozio | Hypnozio Quiz Alcohol Addiction</title>
 
     <link rel="preload" as="style" href="../assets/css/app-b0fb382d.css" />
@@ -130,7 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="modulepreload" href="../assets/build/hypnozio-quiz-53c70ae5.js" />
     <link rel="modulepreload" href="../assets/build/circle-progress-e0904202.js" />
     <link rel="modulepreload" href="../assets/js/module.esm-958008ac.js" />
-    <link rel="modulepreload" href="../assets/build/module.esm-3f6ffe0c.js" />
+    <link rel="modulepreload" href="../assets/js/module.esm-3f6ffe0c.js" />
     <link rel="modulepreload" href="../assets/js/jquery-2c3981e2.js" />
     <link rel="modulepreload" href="../assets/build/million-verifier-5f829d6b.js" />
     <link rel="modulepreload" href="../assets/js/jquery-68c15ecd.js" />
@@ -138,8 +138,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script type="module" src="../assets/build/hypnozio-quiz-53c70ae5.js" data-navigate-track="reload"></script>
     <link rel="modulepreload" href="../assets/js/gtm-tags-e2664de5.js" />
     <script type="module" src="../assets/js/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="../assets/build/input-validation-36ee9ab8.js" />
-    <script type="module" src="../assets/build/input-validation-36ee9ab8.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="../assets/js/input-validation-36ee9ab8.js" />
+    <script type="module" src="../assets/js/input-validation-36ee9ab8.js" data-navigate-track="reload"></script>
 </head>
 
 <body class="antialiased bg-surface text-onSurface scroll-auto">

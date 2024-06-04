@@ -19,7 +19,7 @@ $otherQuizLink = "$quizLink&g=o";
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="icon" type="image/x-icon" href="../assets/hypnozio.svg">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.svg">
     <title>Hypnozio | Find &amp; fix root cause of alcohol addiction using self-hypnosis</title>
 
     <link rel="preload" as="style" href="../assets/css/app-b0fb382d.css" />

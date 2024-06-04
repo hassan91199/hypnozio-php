@@ -13,28 +13,28 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="icon" type="image/x-icon" href="assets/images/favicons/nh.svg">
+    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.svg">
     <title>Natural Neuro Hypnosis | Checkout</title>
 
-    <link rel="preload" as="style" href="assets/build/app-824c45d5.css" />
-    <link rel="stylesheet" href="assets/build/app-824c45d5.css" data-navigate-track="reload" />
-    <link rel="modulepreload" href="assets/build/app-824c45d5.js" />
-    <link rel="modulepreload" href="assets/build/bootstrap-214fcc70.js" />
-    <link rel="modulepreload" href="assets/build/jquery-2c3981e2.js" />
-    <link rel="modulepreload" href="assets/build/module.esm-3f6ffe0c.js" />
-    <link rel="modulepreload" href="assets/build/_commonjsHelpers-de833af9.js" />
-    <link rel="modulepreload" href="assets/build/jquery-68c15ecd.js" />
-    <script type="module" src="assets/build/app-5f69faf4.js" data-navigate-track="reload"></script>
+    <link rel="preload" as="style" href="assets/css/app-824c45d5.css" />
+    <link rel="stylesheet" href="assets/css/app-824c45d5.css" data-navigate-track="reload" />
+    <link rel="modulepreload" href="assets/js/app-5f69faf4.js" />
+    <link rel="modulepreload" href="assets/js/bootstrap-214fcc70.js" />
+    <link rel="modulepreload" href="assets/js/jquery-2c3981e2.js" />
+    <link rel="modulepreload" href="assets/js/module.esm-3f6ffe0c.js" />
+    <link rel="modulepreload" href="assets/js/_commonjsHelpers-de833af9.js" />
+    <link rel="modulepreload" href="assets/js/jquery-68c15ecd.js" />
+    <script type="module" src="assets/js/app-5f69faf4.js" data-navigate-track="reload"></script>
     <link rel="modulepreload" href="assets/js/cookies-ee50a713.js" />
     <script type="module" src="assets/js/cookies-ee50a713.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="assets/build/alpine-splide-54756862.js" />
-    <link rel="modulepreload" href="assets/build/module.esm-958008ac.js" />
-    <link rel="modulepreload" href="assets/build/alpine-splide.esm-09083027.js" />
+    <link rel="modulepreload" href="assets/js/alpine-splide-54756862.js" />
+    <link rel="modulepreload" href="assets/js/module.esm-958008ac.js" />
+    <link rel="modulepreload" href="assets/js/alpine-splide.esm-09083027.js" />
     <script type="module" src="assets/js/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="assets/build/input-validation-36ee9ab8.js" />
-    <script type="module" src="assets/build/input-validation-36ee9ab8.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="assets/build/audio-player.js" />
-    <script type="module" src="assets/build/audio-player.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="assets/js/input-validation-36ee9ab8.js" />
+    <script type="module" src="assets/js/input-validation-36ee9ab8.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="assets/js/audio-player.js" />
+    <script type="module" src="assets/js/audio-player.js" data-navigate-track="reload"></script>
     <link rel="modulepreload" href="assets/js/gtm-tags-e2664de5.js" />
     <script type="module" src="assets/js/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
     <div>
@@ -425,7 +425,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                         Cancel anytime | No hidden fees
                                     </div>
                                     <div class="mt-8 max-w-[359px] mx-auto">
-                                        <img src="assets/checkouts/safe-checkout/safe-checkout-en.png" alt="" />
+                                        <img src="assets/images/safe-checkout-en.png" alt="" />
                                     </div>
                                     <div x-cloak x-show="showModal" class="fixed left-0 top-0 w-full h-full flex justify-center items-center bg-modal z-10">
                                         <div x-on:click.outside="showModal = false; event.preventDefault()" class="bg-white w-[343px] md:w-[456px] p-6 rounded text-center">
@@ -472,27 +472,27 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                     }
                 })">
                             <div class="flex flex-col relative max-w-[344px] h-full mx-auto min-h-[480px]">
-                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="assets/checkouts/client1.png" alt="" />
+                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="assets/images/client1.png" alt="" />
                                 <div class="p-4 pt-2 h-full flex flex-col">
-                                    <img class="w-[102px] mx-auto" src="assets/theme/detoxety/upsells/all-filled-stars.svg" alt="">
+                                    <img class="w-[102px] mx-auto" src="assets/icons/all-filled-stars.svg" alt="">
                                     <div class="text-centerfont-normal text-body-medium mt-2">
                                         &quot;Hypnotherapy for weight loss changed my life. The program helped me control my cravings, overcome emotional eating habits, and lose 20 pounds. I feel more confident and empowered than ever before.&quot;
                                     </div>
                                 </div>
                             </div>
                             <div class="flex flex-col relative max-w-[344px] h-full mx-auto min-h-[480px]">
-                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="assets/checkouts/client2.png" alt="" />
+                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="assets/images/client2.png" alt="" />
                                 <div class="p-4 pt-2 h-full flex flex-col">
-                                    <img class="w-[102px] mx-auto" src="assets/theme/detoxety/upsells/all-filled-stars.svg" alt="">
+                                    <img class="w-[102px] mx-auto" src="assets/icons/all-filled-stars.svg" alt="">
                                     <div class="text-centerfont-normal text-body-medium mt-2">
                                         &quot;I was skeptical, but the hypnotherapy program for weight loss helped me address underlying issues like stress and anxiety that were causing me to overeat. I&#039;ve lost over 30 pounds and highly recommend it to anyone struggling with their weight.&quot;
                                     </div>
                                 </div>
                             </div>
                             <div class="flex flex-col relative max-w-[344px] h-full mx-auto min-h-[480px]">
-                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="assets/checkouts/client3.png" alt="" />
+                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="assets/images/client3.png" alt="" />
                                 <div class="p-4 pt-2 h-full flex flex-col">
-                                    <img class="w-[102px] mx-auto" src="assets/theme/detoxety/upsells/all-filled-stars.svg" alt="">
+                                    <img class="w-[102px] mx-auto" src="assets/icons/all-filled-stars.svg" alt="">
                                     <div class="text-centerfont-normal text-body-medium mt-2">
                                         &quot;Hypnotherapy is a game-changer for me. The program helped me to address the emotional issues that were contributing to my weight gain. The sessions were relaxing and enjoyable, and I felt a significant difference in my attitude towards food&quot;
                                     </div>
@@ -504,27 +504,27 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                 <div class="container">
                     <div class="hidden md:flex justify-between md:space-x-12 py-8">
                         <div class="flex flex-col">
-                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="assets/checkouts/client1.png" alt="" />
+                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="assets/images/client1.png" alt="" />
                             <div class="pt-2 flex flex-col space-y-2 px-4">
-                                <img class="w-[120px] mx-auto" src="assets/theme/detoxety/upsells/all-filled-stars.svg" alt="">
+                                <img class="w-[120px] mx-auto" src="assets/icons/all-filled-stars.svg" alt="">
                                 <div class="text-center font-normal text-body-medium mb-2 max-w-[343px]">
                                     &quot;Hypnotherapy for weight loss changed my life. The program helped me control my cravings, overcome emotional eating habits, and lose 20 pounds. I feel more confident and empowered than ever before.&quot;
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-col">
-                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="assets/checkouts/client2.png" alt="" />
+                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="assets/images/client2.png" alt="" />
                             <div class="pt-2 flex flex-col space-y-2 px-4">
-                                <img class="w-[120px] mx-auto" src="assets/theme/detoxety/upsells/all-filled-stars.svg" alt="">
+                                <img class="w-[120px] mx-auto" src="assets/icons/all-filled-stars.svg" alt="">
                                 <div class="text-center font-normal text-body-medium mb-2 max-w-[343px]">
                                     &quot;I was skeptical, but the hypnotherapy program for weight loss helped me address underlying issues like stress and anxiety that were causing me to overeat. I&#039;ve lost over 30 pounds and highly recommend it to anyone struggling with their weight.&quot;
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-col">
-                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="assets/checkouts/client3.png" alt="" />
+                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="assets/images/client3.png" alt="" />
                             <div class="pt-2 flex flex-col space-y-2 px-4">
-                                <img class="w-[120px] mx-auto" src="assets/theme/detoxety/upsells/all-filled-stars.svg" alt="">
+                                <img class="w-[120px] mx-auto" src="assets/icons/all-filled-stars.svg" alt="">
                                 <div class="text-center font-normal text-body-medium mb-2 max-w-[343px]">
                                     &quot;Hypnotherapy is a game-changer for me. The program helped me to address the emotional issues that were contributing to my weight gain. The sessions were relaxing and enjoyable, and I felt a significant difference in my attitude towards food&quot;
                                 </div>
@@ -541,10 +541,10 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
             <div class="container flex flex-wrap items-center">
                 <div class="basis-full sm:basis-10/12 md:basis-8/12 lg:basis-10/12 xl:basis-8/12 mx-auto">
                     <div class="flex items-center justify-between">
-                        <img class="w-[72px] lg:w-[210px]" src="assets/checkouts/bloomberg-logo.svg" alt="" />
-                        <img class="w-[74px] lg:w-[125px]" src="assets/checkouts/business-insider-logo.svg" alt="" />
-                        <img class="w-[69px] lg:w-[105px]" src="assets/checkouts/yahoo-logo.svg" alt="" />
-                        <img class="w-[64px] lg:w-[131px]" src="assets/checkouts/cbs-logo.svg" alt="" />
+                        <img class="w-[72px] lg:w-[210px]" src="assets/icons/bloomberg-logo.svg" alt="" />
+                        <img class="w-[74px] lg:w-[125px]" src="assets/icons/business-insider-logo.svg" alt="" />
+                        <img class="w-[69px] lg:w-[105px]" src="assets/icons/yahoo-logo.svg" alt="" />
+                        <img class="w-[64px] lg:w-[131px]" src="assets/icons/cbs-logo.svg" alt="" />
                     </div>
                 </div>
             </div>
@@ -931,7 +931,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                         Cancel anytime | No hidden fees
                                     </div>
                                     <div class="mt-8 max-w-[359px] mx-auto">
-                                        <img src="assets/checkouts/safe-checkout/safe-checkout-en.png" alt="" />
+                                        <img src="assets/images/safe-checkout-en.png" alt="" />
                                     </div>
                                     <div x-cloak x-show="showModal" class="fixed left-0 top-0 w-full h-full flex justify-center items-center bg-modal z-10">
                                         <div x-on:click.outside="showModal = false; event.preventDefault()" class="bg-white w-[343px] md:w-[456px] p-6 rounded text-center">

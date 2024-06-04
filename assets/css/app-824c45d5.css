@@ -1428,7 +1428,7 @@ body {
     border-color: rgb(27 27 31 / var(--tw-border-opacity));
     --tw-bg-opacity: 1;
     background-color: rgb(0 181 25 / var(--tw-bg-opacity));
-    background-image: url(check-2-65a82ed3.svg)
+    background-image: url(../icons/check-2-65a82ed3.svg)
 }
 
 .checkbox-circle:checked:hover {
@@ -1463,42 +1463,42 @@ body {
     font-family: Poppins;
     font-style: normal;
     font-weight: 300;
-    src: url(Poppins-Light-647f014d.ttf) format("truetype")
+    src: url(../fonts/Poppins-Light-647f014d.ttf) format("truetype")
 }
 
 @font-face {
     font-family: Poppins;
     font-style: normal;
     font-weight: 400;
-    src: url(Poppins-Regular-707fdc5c.ttf) format("truetype")
+    src: url(../fonts/Poppins-Regular-707fdc5c.ttf) format("truetype")
 }
 
 @font-face {
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
-    src: url(Poppins-Medium-8d909883.ttf) format("truetype")
+    src: url(../fonts/Poppins-Medium-8d909883.ttf) format("truetype")
 }
 
 @font-face {
     font-family: Poppins;
     font-style: normal;
     font-weight: 600;
-    src: url(Poppins-SemiBold-248c0244.ttf) format("truetype")
+    src: url(../fonts/Poppins-SemiBold-248c0244.ttf) format("truetype")
 }
 
 @font-face {
     font-family: Poppins;
     font-style: normal;
     font-weight: 700;
-    src: url(Poppins-Bold-7219547e.ttf) format("truetype")
+    src: url(../fonts/Poppins-Bold-7219547e.ttf) format("truetype")
 }
 
 @font-face {
     font-family: Poppins;
     font-style: normal;
     font-weight: 800;
-    src: url(Poppins-ExtraBold-94a215f8.ttf) format("truetype")
+    src: url(../fonts/Poppins-ExtraBold-94a215f8.ttf) format("truetype")
 }
 
 *,
@@ -5819,11 +5819,11 @@ body {
 }
 
 .bg-pause {
-    background-image: url(audio-pause-a576deca.svg)
+    background-image: url(../icons/audio-pause-a576deca.svg)
 }
 
 .bg-play {
-    background-image: url(audio-play-321a3cdc.svg)
+    background-image: url(../icons/audio-play-321a3cdc.svg)
 }
 
 .bg-pause-red {
@@ -5899,7 +5899,7 @@ body {
 }
 
 .bg-checkmarker2 {
-    background-image: url(check-2-65a82ed3.svg)
+    background-image: url(../icons/check-2-65a82ed3.svg)
 }
 
 .bg-female-with-headphones-mobile {
