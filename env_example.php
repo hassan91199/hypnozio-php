@@ -10,4 +10,6 @@ return [
     'CONVERTKIT_QUIZ_FORM_ID' => '',
     
     'METABOLIC_AGE_INCREMENT' => '',
+
+    'SITE_NAME' => '',
 ];
