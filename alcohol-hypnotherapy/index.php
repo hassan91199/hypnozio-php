@@ -27,7 +27,7 @@ $otherQuizLink = "$quizLink&g=o";
     <link rel="modulepreload" href="../assets/js/bootstrap-214fcc70.js" />
     <link rel="modulepreload" href="../assets/js/jquery-2c3981e2.js" />
     <link rel="modulepreload" href="../assets/js/module.esm-958008ac.js" />
-    <link rel="modulepreload" href="../assets/module.esm-21387d6f.js" />
+    <link rel="modulepreload" href="../assets/js/module.esm-21387d6f.js" />
     <link rel="modulepreload" href="../assets/js/_commonjsHelpers-de833af9.js" />
     <link rel="modulepreload" href="../assets/js/jquery-68c15ecd.js" />
     <link rel="stylesheet" href="../assets/css/app-b0fb382d.css" data-navigate-track="reload" />
@@ -55,7 +55,7 @@ $otherQuizLink = "$quizLink&g=o";
             showWhiteMode: false,
         }" class="container text-white py-4 md:py-5">
                 <div class="flex justify-between items-center">
-                    <img src="../assets/hypnozio/logo.svg" class="w-[110px] md:w-[108px]" alt="Hypnozio">
+                    <img src="../assets/icons/logo.svg" class="w-[110px] md:w-[108px]" alt="Hypnozio">
                     <div class="flex items-center space-x-4">
                         <div x-cloak x-show="!navigationIsOpened" x-on:click="navigationIsOpened = !navigationIsOpened" class="lg:hidden">
                             <div x-bind:class="showWhiteMode ? 'text-white' : 'text-onSurface'">
@@ -99,7 +99,7 @@ $otherQuizLink = "$quizLink&g=o";
                                                                : (showWhiteMode ? 'text-onSurface hover:text-secondary-90' : 'text-onSurface')" x-on:click="languageDesktopNavIsOpened = !languageDesktopNavIsOpened">
                                                             <input class="hidden" type="radio" name="language" value="cs" x-model="activeLanguageCode" />
                                                             <div class="flex items-center">
-                                                                <img src="../assets/hypnozio/flags/czech.svg" alt="Česky" />
+                                                                <img src="../assets/icons/czech.svg" alt="Česky" />
                                                                 <div class="ml-4">Česky</div>
                                                             </div>
 
@@ -222,7 +222,7 @@ $otherQuizLink = "$quizLink&g=o";
                                     <a href="" class="no-underline p-4 rounded-l text-white hover:bg-white/20" x-bind:class="activeLanguageCode === 'cs' ? (showWhiteMode ? 'bg-secondary-90 !text-onSurface' : 'bg-primary') : ''" x-on:click="languageDesktopNavIsOpened = !languageDesktopNavIsOpened">
                                         <input class="hidden" type="radio" name="language" value="cs" x-model="activeLanguageCode" />
                                         <div class="flex items-center">
-                                            <img src="../assets/hypnozio/flags/czech.svg" alt="Česky" />
+                                            <img src="../assets/icons/czech.svg" alt="Česky" />
                                             <div class="ml-4">Česky</div>
                                         </div>
                                     </a>
@@ -307,7 +307,7 @@ $otherQuizLink = "$quizLink&g=o";
                         <div class="font-light text-body-small sm:text-body-large mt-4">
                             Our hypnotherapy program is designed to help you control alcohol consumption from the comfort of your own home.
                         </div>
-                        <img class="w-full rounded-tl-[64px] rounded-br-[64px] lg:hidden my-4" src="../assets/hypnozio/alcohol-addiction-mobile.jpg" alt="" />
+                        <img class="w-full rounded-tl-[64px] rounded-br-[64px] lg:hidden my-4" src="../assets/images/alcohol-addiction-mobile.jpg" alt="" />
                         <div class="mt-4 md:mt-6">
                             <div class="text-body-medium font-light ">
                                 Answer a few questions to get started:
@@ -329,7 +329,7 @@ $otherQuizLink = "$quizLink&g=o";
                         </div>
                     </div>
                     <div class="basis-full lg:basis-7/12 lg:pl-3">
-                        <img class="hidden lg:block rounded-tl-[64px] rounded-br-[64px] lg:w-full" src="../assets/hypnozio/alcohol-addiction-desktop.jpg" alt="" />
+                        <img class="hidden lg:block rounded-tl-[64px] rounded-br-[64px] lg:w-full" src="../assets/images/alcohol-addiction-desktop.jpg" alt="" />
                     </div>
                 </div>
                 <div class="flex">
@@ -358,7 +358,7 @@ $otherQuizLink = "$quizLink&g=o";
         <div class="container">
             <div class="lg:flex lg:justify-between lg:items-center">
                 <div>
-                    <img src="../assets/hypnozio/logo-white.svg" alt="hypnozio" fetchpriority="low" class="mx-auto" />
+                    <img src="../assets/icons/logo-white.svg" alt="hypnozio" fetchpriority="low" class="mx-auto" />
                 </div>
                 <div class="lg:flex space-y-6 lg:space-y-0 lg:space-x-10 mt-6 lg:mt-0">
                     <a class="cursor-pointer link block text-center text-body-medium md:text-body-large text-footer-text hover:!text-footer-light no-underline" id="" target="_blank" href="">

@@ -120,22 +120,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="modulepreload" href="../assets/js/bootstrap-214fcc70.js" />
     <link rel="modulepreload" href="../assets/js/jquery-2c3981e2.js" />
     <link rel="modulepreload" href="../assets/js/module.esm-958008ac.js" />
-    <link rel="modulepreload" href="../assets/module.esm-21387d6f.js" />
+    <link rel="modulepreload" href="../assets/js/module.esm-21387d6f.js" />
     <link rel="modulepreload" href="../assets/js/_commonjsHelpers-de833af9.js" />
     <link rel="modulepreload" href="../assets/js/jquery-68c15ecd.js" />
     <link rel="stylesheet" href="../assets/css/app-b0fb382d.css" data-navigate-track="reload" />
     <script type="module" src="../assets/js/app-5f69faf4.js" data-navigate-track="reload"></script>
     <link rel="modulepreload" href="../assets/js/cookies-ee50a713.js" />
     <script type="module" src="../assets/js/cookies-ee50a713.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="../assets/build/hypnozio-quiz-53c70ae5.js" />
-    <link rel="modulepreload" href="../assets/build/circle-progress-e0904202.js" />
+    <link rel="modulepreload" href="../assets/js/hypnozio-quiz-53c70ae5.js" />
+    <link rel="modulepreload" href="../assets/js/circle-progress-e0904202.js" />
     <link rel="modulepreload" href="../assets/js/module.esm-958008ac.js" />
     <link rel="modulepreload" href="../assets/js/module.esm-3f6ffe0c.js" />
     <link rel="modulepreload" href="../assets/js/jquery-2c3981e2.js" />
-    <link rel="modulepreload" href="../assets/build/million-verifier-5f829d6b.js" />
+    <link rel="modulepreload" href="../assets/js/million-verifier-5f829d6b.js" />
     <link rel="modulepreload" href="../assets/js/jquery-68c15ecd.js" />
     <link rel="modulepreload" href="../assets/js/_commonjsHelpers-de833af9.js" />
-    <script type="module" src="../assets/build/hypnozio-quiz-53c70ae5.js" data-navigate-track="reload"></script>
+    <script type="module" src="../assets/js/hypnozio-quiz-53c70ae5.js" data-navigate-track="reload"></script>
     <link rel="modulepreload" href="../assets/js/gtm-tags-e2664de5.js" />
     <script type="module" src="../assets/js/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
     <link rel="modulepreload" href="../assets/js/input-validation-36ee9ab8.js" />
@@ -154,7 +154,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             showWhiteMode: false,
         }" class="container text-white py-4 md:py-5">
             <div class="flex justify-between items-center">
-                <img src="../assets/hypnozio/logo.svg" class="w-[110px] md:w-[108px]" alt="Hypnozio">
+                <img src="../assets/icons/logo.svg" class="w-[110px] md:w-[108px]" alt="Hypnozio">
                 <div class="flex items-center space-x-4">
                 </div>
             </div>
@@ -304,7 +304,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         <div class="bg-white rounded-3xl shadow-2 pt-2.5 pb-4 px-4 max-w-[343px] sm:max-w-[558px] mx-auto my-4">
                                             <h1 class="text-body-large font-semibold text-center">Expected weight loss journey</h1>
                                             <div class="relative">
-                                                <img src="../assets/hypnozio/quiz/graph2.png" alt="" />
+                                                <img src="../assets/images/graph2.png" alt="" />
                                                 <div class="absolute top-[13px] sm:top-[15px] left-2 sm:left-[9px]">
                                                     <div class="py-1 px-2 bg-black text-white text-[8px] leading-[9px] font-medium rounded-[4px] w-max">
                                                         Beginning of program
@@ -370,7 +370,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         <div class="bg-white rounded-3xl shadow-2 pt-2.5 pb-4 px-4 max-w-[343px] sm:max-w-[558px] mx-auto my-4">
                                             <h1 class="text-body-large font-semibold text-center">Expected muscle gain journey</h1>
                                             <div class="relative">
-                                                <img src="../assets/hypnozio/quiz/gain-graph.png" alt="" />
+                                                <img src="../assets/images/gain-graph.png" alt="" />
                                                 <div class="absolute bottom-6 sm:bottom-[26px] left-2">
                                                     <div class="py-1 px-2 bg-black text-white text-[8px] leading-[9px] font-medium rounded-[4px] w-[94px] text-center">
                                                         Beginning of program
