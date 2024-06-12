@@ -453,12 +453,31 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                                 </div>
                                                 <div class="vertical-line"></div>
                                                 <div class="lg:w-full p-3">
-                                                    Payment Form
+                                                    <div class="flex justify-center">
+                                                        <img class="mx-2 card-brand" src="assets/icons/jcb.svg" alt="jcb icon">
+                                                        <img class="mx-2 card-brand" src="assets/icons/discover.svg" alt="discover icon">
+                                                        <img class="mx-2 card-brand" src="assets/icons/diners-club.svg" alt="diners-club icon">
+                                                        <img class="mx-2 card-brand" src="assets/icons/american-express.svg" alt="american-express icon">
+                                                        <img class="mx-2 card-brand" src="assets/icons/unionpay.svg" alt="unionpay icon">
+                                                        <img class="mx-2 card-brand" src="assets/icons/mastercard.svg" alt="mastercard icon">
+                                                        <img class="mx-2 card-brand" src="assets/icons/visa.svg" alt="visa icon">
+                                                    </div>
 
-                                                    <button class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large">
-                                                        <img class="mx-2" src="assets/icons/unlocked.svg" alt="unlocked icon">
-                                                        Continue
-                                                    </button>
+                                                    <div class="flex justify-center">
+                                                        <form action="" class="w-full max-w-md">
+                                                            <input class="w-full" name="card_number" type="text" placeholder="XXXX XXXX XXXX XXXX">
+                                                            <div class="flex w-full max-w-[500px]">
+                                                                <input class="flex-1" name="card_expiry" type="text" placeholder="MM/YY">
+                                                                <input class="flex-1" name="card_cvv" type="tel" placeholder="CVV">
+                                                            </div>
+
+                                                            <button class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large">
+                                                                <img class="mx-2" src="assets/icons/unlocked.svg" alt="unlocked icon">
+                                                                CONTINUE
+                                                            </button>
+                                                        </form>
+                                                    </div>
+
                                                     <p class="text-neutral-60 text-body-small" id="">
                                                         BetterMe International Limited | Themistokli Dervi 39, 1st floor, Office 104, 1066, Nicosia, Cyprus
                                                     </p>

@@ -1,3 +1,9 @@
+.card-brand {
+    display: inline-block;
+    width: 2.5em;
+    height: 2.5em;
+}
+
 .vertical-line {
     border-left: 1px solid black;
 }
@@ -3329,6 +3335,10 @@ body {
     width: 100%
 }
 
+.w-1\/2 {
+    width: 50%
+}
+
 .w-\[161px\] {
     width: 161px
 }
@@ -4108,6 +4118,10 @@ body {
 
 .max-w-lg {
     max-width: 32rem
+}
+
+.max-w-md {
+    max-width: 28rem
 }
 
 .max-w-\[340px\] {
