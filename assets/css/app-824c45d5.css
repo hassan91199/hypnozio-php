@@ -1,3 +1,26 @@
+.unlocked-icon {
+    background: url('https://cdn.solidgate.com/ui/images/unlocked.svg') center center / contain no-repeat;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+.close-btn {
+    background-color: #d9d9d98f;
+    border-radius: 50%;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.close-btn:hover {
+    background-color: #d9d9d9e6;
+}
+
 .splide__container {
     box-sizing: border-box;
     position: relative
@@ -2359,7 +2382,7 @@ body {
 }
 
 .mt-8 {
-   /* margin-top: 2rem */
+    /* margin-top: 2rem */
 }
 
 .mt-6 {
@@ -10443,7 +10466,7 @@ progress::-webkit-progress-value {
     }
 
     .md\:w-\[108px\] {
-      /*  width: 108px  */
+        /*  width: 108px  */
     }
 
     .md\:w-8 {

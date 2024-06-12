@@ -429,24 +429,35 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                     </div>
                                     <div x-cloak x-show="showModal" class="fixed left-0 top-0 w-full h-full flex justify-center items-center bg-modal z-10">
                                         <div x-on:click.outside="showModal = false; event.preventDefault(); disableCta = false" class="bg-white w-[343px] md:w-[456px] p-6 rounded text-center">
-                                            <button class="close-btn fs-1" @click="showModal = false; event.preventDefault(); disableCta = false">&times;</button>
+                                            <button class="close-btn" @click="showModal = false; event.preventDefault(); disableCta = false">&times;</button>
                                             <div class="text-headline-small md:text-headline-medium font-bold">
-                                                <div>Pay for 4 months.</div>
-                                                <div>We’ll give you <span class="text-primary">2 for free.</span></div>
+                                                <div>
+                                                    Submit a secure payment.
+                                                </div>
                                             </div>
-                                            <a class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large" id="" href="" x-on:click="_tfa.push({
-                                notify: 'event',
-                                name: 'start_checkout',
-                                id: 111111,
-                                revenue: 53.94,
-                                currency: 'USD',
-                                quantity: 1,
-                            })">
-                                                Get 6 months for $8.99 / month
-                                            </a>
-                                            <a class="cursor-pointer link text-neutral-60 text-body-small" id="" x-on:click="_tfa.push(taboolaEvtData)">
-                                                Continue with 2 months for $16.50 / month
-                                            </a>
+
+                                            <div class="lg:flex justify-between lg:mx-8 xl:mx-12">
+                                                <div class="lg:order-1 lg:w-full mx-auto lg:mr-0">
+                                                    <div class="font-semibold break-all min-w-[150px] text-label-extra-large">
+                                                        Your Order Summary
+                                                    </div>
+                                                    <div class="flex justifiy-between">
+                                                        <p class="text-neutralVariant-60 text-body-medium text-center mt-6">Personalised Pilates Challenge</p>
+                                                        <p class="text-neutralVariant-60 text-body-medium text-center mt-6">RM 44.00</p>
+                                                    </div>
+                                                </div>
+                                                <div class="lg:order-2 lg:w-full lg:mr-6">
+                                                    Payment Form
+
+                                                    <button class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large">
+                                                        <img class="mx-2" src="assets/icons/unlocked.svg" alt="unlocked icon">
+                                                        Continue
+                                                    </button>
+                                                    <p class="text-neutral-60 text-body-small" id="">
+                                                        BetterMe International Limited | Themistokli Dervi 39, 1st floor, Office 104, 1066, Nicosia, Cyprus
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -936,11 +947,11 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                     </div>
                                     <div x-cloak x-show="showModal" class="fixed left-0 top-0 w-full h-full flex justify-center items-center bg-modal z-10">
                                         <div x-on:click.outside="showModal = false; event.preventDefault(); disableCta = false" class="bg-white w-[343px] md:w-[456px] p-6 rounded text-center">
-                                            <button class="close-btn fs-1" @click="showModal = false; event.preventDefault(); disableCta = false">&times;</button>
+                                            <button class="close-btn" @click="showModal = false; event.preventDefault(); disableCta = false">&times;</button>
                                             <div class="text-headline-small md:text-headline-medium font-bold">
-                                                <div>Pay for 4 months.</div>
-                                                <div>We’ll give you <span class="text-primary">2 for free.</span></div>
+                                                <div>Submit a secure payment.</div>
                                             </div>
+                                            <button class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large">Get 6 months for $8.99 / month</button>
                                             <a class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large" id="" href="" x-on:click="_tfa.push({
                                 notify: 'event',
                                 name: 'start_checkout',
