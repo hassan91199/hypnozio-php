@@ -428,7 +428,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                         <img src="assets/images/safe-checkout-en.png" alt="" />
                                     </div>
                                     <div x-cloak x-show="showModal" class="fixed left-0 top-0 w-full h-full flex justify-center items-center bg-modal z-10">
-                                        <div x-on:click.outside="showModal = false; event.preventDefault(); disableCta = false" class="bg-white w-[343px] md:w-[456px] p-6 rounded text-center">
+                                        <div x-on:click.outside="showModal = false; event.preventDefault(); disableCta = false" class="bg-white p-6 rounded text-center">
                                             <button class="close-btn" @click="showModal = false; event.preventDefault(); disableCta = false">&times;</button>
                                             <div class="text-headline-small md:text-headline-medium font-bold">
                                                 <div>
