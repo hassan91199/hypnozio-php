@@ -428,25 +428,31 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                         <img src="assets/images/safe-checkout-en.png" alt="" />
                                     </div>
                                     <div x-cloak x-show="showModal" class="fixed left-0 top-0 w-full h-full flex justify-center items-center bg-modal z-10">
-                                        <div x-on:click.outside="showModal = false; event.preventDefault(); disableCta = false" class="bg-white p-6 rounded text-center">
+                                        <div x-on:click.outside="showModal = false; event.preventDefault(); disableCta = false" class="bg-white p-6 rounded">
                                             <button class="close-btn" @click="showModal = false; event.preventDefault(); disableCta = false">&times;</button>
-                                            <div class="text-headline-small md:text-headline-medium font-bold">
-                                                <div>
+                                            <div class="text-center">
+                                                <h2 class="text-headline-small md:text-headline-medium font-bold">
                                                     Submit a secure payment.
-                                                </div>
+                                                </h2>
                                             </div>
 
                                             <div class="lg:flex justify-between lg:mx-8 xl:mx-12">
-                                                <div class="lg:order-1 lg:w-full mx-auto lg:mr-0">
-                                                    <div class="font-semibold break-all min-w-[150px] text-label-extra-large">
+                                                <div class="lg:w-full p-3">
+                                                    <h3 class="font-semibold break-all min-w-[150px] text-label-extra-large my-4">
                                                         Your Order Summary
+                                                    </h3>
+                                                    <div class="flex justify-between my-4">
+                                                        <p class="text-neutralVariant-60 text-body-medium text-center">Personalised Pilates Challenge</p>
+                                                        <p class="text-neutralVariant-60 text-body-medium text-center">RM 44.00</p>
                                                     </div>
-                                                    <div class="flex justifiy-between">
-                                                        <p class="text-neutralVariant-60 text-body-medium text-center mt-6">Personalised Pilates Challenge</p>
-                                                        <p class="text-neutralVariant-60 text-body-medium text-center mt-6">RM 44.00</p>
+                                                    <hr class="my-4">
+                                                    <div class="flex justify-between my-4">
+                                                        <h3 class="font-semibold break-all text-label-extra-large">Total:</h3>
+                                                        <h3 class="font-semibold break-all text-label-extra-large">RM 44.00</h3>
                                                     </div>
                                                 </div>
-                                                <div class="lg:order-2 lg:w-full lg:mr-6">
+                                                <div class="vertical-line"></div>
+                                                <div class="lg:w-full p-3">
                                                     Payment Form
 
                                                     <button class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large">
