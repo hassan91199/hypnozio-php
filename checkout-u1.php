@@ -969,25 +969,59 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                         <img src="assets/images/safe-checkout-en.png" alt="" />
                                     </div>
                                     <div x-cloak x-show="showModal" class="fixed left-0 top-0 w-full h-full flex justify-center items-center bg-modal z-10">
-                                        <div x-on:click.outside="showModal = false; event.preventDefault(); disableCta = false" class="bg-white w-[343px] md:w-[456px] p-6 rounded text-center">
-                                            <button class="close-btn" @click="showModal = false; event.preventDefault(); disableCta = false">&times;</button>
-                                            <div class="text-headline-small md:text-headline-medium font-bold">
-                                                <div>Submit a secure payment.</div>
+                                        <div x-on:click.outside="showModal = false; event.preventDefault(); disableCta = false" class="bg-white p-6 rounded">
+                                            <a class="close-btn" href="<?= "{$_SERVER['REQUEST_URI']}?d=20" ?>" @click="showModal = false; disableCta = false">&times;</a>
+                                            <div class="text-center">
+                                                <h2 class="text-headline-small md:text-headline-medium font-bold">
+                                                    Submit a secure payment.
+                                                </h2>
                                             </div>
-                                            <button class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large">Get 6 months for $8.99 / month</button>
-                                            <a class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large" id="" href="" x-on:click="_tfa.push({
-                                notify: 'event',
-                                name: 'start_checkout',
-                                id: 1111,
-                                revenue: 53.94,
-                                currency: 'USD',
-                                quantity: 1,
-                            })">
-                                                Get 6 months for $8.99 / month
-                                            </a>
-                                            <a class="cursor-pointer link text-neutral-60 text-body-small" id="" x-on:click="_tfa.push(taboolaEvtData)">
-                                                Continue with 2 months for $16.50 / month
-                                            </a>
+
+                                            <div class="lg:flex justify-between lg:mx-8 xl:mx-12">
+                                                <div class="lg:w-full p-3">
+                                                    <h3 class="font-semibold break-all min-w-[150px] text-label-extra-large my-4">
+                                                        Your Order Summary
+                                                    </h3>
+                                                    <div class="flex justify-between my-4">
+                                                        <p class="text-neutralVariant-60 text-body-medium text-center">Personalised Pilates Challenge</p>
+                                                        <p class="text-neutralVariant-60 text-body-medium text-center">RM 44.00</p>
+                                                    </div>
+                                                    <hr class="my-4">
+                                                    <div class="flex justify-between my-4">
+                                                        <h3 class="font-semibold break-all text-label-extra-large">Total:</h3>
+                                                        <h3 class="font-semibold break-all text-label-extra-large">RM 44.00</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="vertical-line"></div>
+                                                <div class="lg:w-full p-3">
+                                                    <div class="flex justify-center py-2">
+                                                        <img class="mx-2 card-brand" src="assets/icons/jcb.svg" alt="jcb icon">
+                                                        <img class="mx-2 card-brand" src="assets/icons/discover.svg" alt="discover icon">
+                                                        <img class="mx-2 card-brand" src="assets/icons/diners-club.svg" alt="diners-club icon">
+                                                        <img class="mx-2 card-brand" src="assets/icons/american-express.svg" alt="american-express icon">
+                                                        <img class="mx-2 card-brand" src="assets/icons/unionpay.svg" alt="unionpay icon">
+                                                        <img class="mx-2 card-brand" src="assets/icons/mastercard.svg" alt="mastercard icon">
+                                                        <img class="mx-2 card-brand" src="assets/icons/visa.svg" alt="visa icon">
+                                                    </div>
+
+                                                    <div class="flex justify-center py-2">
+                                                        <form action="" class="w-full max-w-md text-center">
+                                                            <input name="card_number" type="text" placeholder="XXXX XXXX XXXX XXXX">
+                                                            <input name="card_expiry" type="text" placeholder="MM/YY">
+                                                            <input name="card_cvv" type="tel" placeholder="CVV">
+
+                                                            <button class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large">
+                                                                <img class="mx-2" src="assets/icons/unlocked.svg" alt="unlocked icon">
+                                                                CONTINUE
+                                                            </button>
+                                                        </form>
+                                                    </div>
+
+                                                    <p class="text-neutral-60 text-body-small" id="">
+                                                        BetterMe International Limited | Themistokli Dervi 39, 1st floor, Office 104, 1066, Nicosia, Cyprus
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
