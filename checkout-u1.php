@@ -453,7 +453,7 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                                 </div>
                                                 <div class="vertical-line"></div>
                                                 <div class="lg:w-full p-3">
-                                                    <div class="flex justify-center">
+                                                    <div class="flex justify-center py-2">
                                                         <img class="mx-2 card-brand" src="assets/icons/jcb.svg" alt="jcb icon">
                                                         <img class="mx-2 card-brand" src="assets/icons/discover.svg" alt="discover icon">
                                                         <img class="mx-2 card-brand" src="assets/icons/diners-club.svg" alt="diners-club icon">
@@ -463,13 +463,11 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                                         <img class="mx-2 card-brand" src="assets/icons/visa.svg" alt="visa icon">
                                                     </div>
 
-                                                    <div class="flex justify-center">
-                                                        <form action="" class="w-full max-w-md">
-                                                            <input class="w-full" name="card_number" type="text" placeholder="XXXX XXXX XXXX XXXX">
-                                                            <div class="flex w-full max-w-[500px]">
-                                                                <input class="flex-1" name="card_expiry" type="text" placeholder="MM/YY">
-                                                                <input class="flex-1" name="card_cvv" type="tel" placeholder="CVV">
-                                                            </div>
+                                                    <div class="flex justify-center py-2">
+                                                        <form action="" class="w-full max-w-md text-center">
+                                                            <input name="card_number" type="text" placeholder="XXXX XXXX XXXX XXXX">
+                                                            <input name="card_expiry" type="text" placeholder="MM/YY">
+                                                            <input name="card_cvv" type="tel" placeholder="CVV">
 
                                                             <button class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large">
                                                                 <img class="mx-2" src="assets/icons/unlocked.svg" alt="unlocked icon">
