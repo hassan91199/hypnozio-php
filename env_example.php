@@ -8,8 +8,11 @@ return [
     'CONVERTKIT_API_KEY' => '',
     'CONVERTKIT_API_SECRET' => '',
     'CONVERTKIT_QUIZ_FORM_ID' => '',
-    
+
     'METABOLIC_AGE_INCREMENT' => '',
 
     'SITE_NAME' => '',
+
+    'STRIPE_SECRET_KEY' => '',
+    'STRIPE_PUBLISHABLE_KEY' => '',
 ];
