@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+require_once __DIR__ . '/utils/functions.php';
+
 $ageRange = $_SESSION['AGE_RANGE'] ?? '';
 $overWeightReason = $_SESSION['OVERWEIGHT_REASON'] ?? '';
 $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
@@ -40,6 +42,44 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
     <div>
 
     </div>
+    <script src="https://js.stripe.com/v3/"></script>
+
+    <style>
+        .StripeElement {
+            box-sizing: border-box;
+            width: 100%;
+            height: 40px;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: white;
+            box-shadow: 0 1px 3px 0 #e6ebf1;
+            transition: box-shadow 150ms ease;
+        }
+
+        .StripeElement--focus {
+            box-shadow: 0 1px 3px 0 #cfd7df;
+        }
+
+        .StripeElement--invalid {
+            border-color: #fa755a;
+        }
+
+        .StripeElement--webkit-autofill {
+            background-color: #fefde5 !important;
+        }
+
+        #subscription-form {
+            width: 100%;
+        }
+
+
+        .form-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    </style>
+
 </head>
 
 <body class="antialiased bg-surface text-onSurface scroll-smooth">
@@ -463,13 +503,13 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
                                                         <img class="mx-2 card-brand" src="assets/icons/visa.svg" alt="visa icon">
                                                     </div>
 
-                                                    <div class="flex justify-center py-2">
-                                                        <form action="" class="w-full max-w-md text-center">
-                                                            <input name="card_number" type="text" placeholder="XXXX XXXX XXXX XXXX">
-                                                            <input name="card_expiry" type="text" placeholder="MM/YY">
-                                                            <input name="card_cvv" type="tel" placeholder="CVV">
-
-                                                            <button class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large">
+                                                    <div class="flex justify-center py-2 form-container">
+                                                        <form id="subscription-form">
+                                                            <input type="hidden" id="stripe-publishable-key" value="<?= env('STRIPE_PUBLISHABLE_KEY') ?>" />
+                                                            <div id="card-number-element" class="StripeElement mb-3"></div>
+                                                            <div id="card-expiry-element" class="StripeElement mb-3"></div>
+                                                            <div id="card-cvc-element" class="StripeElement mb-3"></div>
+                                                            <button type="submit" class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large">
                                                                 <img class="mx-2" src="assets/icons/unlocked.svg" alt="unlocked icon">
                                                                 CONTINUE
                                                             </button>
@@ -1033,7 +1073,53 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
         </div>
     </div>
 
+    <script>
+        const stripe = Stripe(document.getElementById('stripe-publishable-key').value);
+        const elements = stripe.elements();
 
+        // Create separate elements for card number, expiry date, and CVC
+        const cardNumberElement = elements.create('cardNumber');
+        const cardExpiryElement = elements.create('cardExpiry');
+        const cardCvcElement = elements.create('cardCvc');
+
+        cardNumberElement.mount('#card-number-element');
+        cardExpiryElement.mount('#card-expiry-element');
+        cardCvcElement.mount('#card-cvc-element');
+
+        const form = document.getElementById('subscription-form');
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const {
+                token,
+                error
+            } = await stripe.createToken(cardNumberElement);
+            if (error) {
+                // Handle error
+                console.error(error);
+            } else {
+                // Send token to server
+                fetch('subscribe.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        token: token.id
+                    }),
+                }).then(response => {
+                    return response.json();
+                }).then(result => {
+                    if (result.error) {
+                        // Handle error
+                        console.error(result.error);
+                    } else {
+                        // Handle success
+                        console.log('Subscription successful!', result);
+                    }
+                });
+            }
+        });
+    </script>
 
 </body>
 
