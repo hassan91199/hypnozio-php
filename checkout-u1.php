@@ -290,14 +290,6 @@ if ($result->num_rows > 0) {
         subscriptionInterval: '6',
         interval: '',
         formattedInterval: ' 0.85714285714286 weeks',
-        taboolaEvtData: {
-            notify: 'event',
-            name: 'start_checkout',
-            id: 111111,
-            revenue: 66,
-            currency: 'USD',
-            quantity: 1,
-        },
      }">
                                 <h2 class="text-title-large text-center lg:hidden mb-6">Select your plan</h2>
                                 <div class="flex flex-col items-center max-w-[503px] mx-auto">
@@ -308,15 +300,7 @@ if ($result->num_rows > 0) {
             subscriptionInterval = '2',
             interval = '',
             formattedInterval = ' 0.28571428571429 weeks',
-            toggleAllCheckboxesByValue('hypnozio-monthly-2-months');
-            taboolaEvtData = {
-                notify: 'event',
-                name: 'start_checkout',
-                id: 11111,
-                revenue: 33,
-                currency: 'USD',
-                quantity: 1,
-            };">
+            toggleAllCheckboxesByValue('hypnozio-monthly-2-months');">
                                         <div class="flex flex-row items-center">
                                             <div class="basis-7/12">
                                                 <div class="flex flex-row items-center">
@@ -352,15 +336,7 @@ if ($result->num_rows > 0) {
             subscriptionInterval = '6',
             interval = '',
             formattedInterval = ' 0.85714285714286 weeks',
-            toggleAllCheckboxesByValue('hypnozio-monthly-6-months');
-            taboolaEvtData = {
-                notify: 'event',
-                name: 'start_checkout',
-                id: 1111,
-                revenue: 66,
-                currency: 'USD',
-                quantity: 1,
-            };">
+            toggleAllCheckboxesByValue('hypnozio-monthly-6-months');">
                                         <div class="flex flex-row items-center">
                                             <div class="basis-7/12">
                                                 <div class="flex flex-row items-center">
@@ -399,15 +375,7 @@ if ($result->num_rows > 0) {
             subscriptionInterval = '4',
             interval = '',
             formattedInterval = ' 0.57142857142857 weeks',
-            toggleAllCheckboxesByValue('hypnozio-monthly-4-months-5394');
-            taboolaEvtData = {
-                notify: 'event',
-                name: 'start_checkout',
-                id: 111111,
-                revenue: 53.94,
-                currency: 'USD',
-                quantity: 1,
-            };">
+            toggleAllCheckboxesByValue('hypnozio-monthly-4-months-5394');">
                                         <div class="flex flex-row items-center">
                                             <div class="basis-7/12">
                                                 <div class="flex flex-row items-center">
@@ -452,7 +420,7 @@ if ($result->num_rows > 0) {
                            $event.preventDefault();
                            disableCta = false;
                    }
-               }; _tfa.push(taboolaEvtData)" x-bind:class="!disableCta ? '' : 'btn-disabled'">
+               };" x-bind:class="!disableCta ? '' : 'btn-disabled'">
                                             <div x-bind:class="disableCta ? 'opacity-50' : ''">
                                                 Order now
                                             </div>
@@ -827,14 +795,6 @@ if ($result->num_rows > 0) {
         subscriptionInterval: '6',
         interval: '',
         formattedInterval: ' 0.85714285714286 weeks',
-        taboolaEvtData: {
-            notify: 'event',
-            name: 'start_checkout',
-            id: 1111,
-            revenue: 66,
-            currency: 'USD',
-            quantity: 1,
-        },
      }">
                                 <h2 class="text-title-large text-center lg:hidden mb-6">Select your plan</h2>
                                 <div class="flex flex-col items-center max-w-[503px] mx-auto">
@@ -845,15 +805,7 @@ if ($result->num_rows > 0) {
             subscriptionInterval = '2',
             interval = '',
             formattedInterval = ' 0.28571428571429 weeks',
-            toggleAllCheckboxesByValue('hypnozio-monthly-2-months');
-            taboolaEvtData = {
-                notify: 'event',
-                name: 'start_checkout',
-                id: 11111,
-                revenue: 33,
-                currency: 'USD',
-                quantity: 1,
-            };">
+            toggleAllCheckboxesByValue('hypnozio-monthly-2-months');">
                                         <div class="flex flex-row items-center">
                                             <div class="basis-7/12">
                                                 <div class="flex flex-row items-center">
@@ -889,15 +841,7 @@ if ($result->num_rows > 0) {
             subscriptionInterval = '6',
             interval = '',
             formattedInterval = ' 0.85714285714286 weeks',
-            toggleAllCheckboxesByValue('hypnozio-monthly-6-months');
-            taboolaEvtData = {
-                notify: 'event',
-                name: 'start_checkout',
-                id: 1111,
-                revenue: 66,
-                currency: 'USD',
-                quantity: 1,
-            };">
+            toggleAllCheckboxesByValue('hypnozio-monthly-6-months');">
                                         <div class="flex flex-row items-center">
                                             <div class="basis-7/12">
                                                 <div class="flex flex-row items-center">
@@ -936,15 +880,7 @@ if ($result->num_rows > 0) {
             subscriptionInterval = '4',
             interval = '',
             formattedInterval = ' 0.57142857142857 weeks',
-            toggleAllCheckboxesByValue('hypnozio-monthly-4-months-5394');
-            taboolaEvtData = {
-                notify: 'event',
-                name: 'start_checkout',
-                id: 11111,
-                revenue: 53.94,
-                currency: 'USD',
-                quantity: 1,
-            };">
+            toggleAllCheckboxesByValue('hypnozio-monthly-4-months-5394');">
                                         <div class="flex flex-row items-center">
                                             <div class="basis-7/12">
                                                 <div class="flex flex-row items-center">
@@ -989,7 +925,7 @@ if ($result->num_rows > 0) {
                            $event.preventDefault();
                            disableCta = false;
                    }
-               }; _tfa.push(taboolaEvtData)" x-bind:class="!disableCta ? '' : 'btn-disabled'">
+               };" x-bind:class="!disableCta ? '' : 'btn-disabled'">
                                             <div x-bind:class="disableCta ? 'opacity-50' : ''">
                                                 Order now
                                             </div>
