@@ -117,7 +117,7 @@ if ($result->num_rows > 0) {
         </div>
     </nav>
 
-    <div x-data="{ checked: 'hypnozio-monthly-6-months'}" class="pb-11 lg:pb-16">
+    <div x-data="{ checked: '<?= $products['6-month plan']['name'] ?>'}" class="pb-11 lg:pb-16">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="basis-full lg:basis-1/2 mx-auto">
@@ -285,42 +285,42 @@ if ($result->num_rows > 0) {
         checkedTos: false,
         disableCta: false,
         showModal: false,
-        formattedPrice: '$66.00',
-        subscriptionPrice: '$66.00',
-        subscriptionInterval: '6',
+        formattedPrice: '<?= $products['6-month plan']->price ?>',
+        subscriptionPrice: '<?= $products['6-month plan']->price ?>',
+        subscriptionInterval: '<?= $products['6-month plan']->quantity ?>',
         interval: '',
         formattedInterval: ' 0.85714285714286 weeks',
      }">
                                 <h2 class="text-title-large text-center lg:hidden mb-6">Select your plan</h2>
                                 <div class="flex flex-col items-center max-w-[503px] mx-auto">
-                                    <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === 'hypnozio-monthly-2-months' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
-            checked = 'hypnozio-monthly-2-months';
-            formattedPrice = '$33.00',
-            subscriptionPrice = '$33.00',
-            subscriptionInterval = '2',
+                                    <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === '<?= $products['2-month plan']['name'] ?>' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
+            checked = '<?= $products['2-month plan']['name'] ?>';
+            formattedPrice = '<?= $products['2-month plan']['price'] ?>',
+            subscriptionPrice = '<?= $products['2-month plan']['price'] ?>',
+            subscriptionInterval = '<?= $products['2-month plan']['quantity'] ?>',
             interval = '',
             formattedInterval = ' 0.28571428571429 weeks',
-            toggleAllCheckboxesByValue('hypnozio-monthly-2-months');">
+            toggleAllCheckboxesByValue('<?= $products['2-month plan']['name'] ?>');">
                                         <div class="flex flex-row items-center">
                                             <div class="basis-7/12">
                                                 <div class="flex flex-row items-center">
-                                                    <input class="checkbox-circle w-6 h-6 bg-checkmarker2 mr-4 lg:mr-6" type="radio" autocomplete="off" value="hypnozio-monthly-2-months" :id="$id('order-input')" :name="'order-radio-' + tableComponentCount" />
+                                                    <input class="checkbox-circle w-6 h-6 bg-checkmarker2 mr-4 lg:mr-6" type="radio" autocomplete="off" value="<?= $products['2-month plan']['name'] ?>" :id="$id('order-input')" :name="'order-radio-' + tableComponentCount" />
                                                     <div class="flex flex-col space-y-1 pr-2 lg:pr-4">
                                                         <div class="font-semibold break-all min-w-[150px] text-label-extra-large">
-                                                            2-month plan
+                                                            <?= $products['2-month plan']['name'] ?>
                                                         </div>
                                                         <div class="flex text-body-small">
                                                             <div class="line-through text-accent mr-3">$66.00</div>
-                                                            <div class="text-neutralVariant-80">$33.00</div>
+                                                            <div class="text-neutralVariant-80"><?= "$" . $products['2-month plan']['price'] ?></div>
                                                         </div>
-                                                        <div class="text-neutralVariant-60 text-body-small">Billed every 2 months</div>
+                                                        <div class="text-neutralVariant-60 text-body-small">Billed every <?= $products['2-month plan']['quantity'] ?> months</div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="basis-5/12 border-l border-neutralVariant-90 min-h-[82px] flex flex-col items-center justify-center">
                                                 <div class="flex flex-col justify-center items-center mx-auto">
                                                     <div class="font-semibold text-headline-small sm:text-headline-medium">
-                                                        $16.50
+                                                        <?= "$" . number_format($products['2-month plan']['price'] / $products['2-month plan']['quantity'], 2)  ?>
                                                     </div>
                                                     <div class="text-neutralVariant-60 text-body-small">
                                                         per month
@@ -329,27 +329,27 @@ if ($result->num_rows > 0) {
                                             </div>
                                         </div>
                                     </label>
-                                    <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === 'hypnozio-monthly-6-months' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
-            checked = 'hypnozio-monthly-6-months';
-            formattedPrice = '$66.00',
-            subscriptionPrice = '$66.00',
-            subscriptionInterval = '6',
+                                    <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === '<?= $products['6-month plan']['name'] ?>' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
+            checked = '<?= $products['6-month plan']['name'] ?>';
+            formattedPrice = '<?= $products['6-month plan']['price'] ?>',
+            subscriptionPrice = '<?= $products['6-month plan']['price'] ?>',
+            subscriptionInterval = '<?= $products['6-month plan']['quantity'] ?>',
             interval = '',
             formattedInterval = ' 0.85714285714286 weeks',
-            toggleAllCheckboxesByValue('hypnozio-monthly-6-months');">
+            toggleAllCheckboxesByValue('<?= $products['6-month plan']['name'] ?>');">
                                         <div class="flex flex-row items-center">
                                             <div class="basis-7/12">
                                                 <div class="flex flex-row items-center">
-                                                    <input class="checkbox-circle w-6 h-6 bg-checkmarker2 mr-4 lg:mr-6" type="radio" autocomplete="off" value="hypnozio-monthly-6-months" :id="$id('order-input')" :name="'order-radio-' + tableComponentCount" checked />
+                                                    <input class="checkbox-circle w-6 h-6 bg-checkmarker2 mr-4 lg:mr-6" type="radio" autocomplete="off" value="<?= $products['6-month plan']['name'] ?>" :id="$id('order-input')" :name="'order-radio-' + tableComponentCount" checked />
                                                     <div class="flex flex-col space-y-1 pr-2 lg:pr-4">
                                                         <div class="font-semibold break-all min-w-[150px] text-label-extra-large">
-                                                            6-month plan
+                                                            <?= $products['6-month plan']['name'] ?>
                                                         </div>
                                                         <div class="flex text-body-small">
                                                             <div class="line-through text-accent mr-3">$264.00</div>
-                                                            <div class="text-neutralVariant-80">$66.00</div>
+                                                            <div class="text-neutralVariant-80"><?= "$" . $products['6-month plan']['price'] ?></div>
                                                         </div>
-                                                        <div class="text-neutralVariant-60 text-body-small">Billed every 6 months</div>
+                                                        <div class="text-neutralVariant-60 text-body-small">Billed every <?= $products['6-month plan']['quantity'] ?> months</div>
                                                         <div class="w-fit bg-accent py-1 px-2 rounded-[14px] text-white font-semibold text-body-small">
                                                             Most popular
                                                         </div>
@@ -359,7 +359,7 @@ if ($result->num_rows > 0) {
                                             <div class="basis-5/12 border-l border-neutralVariant-90 min-h-[82px] flex flex-col items-center justify-center">
                                                 <div class="flex flex-col justify-center items-center mx-auto">
                                                     <div class="font-semibold text-headline-small sm:text-headline-medium">
-                                                        $11.00
+                                                        <?= "$" . number_format($products['6-month plan']['price'] / $products['6-month plan']['quantity'], 2) ?>
                                                     </div>
                                                     <div class="text-neutralVariant-60 text-body-small">
                                                         per month
@@ -368,34 +368,34 @@ if ($result->num_rows > 0) {
                                             </div>
                                         </div>
                                     </label>
-                                    <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === 'hypnozio-monthly-4-months-5394' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
-            checked = 'hypnozio-monthly-4-months-5394';
-            formattedPrice = '$53.94',
-            subscriptionPrice = '$53.94',
-            subscriptionInterval = '4',
+                                    <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === '<?= $products['4-month plan']['name'] ?>' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
+            checked = '<?= $products['4-month plan']['name'] ?>';
+            formattedPrice = '<?= $products['4-month plan']['price'] ?>',
+            subscriptionPrice = '<?= $products['4-month plan']['price'] ?>',
+            subscriptionInterval = '<?= $products['4-month plan']['quantity'] ?>',
             interval = '',
             formattedInterval = ' 0.57142857142857 weeks',
-            toggleAllCheckboxesByValue('hypnozio-monthly-4-months-5394');">
+            toggleAllCheckboxesByValue('<?= $products['4-month plan']['name'] ?>');">
                                         <div class="flex flex-row items-center">
                                             <div class="basis-7/12">
                                                 <div class="flex flex-row items-center">
-                                                    <input class="checkbox-circle w-6 h-6 bg-checkmarker2 mr-4 lg:mr-6" type="radio" autocomplete="off" value="hypnozio-monthly-4-months-5394" :id="$id('order-input')" :name="'order-radio-' + tableComponentCount" />
+                                                    <input class="checkbox-circle w-6 h-6 bg-checkmarker2 mr-4 lg:mr-6" type="radio" autocomplete="off" value="<?= $products['4-month plan']['name'] ?>" :id="$id('order-input')" :name="'order-radio-' + tableComponentCount" />
                                                     <div class="flex flex-col space-y-1 pr-2 lg:pr-4">
                                                         <div class="font-semibold break-all min-w-[150px] text-label-extra-large">
-                                                            4-month plan
+                                                            <?= $products['4-month plan']['name'] ?>
                                                         </div>
                                                         <div class="flex text-body-small">
                                                             <div class="line-through text-accent mr-3">$107.88</div>
-                                                            <div class="text-neutralVariant-80">$53.94</div>
+                                                            <div class="text-neutralVariant-80"><?= $products['4-month plan']['price'] ?></div>
                                                         </div>
-                                                        <div class="text-neutralVariant-60 text-body-small">Billed every 4 months</div>
+                                                        <div class="text-neutralVariant-60 text-body-small">Billed every <?= $products['4-month plan']['quantity'] ?> months</div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="basis-5/12 border-l border-neutralVariant-90 min-h-[82px] flex flex-col items-center justify-center">
                                                 <div class="flex flex-col justify-center items-center mx-auto">
                                                     <div class="font-semibold text-headline-small sm:text-headline-medium">
-                                                        $13.49
+                                                        <?= "$" . number_format($products['4-month plan']['price'] / $products['4-month plan']['quantity'], 2) ?>
                                                     </div>
                                                     <div class="text-neutralVariant-60 text-body-small">
                                                         per month
@@ -416,7 +416,7 @@ if ($result->num_rows > 0) {
                    } else {
                    disableCta = true;
                    showModal = true;
-                       if (checked === 'hypnozio-monthly-2-months' && true ) {
+                       if (checked === '<?= $products['2-month plan']['name'] ?>' && true ) {
                            $event.preventDefault();
                            disableCta = false;
                    }
@@ -785,47 +785,47 @@ if ($result->num_rows > 0) {
                             </div>
                         </div>
                         <div class="lg:order-1 lg:w-full lg:mr-6">
-                            <div class="mt-6 lg:mt-0 lg:min-w-[396px] lg:w-full" x-data="{
+                            <div class="mt-6 lg:mt-0 lg:min-w-[396px]" x-data="{
         tableComponentCount: 2,
         checkedTos: false,
         disableCta: false,
         showModal: false,
-        formattedPrice: '$66.00',
-        subscriptionPrice: '$66.00',
-        subscriptionInterval: '6',
+        formattedPrice: '<?= $products['6-month plan']->price ?>',
+        subscriptionPrice: '<?= $products['6-month plan']->price ?>',
+        subscriptionInterval: '<?= $products['6-month plan']->quantity ?>',
         interval: '',
         formattedInterval: ' 0.85714285714286 weeks',
      }">
                                 <h2 class="text-title-large text-center lg:hidden mb-6">Select your plan</h2>
                                 <div class="flex flex-col items-center max-w-[503px] mx-auto">
-                                    <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === 'hypnozio-monthly-2-months' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
-            checked = 'hypnozio-monthly-2-months';
-            formattedPrice = '$33.00',
-            subscriptionPrice = '$33.00',
-            subscriptionInterval = '2',
+                                    <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === '<?= $products['2-month plan']['name'] ?>' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
+            checked = '<?= $products['2-month plan']['name'] ?>';
+            formattedPrice = '<?= $products['2-month plan']['price'] ?>',
+            subscriptionPrice = '<?= $products['2-month plan']['price'] ?>',
+            subscriptionInterval = '<?= $products['2-month plan']['quantity'] ?>',
             interval = '',
             formattedInterval = ' 0.28571428571429 weeks',
-            toggleAllCheckboxesByValue('hypnozio-monthly-2-months');">
+            toggleAllCheckboxesByValue('<?= $products['2-month plan']['name'] ?>');">
                                         <div class="flex flex-row items-center">
                                             <div class="basis-7/12">
                                                 <div class="flex flex-row items-center">
-                                                    <input class="checkbox-circle w-6 h-6 bg-checkmarker2 mr-4 lg:mr-6" type="radio" autocomplete="off" value="hypnozio-monthly-2-months" :id="$id('order-input')" :name="'order-radio-' + tableComponentCount" />
+                                                    <input class="checkbox-circle w-6 h-6 bg-checkmarker2 mr-4 lg:mr-6" type="radio" autocomplete="off" value="<?= $products['2-month plan']['name'] ?>" :id="$id('order-input')" :name="'order-radio-' + tableComponentCount" />
                                                     <div class="flex flex-col space-y-1 pr-2 lg:pr-4">
                                                         <div class="font-semibold break-all min-w-[150px] text-label-extra-large">
-                                                            2-month plan
+                                                            <?= $products['2-month plan']['name'] ?>
                                                         </div>
                                                         <div class="flex text-body-small">
                                                             <div class="line-through text-accent mr-3">$66.00</div>
-                                                            <div class="text-neutralVariant-80">$33.00</div>
+                                                            <div class="text-neutralVariant-80"><?= "$" . $products['2-month plan']['price'] ?></div>
                                                         </div>
-                                                        <div class="text-neutralVariant-60 text-body-small">Billed every 2 months</div>
+                                                        <div class="text-neutralVariant-60 text-body-small">Billed every <?= $products['2-month plan']['quantity'] ?> months</div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="basis-5/12 border-l border-neutralVariant-90 min-h-[82px] flex flex-col items-center justify-center">
                                                 <div class="flex flex-col justify-center items-center mx-auto">
                                                     <div class="font-semibold text-headline-small sm:text-headline-medium">
-                                                        $16.50
+                                                        <?= "$" . number_format($products['2-month plan']['price'] / $products['2-month plan']['quantity'], 2)  ?>
                                                     </div>
                                                     <div class="text-neutralVariant-60 text-body-small">
                                                         per month
@@ -834,27 +834,27 @@ if ($result->num_rows > 0) {
                                             </div>
                                         </div>
                                     </label>
-                                    <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === 'hypnozio-monthly-6-months' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
-            checked = 'hypnozio-monthly-6-months';
-            formattedPrice = '$66.00',
-            subscriptionPrice = '$66.00',
-            subscriptionInterval = '6',
+                                    <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === '<?= $products['6-month plan']['name'] ?>' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
+            checked = '<?= $products['6-month plan']['name'] ?>';
+            formattedPrice = '<?= $products['6-month plan']['price'] ?>',
+            subscriptionPrice = '<?= $products['6-month plan']['price'] ?>',
+            subscriptionInterval = '<?= $products['6-month plan']['quantity'] ?>',
             interval = '',
             formattedInterval = ' 0.85714285714286 weeks',
-            toggleAllCheckboxesByValue('hypnozio-monthly-6-months');">
+            toggleAllCheckboxesByValue('<?= $products['6-month plan']['name'] ?>');">
                                         <div class="flex flex-row items-center">
                                             <div class="basis-7/12">
                                                 <div class="flex flex-row items-center">
-                                                    <input class="checkbox-circle w-6 h-6 bg-checkmarker2 mr-4 lg:mr-6" type="radio" autocomplete="off" value="hypnozio-monthly-6-months" :id="$id('order-input')" :name="'order-radio-' + tableComponentCount" checked />
+                                                    <input class="checkbox-circle w-6 h-6 bg-checkmarker2 mr-4 lg:mr-6" type="radio" autocomplete="off" value="<?= $products['6-month plan']['name'] ?>" :id="$id('order-input')" :name="'order-radio-' + tableComponentCount" checked />
                                                     <div class="flex flex-col space-y-1 pr-2 lg:pr-4">
                                                         <div class="font-semibold break-all min-w-[150px] text-label-extra-large">
-                                                            6-month plan
+                                                            <?= $products['6-month plan']['name'] ?>
                                                         </div>
                                                         <div class="flex text-body-small">
                                                             <div class="line-through text-accent mr-3">$264.00</div>
-                                                            <div class="text-neutralVariant-80">$66.00</div>
+                                                            <div class="text-neutralVariant-80"><?= "$" . $products['6-month plan']['price'] ?></div>
                                                         </div>
-                                                        <div class="text-neutralVariant-60 text-body-small">Billed every 6 months</div>
+                                                        <div class="text-neutralVariant-60 text-body-small">Billed every <?= $products['6-month plan']['quantity'] ?> months</div>
                                                         <div class="w-fit bg-accent py-1 px-2 rounded-[14px] text-white font-semibold text-body-small">
                                                             Most popular
                                                         </div>
@@ -864,7 +864,7 @@ if ($result->num_rows > 0) {
                                             <div class="basis-5/12 border-l border-neutralVariant-90 min-h-[82px] flex flex-col items-center justify-center">
                                                 <div class="flex flex-col justify-center items-center mx-auto">
                                                     <div class="font-semibold text-headline-small sm:text-headline-medium">
-                                                        $11.00
+                                                        <?= "$" . number_format($products['6-month plan']['price'] / $products['6-month plan']['quantity'], 2) ?>
                                                     </div>
                                                     <div class="text-neutralVariant-60 text-body-small">
                                                         per month
@@ -873,34 +873,34 @@ if ($result->num_rows > 0) {
                                             </div>
                                         </div>
                                     </label>
-                                    <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === 'hypnozio-monthly-4-months-5394' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
-            checked = 'hypnozio-monthly-4-months-5394';
-            formattedPrice = '$53.94',
-            subscriptionPrice = '$53.94',
-            subscriptionInterval = '4',
+                                    <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === '<?= $products['4-month plan']['name'] ?>' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
+            checked = '<?= $products['4-month plan']['name'] ?>';
+            formattedPrice = '<?= $products['4-month plan']['price'] ?>',
+            subscriptionPrice = '<?= $products['4-month plan']['price'] ?>',
+            subscriptionInterval = '<?= $products['4-month plan']['quantity'] ?>',
             interval = '',
             formattedInterval = ' 0.57142857142857 weeks',
-            toggleAllCheckboxesByValue('hypnozio-monthly-4-months-5394');">
+            toggleAllCheckboxesByValue('<?= $products['4-month plan']['name'] ?>');">
                                         <div class="flex flex-row items-center">
                                             <div class="basis-7/12">
                                                 <div class="flex flex-row items-center">
-                                                    <input class="checkbox-circle w-6 h-6 bg-checkmarker2 mr-4 lg:mr-6" type="radio" autocomplete="off" value="hypnozio-monthly-4-months-5394" :id="$id('order-input')" :name="'order-radio-' + tableComponentCount" />
+                                                    <input class="checkbox-circle w-6 h-6 bg-checkmarker2 mr-4 lg:mr-6" type="radio" autocomplete="off" value="<?= $products['4-month plan']['name'] ?>" :id="$id('order-input')" :name="'order-radio-' + tableComponentCount" />
                                                     <div class="flex flex-col space-y-1 pr-2 lg:pr-4">
                                                         <div class="font-semibold break-all min-w-[150px] text-label-extra-large">
-                                                            4-month plan
+                                                            <?= $products['4-month plan']['name'] ?>
                                                         </div>
                                                         <div class="flex text-body-small">
                                                             <div class="line-through text-accent mr-3">$107.88</div>
-                                                            <div class="text-neutralVariant-80">$53.94</div>
+                                                            <div class="text-neutralVariant-80"><?= $products['4-month plan']['price'] ?></div>
                                                         </div>
-                                                        <div class="text-neutralVariant-60 text-body-small">Billed every 4 months</div>
+                                                        <div class="text-neutralVariant-60 text-body-small">Billed every <?= $products['4-month plan']['quantity'] ?> months</div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="basis-5/12 border-l border-neutralVariant-90 min-h-[82px] flex flex-col items-center justify-center">
                                                 <div class="flex flex-col justify-center items-center mx-auto">
                                                     <div class="font-semibold text-headline-small sm:text-headline-medium">
-                                                        $13.49
+                                                        <?= "$" . number_format($products['4-month plan']['price'] / $products['4-month plan']['quantity'], 2) ?>
                                                     </div>
                                                     <div class="text-neutralVariant-60 text-body-small">
                                                         per month
@@ -921,7 +921,7 @@ if ($result->num_rows > 0) {
                    } else {
                    disableCta = true;
                    showModal = true;
-                       if (checked === 'hypnozio-monthly-2-months' && true ) {
+                       if (checked === '<?= $products['2-month plan']['name'] ?>' && true ) {
                            $event.preventDefault();
                            disableCta = false;
                    }
@@ -988,13 +988,13 @@ if ($result->num_rows > 0) {
                                                         <img class="mx-2 card-brand" src="assets/icons/visa.svg" alt="visa icon">
                                                     </div>
 
-                                                    <div class="flex justify-center py-2">
-                                                        <form action="" class="w-full max-w-md text-center">
-                                                            <input name="card_number" type="text" placeholder="XXXX XXXX XXXX XXXX">
-                                                            <input name="card_expiry" type="text" placeholder="MM/YY">
-                                                            <input name="card_cvv" type="tel" placeholder="CVV">
-
-                                                            <button class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large">
+                                                    <div class="flex justify-center py-2 form-container">
+                                                        <form id="subscription-form">
+                                                            <input type="hidden" id="stripe-publishable-key" value="<?= env('STRIPE_PUBLISHABLE_KEY') ?>" />
+                                                            <div id="card-number-element" class="StripeElement mb-3"></div>
+                                                            <div id="card-expiry-element" class="StripeElement mb-3"></div>
+                                                            <div id="card-cvc-element" class="StripeElement mb-3"></div>
+                                                            <button type="submit" class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large">
                                                                 <img class="mx-2" src="assets/icons/unlocked.svg" alt="unlocked icon">
                                                                 CONTINUE
                                                             </button>
