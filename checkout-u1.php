@@ -283,7 +283,6 @@ if ($result->num_rows > 0) {
                             <div class="mt-6 lg:mt-0 lg:min-w-[396px]" x-data="{
         tableComponentCount: 1,
         checkedTos: false,
-        orderUrl: '',
         disableCta: false,
         showModal: false,
         formattedPrice: '$66.00',
@@ -303,7 +302,6 @@ if ($result->num_rows > 0) {
                                 <h2 class="text-title-large text-center lg:hidden mb-6">Select your plan</h2>
                                 <div class="flex flex-col items-center max-w-[503px] mx-auto">
                                     <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === 'hypnozio-monthly-2-months' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
-            orderUrl = '';
             checked = 'hypnozio-monthly-2-months';
             formattedPrice = '$33.00',
             subscriptionPrice = '$33.00',
@@ -348,7 +346,6 @@ if ($result->num_rows > 0) {
                                         </div>
                                     </label>
                                     <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === 'hypnozio-monthly-6-months' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
-            orderUrl = '';
             checked = 'hypnozio-monthly-6-months';
             formattedPrice = '$66.00',
             subscriptionPrice = '$66.00',
@@ -396,7 +393,6 @@ if ($result->num_rows > 0) {
                                         </div>
                                     </label>
                                     <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === 'hypnozio-monthly-4-months-5394' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
-            orderUrl = '';
             checked = 'hypnozio-monthly-4-months-5394';
             formattedPrice = '$53.94',
             subscriptionPrice = '$53.94',
@@ -824,7 +820,6 @@ if ($result->num_rows > 0) {
                             <div class="mt-6 lg:mt-0 lg:min-w-[396px] lg:w-full" x-data="{
         tableComponentCount: 2,
         checkedTos: false,
-        orderUrl: '',
         disableCta: false,
         showModal: false,
         formattedPrice: '$66.00',
@@ -844,7 +839,6 @@ if ($result->num_rows > 0) {
                                 <h2 class="text-title-large text-center lg:hidden mb-6">Select your plan</h2>
                                 <div class="flex flex-col items-center max-w-[503px] mx-auto">
                                     <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === 'hypnozio-monthly-2-months' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
-            orderUrl = '';
             checked = 'hypnozio-monthly-2-months';
             formattedPrice = '$33.00',
             subscriptionPrice = '$33.00',
@@ -889,7 +883,6 @@ if ($result->num_rows > 0) {
                                         </div>
                                     </label>
                                     <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === 'hypnozio-monthly-6-months' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
-            orderUrl = '';
             checked = 'hypnozio-monthly-6-months';
             formattedPrice = '$66.00',
             subscriptionPrice = '$66.00',
@@ -937,7 +930,6 @@ if ($result->num_rows > 0) {
                                         </div>
                                     </label>
                                     <label class="w-full cursor-pointer bg-white border border-neutralVariant-90 rounded p-4 min-w-[343px] max-w-[503px] xl:max-w-[397px] relative overflow-hidden mb-2 !max-w-full" :for="$id('order-input')" x-bind:style="checked === 'hypnozio-monthly-4-months-5394' ? 'border: 2px solid #27BFB3;' : 'border:1px solid #E1E2EC;'" x-on:click="
-            orderUrl = '';
             checked = 'hypnozio-monthly-4-months-5394';
             formattedPrice = '$53.94',
             subscriptionPrice = '$53.94',
