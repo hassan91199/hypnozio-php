@@ -1,12 +1,12 @@
 <?php
 session_start();
 
-require_once __DIR__ . '/utils/functions.php';
 require_once __DIR__ . '/utils/db.php';
 
 $ageRange = $_SESSION['AGE_RANGE'] ?? '';
 $overWeightReason = $_SESSION['OVERWEIGHT_REASON'] ?? '';
 $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
+$email = $_SESSION['EMAIL'] ?? '';
 
 // Getting all the products
 $conn = getDbConnection();
@@ -288,6 +288,7 @@ if ($result->num_rows > 0) {
         formattedPrice: '<?= $products['6-month plan']['price'] ?>',
         subscriptionPrice: '<?= $products['6-month plan']['price'] ?>',
         subscriptionInterval: '<?= $products['6-month plan']['quantity'] ?>',
+        stripePriceId: '<?= $products['6-month plan']['stripe_price_id'] ?>',
         interval: '',
         formattedInterval: ' 0.85714285714286 weeks',
      }">
@@ -298,6 +299,7 @@ if ($result->num_rows > 0) {
             formattedPrice = '<?= $products['2-month plan']['price'] ?>',
             subscriptionPrice = '<?= $products['2-month plan']['price'] ?>',
             subscriptionInterval = '<?= $products['2-month plan']['quantity'] ?>',
+            stripePriceId = '<?= $products['2-month plan']['stripe_price_id'] ?>',
             interval = '',
             formattedInterval = ' 0.28571428571429 weeks',
             toggleAllCheckboxesByValue('<?= $products['2-month plan']['name'] ?>');">
@@ -334,6 +336,7 @@ if ($result->num_rows > 0) {
             formattedPrice = '<?= $products['6-month plan']['price'] ?>',
             subscriptionPrice = '<?= $products['6-month plan']['price'] ?>',
             subscriptionInterval = '<?= $products['6-month plan']['quantity'] ?>',
+            stripePriceId = '<?= $products['6-month plan']['stripe_price_id'] ?>',
             interval = '',
             formattedInterval = ' 0.85714285714286 weeks',
             toggleAllCheckboxesByValue('<?= $products['6-month plan']['name'] ?>');">
@@ -373,6 +376,7 @@ if ($result->num_rows > 0) {
             formattedPrice = '<?= $products['4-month plan']['price'] ?>',
             subscriptionPrice = '<?= $products['4-month plan']['price'] ?>',
             subscriptionInterval = '<?= $products['4-month plan']['quantity'] ?>',
+            stripePriceId = '<?= $products['4-month plan']['stripe_price_id'] ?>',
             interval = '',
             formattedInterval = ' 0.57142857142857 weeks',
             toggleAllCheckboxesByValue('<?= $products['4-month plan']['name'] ?>');">
@@ -485,7 +489,9 @@ if ($result->num_rows > 0) {
 
                                                     <div class="flex justify-center py-2 form-container">
                                                         <form id="subscription-form">
-                                                            <input type="hidden" id="stripe-publishable-key" value="<?= env('STRIPE_PUBLISHABLE_KEY') ?>" />
+                                                            <input type="hidden" id="stripe-publishable-key" value="<?= $env['STRIPE_PUBLISHABLE_KEY'] ?>" />
+                                                            <input type="hidden" name="stripe_price_id" :value="stripePriceId">
+                                                            <input type="hidden" name="email" value="<?= $email ?>">
                                                             <div id="card-number-element" class="StripeElement mb-3"></div>
                                                             <div id="card-expiry-element" class="StripeElement mb-3"></div>
                                                             <div id="card-cvc-element" class="StripeElement mb-3"></div>
@@ -990,7 +996,7 @@ if ($result->num_rows > 0) {
 
                                                     <div class="flex justify-center py-2 form-container">
                                                         <form id="subscription-form">
-                                                            <input type="hidden" id="stripe-publishable-key" value="<?= env('STRIPE_PUBLISHABLE_KEY') ?>" />
+                                                            <input type="hidden" id="stripe-publishable-key" value="<?= $env['STRIPE_PUBLISHABLE_KEY'] ?>" />
                                                             <div id="card-number-element" class="StripeElement mb-3"></div>
                                                             <div id="card-expiry-element" class="StripeElement mb-3"></div>
                                                             <div id="card-cvc-element" class="StripeElement mb-3"></div>
