@@ -490,8 +490,8 @@ if ($result->num_rows > 0) {
                                                     <div class="flex justify-center py-2 form-container">
                                                         <form id="subscription-form">
                                                             <input type="hidden" id="stripe-publishable-key" value="<?= $env['STRIPE_PUBLISHABLE_KEY'] ?>" />
-                                                            <input type="hidden" name="stripe_price_id" :value="stripePriceId">
-                                                            <input type="hidden" name="email" value="<?= $email ?>">
+                                                            <input type="hidden" id="stripe-price-id" :value="stripePriceId">
+                                                            <input type="hidden" id="email" value="<?= $email ?>">
                                                             <div id="card-number-element" class="StripeElement mb-3"></div>
                                                             <div id="card-expiry-element" class="StripeElement mb-3"></div>
                                                             <div id="card-cvc-element" class="StripeElement mb-3"></div>
@@ -1043,6 +1043,8 @@ if ($result->num_rows > 0) {
                 token,
                 error
             } = await stripe.createToken(cardNumberElement);
+            const email = document.getElementById('email').value;
+            const stripePriceId = document.getElementById('stripe-price-id').value;
             if (error) {
                 // Handle error
                 console.error(error);
@@ -1054,7 +1056,9 @@ if ($result->num_rows > 0) {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        token: token.id
+                        token: token.id,
+                        email,
+                        stripePriceId
                     }),
                 }).then(response => {
                     return response.json();
