@@ -466,13 +466,13 @@ if ($result->num_rows > 0) {
                                                         Your Order Summary
                                                     </h3>
                                                     <div class="flex justify-between my-4">
-                                                        <p class="text-neutralVariant-60 text-body-medium text-center">Personalised Pilates Challenge</p>
-                                                        <p class="text-neutralVariant-60 text-body-medium text-center">RM 44.00</p>
+                                                        <p class="text-neutralVariant-60 text-body-medium text-center" x-text="checked"></p>
+                                                        <p class="text-neutralVariant-60 text-body-medium text-center" x-text="subscriptionPrice"></p>
                                                     </div>
                                                     <hr class="my-4">
                                                     <div class="flex justify-between my-4">
                                                         <h3 class="font-semibold break-all text-label-extra-large">Total:</h3>
-                                                        <h3 class="font-semibold break-all text-label-extra-large">RM 44.00</h3>
+                                                        <h3 class="font-semibold break-all text-label-extra-large" x-text="subscriptionPrice"></h3>
                                                     </div>
                                                 </div>
                                                 <div class="vertical-line"></div>
