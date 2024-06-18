@@ -9,24 +9,28 @@ $token = $input['token'];
 $email = $input['email'];
 $stripePriceId = $input['stripePriceId'];
 
-try {
-    // Create a new customer
-    $customer = \Stripe\Customer::create([
-        'source' => $token,
-        'email' => $email,
-    ]);
+if (isset($token) && isset($email) && isset($stripePriceId)) {
+    try {
+        // Create a new customer
+        $customer = \Stripe\Customer::create([
+            'source' => $token,
+            'email' => $email,
+        ]);
 
-    // Create a new subscription
-    $subscription = \Stripe\Subscription::create([
-        'customer' => $customer->id,
-        'items' => [
-            [
-                'price' => $stripePriceId,
+        // Create a new subscription
+        $subscription = \Stripe\Subscription::create([
+            'customer' => $customer->id,
+            'items' => [
+                [
+                    'price' => $stripePriceId,
+                ],
             ],
-        ],
-    ]);
+        ]);
 
-    echo json_encode(['success' => true, 'subscription' => $subscription]);
-} catch (\Stripe\Exception\ApiErrorException $e) {
-    echo json_encode(['error' => $e->getMessage()]);
+        echo json_encode(['success' => true, 'subscription' => $subscription]);
+    } catch (\Stripe\Exception\ApiErrorException $e) {
+        echo json_encode(['error' => $e->getMessage()]);
+    }
+} else {
+    echo json_encode(['success' => false, 'message' => 'Insufficient arguments provided.']);
 }
