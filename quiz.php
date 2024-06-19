@@ -112,6 +112,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION['AGE_RANGE'] = $data['answer_1'];
     $_SESSION['OVERWEIGHT_REASON'] = $data['answer_6'];
 
+    // Setting the email in the session to use it while checking out
+    $_SESSION['EMAIL'] = $email;
+
     $user = null;
 
     // Create or update the user of quiz
