@@ -172,3 +172,37 @@ function findRecord($table, $conditions)
     // Return the record or null
     return $record;
 }
+
+function createRecord($table, $data)
+{
+    // Get the database connection
+    $conn = getDbConnection();
+
+    // Escape inputs for security
+    foreach ($data as $key => $value) {
+        $data[$key] = $conn->real_escape_string($value);
+    }
+
+    // Build the columns and values strings
+    $columns = implode(", ", array_keys($data));
+    $values = "'" . implode("', '", array_values($data)) . "'";
+
+    // Query to insert the record
+    $insertQuery = "INSERT INTO $table ($columns) VALUES ($values)";
+
+    if ($conn->query($insertQuery) === TRUE) {
+        // Return the ID of the newly inserted record
+        $last_id = $conn->insert_id;
+        $selectQuery = "SELECT * FROM $table WHERE id = $last_id";
+        $newRecord = $conn->query($selectQuery)->fetch_assoc();
+    } else {
+        echo "Error creating record: " . $conn->error;
+        $newRecord = null;
+    }
+
+    // Close the connection
+    $conn->close();
+
+    // Return the new record or null
+    return $newRecord;
+}
