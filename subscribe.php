@@ -12,6 +12,7 @@ $stripePriceId = $input['stripePriceId'];
 if (isset($token) && isset($email) && isset($stripePriceId)) {
     try {
         $user = findRecord('users', ['email' => $email]);
+        $product = findRecord('products', ['stripe_price_id' => $stripePriceId]);
 
         $stripeCustomerId = $user['stripe_customer_id'];
 
@@ -40,6 +41,20 @@ if (isset($token) && isset($email) && isset($stripePriceId)) {
                 ],
             ],
         ]);
+
+        // Save the subscription in the DB
+        $subscriptionRecord = createRecord(
+            'subscriptions',
+            [
+                'user_id' => $user['id'],
+                'product_id' => $product['id'],
+                'stripe_subscription_id' => $subscription->id,
+                'stripe_price_id' => $stripePriceId,
+                'status' => 'active',
+                'start_date' =>  date('Y-m-d H:i:s', $subscription->current_period_start),
+                'end_date' => date('Y-m-d H:i:s', $subscription->current_period_start)
+            ]
+        );
 
         echo json_encode(['success' => true, 'subscription' => $subscription]);
     } catch (\Stripe\Exception\ApiErrorException $e) {
