@@ -495,7 +495,7 @@ if ($result->num_rows > 0) {
                                                             <div id="card-number-element" class="StripeElement mb-3"></div>
                                                             <div id="card-expiry-element" class="StripeElement mb-3"></div>
                                                             <div id="card-cvc-element" class="StripeElement mb-3"></div>
-                                                            <button type="submit" class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large">
+                                                            <button type="submit" class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large" x-on:click="showModal = false;">
                                                                 <img class="mx-2" src="assets/icons/unlocked.svg" alt="unlocked icon">
                                                                 CONTINUE
                                                             </button>
@@ -1000,7 +1000,7 @@ if ($result->num_rows > 0) {
                                                             <div id="card-number-element" class="StripeElement mb-3"></div>
                                                             <div id="card-expiry-element" class="StripeElement mb-3"></div>
                                                             <div id="card-cvc-element" class="StripeElement mb-3"></div>
-                                                            <button type="submit" class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large">
+                                                            <button type="submit" class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large" x-on:click="showModal = false;">
                                                                 <img class="mx-2" src="assets/icons/unlocked.svg" alt="unlocked icon">
                                                                 CONTINUE
                                                             </button>
