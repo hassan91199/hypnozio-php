@@ -60,8 +60,6 @@ if (isset($token) && isset($email) && isset($stripePriceId)) {
                     'stripe_subscription_id' => $subscription->id,
                     'stripe_price_id' => $stripePriceId,
                     'status' => 'active',
-                    'start_date' =>  date('Y-m-d H:i:s', $subscription->current_period_start),
-                    'end_date' => date('Y-m-d H:i:s', $subscription->current_period_start)
                 ]
             );
 
