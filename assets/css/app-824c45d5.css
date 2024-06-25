@@ -1431,7 +1431,7 @@ body {
 .checkbox:checked {
     --tw-bg-opacity: 1;
     background-color: rgb(58 91 169 / var(--tw-bg-opacity));
-    background-image: url(check-62b61eb2.svg)
+    background-image: url(/assets/icons/check-62b61eb2.svg)
 }
 
 .checkbox:focus {
