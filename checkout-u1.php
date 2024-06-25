@@ -528,7 +528,7 @@ foreach ($products as $key => $product) {
                                                             <div id="card-number-element" class="StripeElement mb-3"></div>
                                                             <div id="card-expiry-element" class="StripeElement mb-3"></div>
                                                             <div id="card-cvc-element" class="StripeElement mb-3"></div>
-                                                            <button type="submit" class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large" x-on:click="showModal = false;">
+                                                            <button type="submit" class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large" x-on:click="showModal = false; disableCta = false;">
                                                                 <img class="mx-2" src="assets/icons/unlocked.svg" alt="unlocked icon">
                                                                 CONTINUE
                                                             </button>
@@ -1033,7 +1033,7 @@ foreach ($products as $key => $product) {
                                                             <div id="card-number-element" class="StripeElement mb-3"></div>
                                                             <div id="card-expiry-element" class="StripeElement mb-3"></div>
                                                             <div id="card-cvc-element" class="StripeElement mb-3"></div>
-                                                            <button type="submit" class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large" x-on:click="showModal = false;">
+                                                            <button type="submit" class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large" x-on:click="showModal = false; disableCta = false;">
                                                                 <img class="mx-2" src="assets/icons/unlocked.svg" alt="unlocked icon">
                                                                 CONTINUE
                                                             </button>
