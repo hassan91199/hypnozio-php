@@ -5,6 +5,14 @@ require_once __DIR__ . '/utils/db.php';
 
 $discount = $_GET['d'] ?? null;
 
+$previousDiscount = $_SESSION['PREVIOUS_DISCOUNT'] ?? null;
+
+$showDiscountText = isset($discount) && isset($previousDiscount) && $previousDiscount !== $discount;
+
+if (isset($discount)) {
+    $_SESSION['PREVIOUS_DISCOUNT'] = $discount;
+}
+
 $discountCoupon = null;
 
 switch ($discount) {
@@ -145,7 +153,13 @@ foreach ($products as $key => $product) {
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="basis-full lg:basis-1/2 mx-auto">
-                    <div class="text-headline-large text-center">Here’s your Natural Neuro Hypnosis program</div>
+                    <?php if ($showDiscountText) : ?>
+                        <div class="line-through text-headline-large text-center">Previous Discount: <span class="text-accent font-semibold"><?= $previousDiscount . "%" ?></span></div>
+                        <div class="text-headline-large text-center font-semibold">Get your personal plan with up to <span class="text-accent font-semibold"><?= $discount . "%" ?></span> discount</div>
+                    <?php else : ?>
+                        <div class="text-headline-large text-center">Here’s your Natural Neuro Hypnosis program</div>
+                    <?php endif; ?>
+
                     <div class="mt-6 lg:mt-10 max-w-[552px] mx-auto lg:mr-0">
                         <div class="rounded shadow overflow-hidden">
                             <div class="bg-primary-95 p-4">

@@ -6,6 +6,8 @@ session_start();
 require_once __DIR__ . '/utils/functions.php';
 require_once __DIR__ . '/utils/db.php';
 
+unset($_SESSION['PREVIOUS_DISCOUNT']);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $requestData = $_POST;
 
