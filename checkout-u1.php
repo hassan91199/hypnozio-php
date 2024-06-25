@@ -3,6 +3,22 @@ session_start();
 
 require_once __DIR__ . '/utils/db.php';
 
+$discount = $_GET['d'] ?? null;
+
+$discountCoupon = null;
+
+switch ($discount) {
+    case 50:
+        $discountCoupon = 'LNe9DXbk';
+        break;
+    case 70:
+        $discountCoupon = '0zq0BDm1';
+        break;
+
+    default:
+        break;
+}
+
 $ageRange = $_SESSION['AGE_RANGE'] ?? '';
 $overWeightReason = $_SESSION['OVERWEIGHT_REASON'] ?? '';
 $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
@@ -22,6 +38,14 @@ if ($result->num_rows > 0) {
     }
 }
 
+foreach ($products as $key => $product) {
+    $price = $product['price'];
+    $discountedPrice = isset($discount) ? $price - ($price * $discount / 100) : $price;
+    $products[$key]['discounted_price'] = number_format($discountedPrice, 2);
+
+    $perMonthPrice = $products[$key]['discounted_price'] / $product['quantity'];
+    $products[$key]['per_month_price'] = number_format($perMonthPrice, 2);
+}
 ?>
 
 <!DOCTYPE html>
@@ -312,8 +336,10 @@ if ($result->num_rows > 0) {
                                                             <?= $products['2-month plan']['name'] ?>
                                                         </div>
                                                         <div class="flex text-body-small">
-                                                            <div class="line-through text-accent mr-3">$66.00</div>
-                                                            <div class="text-neutralVariant-80"><?= "$" . $products['2-month plan']['price'] ?></div>
+                                                            <?php if (isset($discount)) : ?>
+                                                                <div class="line-through text-accent mr-3"><?= "$" . $products['2-month plan']['price'] ?></div>
+                                                            <?php endif; ?>
+                                                            <div class="text-neutralVariant-80"><?= "$" . $products['2-month plan']['discounted_price'] ?></div>
                                                         </div>
                                                         <div class="text-neutralVariant-60 text-body-small">Billed every <?= $products['2-month plan']['quantity'] ?> months</div>
                                                     </div>
@@ -322,7 +348,7 @@ if ($result->num_rows > 0) {
                                             <div class="basis-5/12 border-l border-neutralVariant-90 min-h-[82px] flex flex-col items-center justify-center">
                                                 <div class="flex flex-col justify-center items-center mx-auto">
                                                     <div class="font-semibold text-headline-small sm:text-headline-medium">
-                                                        <?= "$" . number_format($products['2-month plan']['price'] / $products['2-month plan']['quantity'], 2)  ?>
+                                                        <?= "$" . $products['2-month plan']['per_month_price']  ?>
                                                     </div>
                                                     <div class="text-neutralVariant-60 text-body-small">
                                                         per month
@@ -349,8 +375,10 @@ if ($result->num_rows > 0) {
                                                             <?= $products['6-month plan']['name'] ?>
                                                         </div>
                                                         <div class="flex text-body-small">
-                                                            <div class="line-through text-accent mr-3">$264.00</div>
-                                                            <div class="text-neutralVariant-80"><?= "$" . $products['6-month plan']['price'] ?></div>
+                                                            <?php if (isset($discount)) : ?>
+                                                                <div class="line-through text-accent mr-3"><?= "$" . $products['6-month plan']['price'] ?></div>
+                                                            <?php endif; ?>
+                                                            <div class="text-neutralVariant-80"><?= "$" . $products['6-month plan']['discounted_price'] ?></div>
                                                         </div>
                                                         <div class="text-neutralVariant-60 text-body-small">Billed every <?= $products['6-month plan']['quantity'] ?> months</div>
                                                         <div class="w-fit bg-accent py-1 px-2 rounded-[14px] text-white font-semibold text-body-small">
@@ -362,7 +390,7 @@ if ($result->num_rows > 0) {
                                             <div class="basis-5/12 border-l border-neutralVariant-90 min-h-[82px] flex flex-col items-center justify-center">
                                                 <div class="flex flex-col justify-center items-center mx-auto">
                                                     <div class="font-semibold text-headline-small sm:text-headline-medium">
-                                                        <?= "$" . number_format($products['6-month plan']['price'] / $products['6-month plan']['quantity'], 2) ?>
+                                                        <?= "$" . $products['6-month plan']['per_month_price'] ?>
                                                     </div>
                                                     <div class="text-neutralVariant-60 text-body-small">
                                                         per month
@@ -389,8 +417,10 @@ if ($result->num_rows > 0) {
                                                             <?= $products['4-month plan']['name'] ?>
                                                         </div>
                                                         <div class="flex text-body-small">
-                                                            <div class="line-through text-accent mr-3">$107.88</div>
-                                                            <div class="text-neutralVariant-80"><?= $products['4-month plan']['price'] ?></div>
+                                                            <?php if (isset($discount)) : ?>
+                                                                <div class="line-through text-accent mr-3"><?= "$" . $products['4-month plan']['price'] ?></div>
+                                                            <?php endif; ?>
+                                                            <div class="text-neutralVariant-80"><?= "$" . $products['4-month plan']['discounted_price'] ?></div>
                                                         </div>
                                                         <div class="text-neutralVariant-60 text-body-small">Billed every <?= $products['4-month plan']['quantity'] ?> months</div>
                                                     </div>
@@ -399,7 +429,7 @@ if ($result->num_rows > 0) {
                                             <div class="basis-5/12 border-l border-neutralVariant-90 min-h-[82px] flex flex-col items-center justify-center">
                                                 <div class="flex flex-col justify-center items-center mx-auto">
                                                     <div class="font-semibold text-headline-small sm:text-headline-medium">
-                                                        <?= "$" . number_format($products['4-month plan']['price'] / $products['4-month plan']['quantity'], 2) ?>
+                                                        <?= "$" . $products['4-month plan']['per_month_price'] ?>
                                                     </div>
                                                     <div class="text-neutralVariant-60 text-body-small">
                                                         per month
@@ -453,7 +483,7 @@ if ($result->num_rows > 0) {
                                     </div>
                                     <div x-cloak x-show="showModal" class="fixed left-0 top-0 w-full h-full flex justify-center items-center bg-modal z-10">
                                         <div x-on:click.outside="showModal = false; event.preventDefault(); disableCta = false" class="bg-white p-6 rounded">
-                                            <a class="close-btn" href="<?= "{$_SERVER['REQUEST_URI']}?d=20" ?>" @click="showModal = false; disableCta = false">&times;</a>
+                                            <a class="close-btn" href="<?= "{$_SERVER['REQUEST_URI']}?d=70" ?>" @click="showModal = false; disableCta = false">&times;</a>
                                             <div class="text-center">
                                                 <h2 class="text-headline-small md:text-headline-medium font-bold">
                                                     Submit a secure payment.
@@ -492,6 +522,9 @@ if ($result->num_rows > 0) {
                                                             <input type="hidden" id="stripe-publishable-key" value="<?= $env['STRIPE_PUBLISHABLE_KEY'] ?>" />
                                                             <input type="hidden" id="stripe-price-id" :value="stripePriceId">
                                                             <input type="hidden" id="email" value="<?= $email ?>">
+                                                            <?php if (isset($discountCoupon)) : ?>
+                                                                <input type="hidden" id="discount-coupon" value="<?= $discountCoupon ?>">
+                                                            <?php endif; ?>
                                                             <div id="card-number-element" class="StripeElement mb-3"></div>
                                                             <div id="card-expiry-element" class="StripeElement mb-3"></div>
                                                             <div id="card-cvc-element" class="StripeElement mb-3"></div>
@@ -960,7 +993,7 @@ if ($result->num_rows > 0) {
                                     </div>
                                     <div x-cloak x-show="showModal" class="fixed left-0 top-0 w-full h-full flex justify-center items-center bg-modal z-10">
                                         <div x-on:click.outside="showModal = false; event.preventDefault(); disableCta = false" class="bg-white p-6 rounded">
-                                            <a class="close-btn" href="<?= "{$_SERVER['REQUEST_URI']}?d=20" ?>" @click="showModal = false; disableCta = false">&times;</a>
+                                            <a class="close-btn" href="<?= "{$_SERVER['REQUEST_URI']}?d=70" ?>" @click="showModal = false; disableCta = false">&times;</a>
                                             <div class="text-center">
                                                 <h2 class="text-headline-small md:text-headline-medium font-bold">
                                                     Submit a secure payment.
@@ -1045,6 +1078,7 @@ if ($result->num_rows > 0) {
             } = await stripe.createToken(cardNumberElement);
             const email = document.getElementById('email').value;
             const stripePriceId = document.getElementById('stripe-price-id').value;
+            const discountCoupon = document.getElementById('discount-coupon')?.value ?? null;
             if (error) {
                 // Handle error
                 console.error(error);
@@ -1058,7 +1092,8 @@ if ($result->num_rows > 0) {
                     body: JSON.stringify({
                         token: token.id,
                         email,
-                        stripePriceId
+                        stripePriceId,
+                        discountCoupon
                     }),
                 }).then(response => {
                     return response.json();

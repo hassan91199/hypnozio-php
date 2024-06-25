@@ -8,6 +8,7 @@ $input = json_decode(file_get_contents('php://input'), true);
 $token = $input['token'];
 $email = $input['email'];
 $stripePriceId = $input['stripePriceId'];
+$discountCoupon = $input['discountCoupon'];
 
 if (isset($token) && isset($email) && isset($stripePriceId)) {
     try {
@@ -41,15 +42,21 @@ if (isset($token) && isset($email) && isset($stripePriceId)) {
 
         // Only create subscription if no subscription is currently active
         if (!isset($existingSubscription)) {
-            // Create a new subscription
-            $subscription = \Stripe\Subscription::create([
+            $subscriptionData = [
                 'customer' => $stripeCustomerId,
                 'items' => [
                     [
                         'price' => $stripePriceId,
                     ],
                 ],
-            ]);
+            ];
+
+            if (isset($discountCoupon)) {
+                $subscriptionData['coupon'] = $discountCoupon;
+            }
+
+            // Create a new subscription
+            $subscription = \Stripe\Subscription::create($subscriptionData);
 
             // Save the subscription in the DB
             $subscriptionRecord = createRecord(
