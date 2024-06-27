@@ -496,7 +496,7 @@ foreach ($products as $key => $product) {
                                         <img src="assets/images/safe-checkout-en.png" alt="" />
                                     </div>
                                     <div x-cloak x-show="showModal" class="fixed left-0 top-0 w-full h-full flex justify-center items-center bg-modal z-10">
-                                        <div x-on:click.outside="showModal = false; event.preventDefault(); disableCta = false" class="bg-white p-6 rounded">
+                                        <div x-on:click.outside="showModal = false; event.preventDefault(); disableCta = false" class="xs:h-full bg-white p-6 rounded">
                                             <a class="close-btn" href="/checkout-u1.php?d=70" @click="showModal = false; disableCta = false">&times;</a>
                                             <div class="text-center">
                                                 <h2 class="text-headline-small md:text-headline-medium font-bold">

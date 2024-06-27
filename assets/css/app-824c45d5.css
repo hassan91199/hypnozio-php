@@ -1,7 +1,7 @@
 .card-brand {
     display: inline-block;
-    width: 2.5em;
-    height: 2.5em;
+    width: 2em;
+    height: 2em;
 }
 
 .vertical-line {
@@ -8553,6 +8553,16 @@ progress::-webkit-progress-value {
 .peer:focus~.peer-focus\:text-onSurface {
     --tw-text-opacity: 1;
     color: rgb(27 27 31 / var(--tw-text-opacity))
+}
+
+@media (max-width: 600px) {
+    .xs\:h-full {
+        height: 100%
+    }
+
+    .xs\:w-full {
+        width: 100%
+    }
 }
 
 @media (min-width: 360px) {
