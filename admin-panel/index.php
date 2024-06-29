@@ -84,7 +84,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         </div>
     </nav>
 
-    <div class="lg:h-min lg:min-h-screen">
+    <div>
         <div class="mt-4 md:mt-8 pb-10 md:pb-20 lg:pb-8">
             <div class="container">
                 <div class="flex flex-wrap justify-between">
