@@ -206,3 +206,27 @@ function createRecord($table, $data)
     // Return the new record or null
     return $newRecord;
 }
+
+function runQuery($query)
+{
+    // Get the database connection
+    $conn = getDbConnection();
+
+    // Execute the query
+    $result = $conn->query($query);
+
+    $records = [];
+
+    if ($result) {
+        // Fetch all records
+        while ($row = $result->fetch_assoc()) {
+            $records[] = $row;
+        }
+    }
+
+    // Close the connection
+    $conn->close();
+
+    // Return the records or an empty array if no results
+    return $records;
+}
