@@ -15,5 +15,7 @@ return [
 
     'STRIPE_SECRET_KEY' => '',
     'STRIPE_PUBLISHABLE_KEY' => '',
-    'STRIPE_WEBHOOK_SECRET' => ''
+    'STRIPE_WEBHOOK_SECRET' => '',
+
+    'BASE_URL', "http://{$_SERVER['HTTP_HOST']}/"
 ];
