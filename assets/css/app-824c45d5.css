@@ -1,3 +1,9 @@
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
 .card-brand {
     display: inline-block;
     width: 2em;
