@@ -45,7 +45,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 <img src="assets/icons/logo.svg" class="" alt="" />
                 <div class="flex items-center space-x-4">
                     <div x-show="!navigationIsOpened" x-on:click="navigationIsOpened = !navigationIsOpened">
-                        <div class="text-onSurface">
+                        <div class="text-onSurface cursor-pointer">
                             <svg class="w-6 h-6 md:w-8 md:h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M3 8V6H21V8H3ZM3 13H21V11H3V13ZM3 18H21V16H3V18Z" fill="currentColor"></path>
                             </svg>
@@ -54,7 +54,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                     <div x-show="navigationIsOpened" class="fixed top-0 bottom-0 left-0 w-screen h-screen overflow-hidden nav-bg z-50" style="display: none">
                         <div x-show="navigationIsOpened" x-transition:enter="transition duration-300 transform ease-out" x-transition:enter-start="opacity-0 translate-x-full" x-transition:enter-end="opacity-100 translate-x-0" x-transition:leave="transition duration-300 transform ease-in" x-transition:leave-start="opacity-100 translate-x-0" x-transition:leave-end="opacity-0 translate-x-full" class="w-[279px] bg-white rounded-l-[64px] ml-auto mr-0 flex h-full flex-col" style="display: none">
                             <div class="px-4 py-2">
-                                <svg class="ml-auto mr-0" x-on:click="navigationIsOpened = !navigationIsOpened" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="ml-auto mr-0 cursor-pointer" x-on:click="navigationIsOpened = !navigationIsOpened" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.29844 25.0999L6.89844 23.6999L14.5984 15.9999L6.89844 8.2999L8.29844 6.8999L15.9984 14.5999L23.6984 6.8999L25.0984 8.2999L17.3984 15.9999L25.0984 23.6999L23.6984 25.0999L15.9984 17.3999L8.29844 25.0999Z" fill="#1B1B1F"></path>
                                 </svg>
                                 <div class="space-y-6 pt-10 pb-8">
