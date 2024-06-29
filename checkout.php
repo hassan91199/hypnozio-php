@@ -16,8 +16,8 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
     <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.svg">
     <title>Natural Neuro Hypnosis | Checkout</title>
 
-    <link rel="preload" as="style" href="assets/css/app-824c45d5.css" />
-    <link rel="stylesheet" href="assets/css/app-824c45d5.css" data-navigate-track="reload" />
+    <link rel="preload" as="style" href="assets/css/app.css" />
+    <link rel="stylesheet" href="assets/css/app.css" data-navigate-track="reload" />
     <link rel="modulepreload" href="assets/js/app-5f69faf4.js" />
     <link rel="modulepreload" href="assets/js/bootstrap-214fcc70.js" />
     <link rel="modulepreload" href="assets/js/jquery-2c3981e2.js" />

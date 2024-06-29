@@ -198,7 +198,7 @@ $siteName = 'Natural Neuro Hypnosis'
 
     <title><?= $siteName ?> | Find &amp; fix root cause of overweight using self-hypnosis</title>
 
-    <link rel="stylesheet" href="assets/css/app-824c45d5.css" data-navigate-track="reload" />
+    <link rel="stylesheet" href="assets/css/app.css" data-navigate-track="reload" />
     <script type="module" src="assets/js/nh-quiz-1f23fa02.js" data-navigate-track="reload"></script>
     <script type="module" src="assets/js/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
 </head>
