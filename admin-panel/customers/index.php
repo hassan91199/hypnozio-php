@@ -12,7 +12,8 @@ $query = "
     SELECT 
         users.email,
         products.name,
-        subscriptions.status
+        subscriptions.status,
+        subscriptions.stripe_subscription_id
     FROM 
         users
     INNER JOIN 
@@ -126,7 +127,18 @@ $customers = runQuery($query);
                                 <td><?= $customer['email'] ?></td>
                                 <td><?= $customer['name'] ?></td>
                                 <td><?= $customer['status'] ?></td>
-                                <td>Actions</td>
+                                <td>
+                                    <form action="/stripe/cancel-subscription.php">
+                                        <input type="hidden" name="stripe_subscription_id" value="<?= $customer['stripe_subscription_id'] ?>">
+                                        <button type="submit" class="hover:opacity-60" title="Cancel Subscription">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <line x1="15" y1="9" x2="9" y2="15"></line>
+                                                <line x1="9" y1="9" x2="15" y2="15"></line>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </td>
                             </tr>
                         <?php endforeach; ?>
                     </table>
