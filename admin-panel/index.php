@@ -87,11 +87,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     <div>
         <div class="mt-4 md:mt-8 pb-10 md:pb-20 lg:pb-8">
             <div class="container">
-                <div class="flex flex-wrap justify-between">
-                    <div class="basis-full lg:basis-1/2 lg:pr-12">
-                        <div class="text-headline-medium sm:text-display-small xl:text-display-medium">
-                            Welcome to the Admin Panel
-                        </div>
+                <div class="text-headline-medium sm:text-display-small xl:text-display-medium">
+                    Welcome to the Admin Panel
+                </div>
+                <div class="mt-4">
+                    <div class="text-title-medium uppercase text-primary mb-1">
+                        Quick Links
+                    </div>
+                    <div class="mb-1 flex flex-wrap items-center justify-between lg:justify-between gap-4 lg:gap-6">
+                        <a class="cursor-pointer link w-[161px] sm:w-[267px] md:w-[275px] lg:w-[204px] xl:w-[246px] h-12 lg:h-16 cursor-pointer btn btn-outlined" id="" @click="userGender = 'other'" href="<?= env('BASE_URL') . 'admin-panel/customers' ?>" x-on:click="sendHypnozioQuizAnswerClickedEvent('Select your gender', userGender); sendHypnozioQuizStartedEvent()">
+                            Customers
+                        </a>
                     </div>
                 </div>
             </div>
