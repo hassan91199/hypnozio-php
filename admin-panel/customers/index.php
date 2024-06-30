@@ -1,11 +1,17 @@
 <?php
-require(__DIR__ . '/../../utils/functions.php');
 require(__DIR__ . '/../../utils/db.php');
 session_start();
 
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header("Location: " . env('BASE_URL') . "/admin-panel/login.php");
+    header("Location: " . $env['BASE_URL'] . "admin-panel/login.php");
     exit();
+}
+
+$sessionMessage = $_SESSION['SESSION_MESSAGE'];
+$showSessionMessage = false;
+if (isset($sessionMessage)) {
+    $showSessionMessage = true;
+    unset($_SESSION['SESSION_MESSAGE']);
 }
 
 $query = "
@@ -114,6 +120,12 @@ $customers = runQuery($query);
                     </div>
                 </div>
                 <div class="overflow-auto">
+                    <?php if ($showSessionMessage === true) : ?>
+                        <div class="w-full my-5 message <?= $sessionMessage['status'] ?>">
+                            <?= $sessionMessage['message'] ?>
+                        </div>
+                    <?php endif; ?>
+
                     <table class="w-full my-5">
                         <tr>
                             <th>Email</th>
@@ -128,16 +140,15 @@ $customers = runQuery($query);
                                 <td><?= $customer['name'] ?></td>
                                 <td><?= $customer['status'] ?></td>
                                 <td>
-                                    <form action="/stripe/cancel-subscription.php">
-                                        <input type="hidden" name="stripe_subscription_id" value="<?= $customer['stripe_subscription_id'] ?>">
-                                        <button type="submit" class="hover:opacity-60" title="Cancel Subscription">
+                                    <?php if ($customer['status'] === 'active') : ?>
+                                        <button id="cancel-subscription-btn" type="submit" class="hover:opacity-60" title="Cancel Subscription" data-stripe-subscription-id="<?= $customer['stripe_subscription_id'] ?>" onclick="handleCancelSubscription(this)">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle">
                                                 <circle cx="12" cy="12" r="10"></circle>
                                                 <line x1="15" y1="9" x2="9" y2="15"></line>
                                                 <line x1="9" y1="9" x2="15" y2="15"></line>
                                             </svg>
                                         </button>
-                                    </form>
+                                    <?php endif; ?>
                                 </td>
                             </tr>
                         <?php endforeach; ?>
@@ -146,6 +157,31 @@ $customers = runQuery($query);
             </div>
         </div>
     </div>
+
+    <script>
+        function handleCancelSubscription(button) {
+            // Disable the button to avoid unnecessary cancelations
+            button.disabled = true;
+
+            const stripeSubscriptionId = button.getAttribute('data-stripe-subscription-id');
+            const url = '<?= $env['BASE_URL'] . 'stripe/cancel-subscription.php' ?>';
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    stripe_subscription_id: stripeSubscriptionId,
+                }),
+            }).then(response => {
+                return response.json();
+            }).then(result => {
+                location.reload();
+            });
+        }
+    </script>
+
 </body>
 
 </html>
