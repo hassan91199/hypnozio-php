@@ -3,7 +3,7 @@ require(__DIR__ . '/../utils/functions.php');
 session_start();
 
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header("Location: " . env('BASE_URL') . "/admin-panel/login.php");
+    header("Location: " . env('BASE_URL') . "admin-panel/login.php");
     exit();
 }
 ?>

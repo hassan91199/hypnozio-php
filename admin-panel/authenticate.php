@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($username === $admin_username && $password === $admin_password) {
         $_SESSION['loggedin'] = true;
-        header("Location: " . env('BASE_URL') . "/admin-panel");
+        header("Location: " . env('BASE_URL') . "admin-panel");
         exit();
     } else {
         echo 'Invalid username or password';
