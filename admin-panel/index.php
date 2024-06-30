@@ -14,26 +14,26 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
-    <link rel="icon" type="image/x-icon" href="assets/icons/logo.svg" />
+    <link rel="icon" type="image/x-icon" href="/assets/icons/logo.svg" />
 
     <title>Admin Panel</title>
 
-    <link rel="preload" as="style" href="assets/css/app-b0fb382d.css" />
-    <link rel="stylesheet" href="assets/css/app-b0fb382d.css" data-navigate-track="reload" />
-    <link rel="modulepreload" href="assets/js/app-5f69faf4.js" />
-    <link rel="modulepreload" href="assets/js/bootstrap-214fcc70.js" />
-    <link rel="modulepreload" href="assets/js/jquery-2c3981e2.js" />
-    <link rel="modulepreload" href="assets/js/module.esm-958008ac.js" />
-    <link rel="modulepreload" href="assets/js/_commonjsHelpers-de833af9.js" />
-    <link rel="modulepreload" href="assets/js/jquery-68c15ecd.js" />
-    <script type="module" src="assets/js/app-5f69faf4.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="assets/js/cookies-ee50a713.js" />
-    <script type="module" src="assets/js/cookies-ee50a713.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="assets/js/gtm-tags-e2664de5.js" />
-    <script type="module" src="assets/js/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="assets/js/alpine-js-2881bf21.js" />
-    <link rel="modulepreload" href="assets/js/module.esm-958008ac.js" />
-    <script type="module" src="assets/js/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
+    <link rel="preload" as="style" href="/assets/css/app-b0fb382d.css" />
+    <link rel="stylesheet" href="/assets/css/app-b0fb382d.css" data-navigate-track="reload" />
+    <link rel="modulepreload" href="/assets/js/app-5f69faf4.js" />
+    <link rel="modulepreload" href="/assets/js/bootstrap-214fcc70.js" />
+    <link rel="modulepreload" href="/assets/js/jquery-2c3981e2.js" />
+    <link rel="modulepreload" href="/assets/js/module.esm-958008ac.js" />
+    <link rel="modulepreload" href="/assets/js/_commonjsHelpers-de833af9.js" />
+    <link rel="modulepreload" href="/assets/js/jquery-68c15ecd.js" />
+    <script type="module" src="/assets/js/app-5f69faf4.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="/assets/js/cookies-ee50a713.js" />
+    <script type="module" src="/assets/js/cookies-ee50a713.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="/assets/js/gtm-tags-e2664de5.js" />
+    <script type="module" src="/assets/js/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="/assets/js/alpine-js-2881bf21.js" />
+    <link rel="modulepreload" href="/assets/js/module.esm-958008ac.js" />
+    <script type="module" src="/assets/js/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
 </head>
 
 <body class="antialiased bg-surface text-onSurface scroll-smooth">
@@ -42,7 +42,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 						navigationIsOpened: false,
 						}" class="container text-white py-4 md:py-5">
             <div class="flex justify-between items-center">
-                <img src="assets/icons/logo.svg" class="" alt="" />
+                <img src="/assets/icons/logo.svg" class="" alt="" />
                 <div class="flex items-center space-x-4">
                     <div x-show="!navigationIsOpened" x-on:click="navigationIsOpened = !navigationIsOpened">
                         <div class="text-onSurface cursor-pointer">
