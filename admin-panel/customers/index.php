@@ -121,7 +121,7 @@ $customers = runQuery($query);
                 </div>
                 <div class="overflow-auto">
                     <?php if ($showSessionMessage === true) : ?>
-                        <div class="w-full my-5 message <?= $sessionMessage['status'] ?>">
+                        <div id="session-message" class="w-full my-5 message <?= $sessionMessage['status'] ?>">
                             <?= $sessionMessage['message'] ?>
                         </div>
                     <?php endif; ?>
@@ -180,6 +180,15 @@ $customers = runQuery($query);
                 location.reload();
             });
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const messageElement = document.getElementById("session-message");
+            if (messageElement) {
+                setTimeout(function() {
+                    messageElement.style.display = "none";
+                }, 5000);
+            }
+        });
     </script>
 
 </body>
