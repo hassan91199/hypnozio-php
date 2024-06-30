@@ -1,6 +1,7 @@
 <?php
 require(__DIR__ . '/../vendor/autoload.php');
 require(__DIR__ . '/../utils/db.php');
+session_start();
 
 \Stripe\Stripe::setApiKey($env['STRIPE_SECRET_KEY']);
 
@@ -43,19 +44,23 @@ try {
             'amount' => $paymentIntent->amount, // Refund the full amount
         ]);
 
-        echo json_encode([
+        $_SESSION['SESSION_MESSAGE'] = [
             'status' => 'success',
             'message' => 'Subscription cancelled and refund issued successfully.'
-        ]);
+        ];
     } else {
-        echo json_encode([
+        $_SESSION['SESSION_MESSAGE'] = [
             'status' => 'error',
             'message' => 'No invoices found for this subscription.',
-        ]);
+        ];
     }
 } catch (\Stripe\Exception\ApiErrorException $e) {
-    echo json_encode([
+    $_SESSION['SESSION_MESSAGE'] = [
         'status' => 'error',
-        'message' => 'Error: ' . $e->getMessage(),
+        'message' => 'There was an error canceling the subscription.' . $e->getMessage(),
+    ];
+} finally {
+    echo json_encode([
+        'message' => 'Script ended successfully'
     ]);
 }
