@@ -513,10 +513,17 @@ foreach ($products as $key => $product) {
                                                         <p class="text-neutralVariant-60 text-body-medium text-center" x-text="checked"></p>
                                                         <p class="text-neutralVariant-60 text-body-medium text-center" x-text="subscriptionPrice"></p>
                                                     </div>
+                                                    <div class="flex justify-between my-4">
+                                                        <p class="text-neutralVariant-60 text-body-medium text-center">70% introductory offer discount</p>
+                                                        <p class="text-accent text-body-medium text-center">-$69.85</p>
+                                                    </div>
                                                     <hr class="my-4">
                                                     <div class="flex justify-between my-4">
                                                         <h3 class="font-semibold break-all text-label-extra-large">Total:</h3>
                                                         <h3 class="font-semibold break-all text-label-extra-large" x-text="subscriptionPrice"></h3>
+                                                    </div>
+                                                    <div>
+                                                        <p class="text-accent text-body-medium text-right">You just saved $69.85 (70% off)</p>
                                                     </div>
                                                 </div>
                                                 <div class="vertical-line"></div>
@@ -542,14 +549,14 @@ foreach ($products as $key => $product) {
                                                             <div id="card-number-element" class="StripeElement mb-3"></div>
                                                             <div id="card-expiry-element" class="StripeElement mb-3"></div>
                                                             <div id="card-cvc-element" class="StripeElement mb-3"></div>
-                                                            <button type="submit" class="cursor-pointer link btn h-14 my-6 text-body-large md:text-label-extra-large" x-on:click="showModal = false; disableCta = false;">
+                                                            <button type="submit" class="cursor-pointer link btn h-14 text-body-large md:text-label-extra-large" x-on:click="showModal = false; disableCta = false;">
                                                                 <img class="mx-2" src="assets/icons/unlocked.svg" alt="unlocked icon">
                                                                 CONTINUE
                                                             </button>
                                                         </form>
                                                     </div>
 
-                                                    <p class="text-neutral-60 text-body-small" id="">
+                                                    <p class="text-neutral-60 text-body-small">
                                                         BetterMe International Limited | Themistokli Dervi 39, 1st floor, Office 104, 1066, Nicosia, Cyprus
                                                     </p>
                                                 </div>
