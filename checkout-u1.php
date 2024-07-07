@@ -48,7 +48,11 @@ if ($result->num_rows > 0) {
 
 foreach ($products as $key => $product) {
     $price = $product['price'];
-    $totalPrice = isset($discount) ? $price - ($price * $discount / 100) : $price;
+
+    $discountAmount = $price * $discount / 100;
+    $products[$key]['discount_amount'] = number_format($discountAmount, 2);
+
+    $totalPrice = isset($discount) ? $price - $discountAmount : $price;
     $products[$key]['total_price'] = number_format($totalPrice, 2);
 
     $perMonthPrice = $products[$key]['total_price'] / $product['quantity'];
@@ -325,6 +329,8 @@ foreach ($products as $key => $product) {
         showModal: false,
         formattedPrice: '<?= $products['6-month plan']['price'] ?>',
         subscriptionPrice: '<?= $products['6-month plan']['price'] ?>',
+        totalPrice: '<?= $products['6-month plan']['total_price'] ?>',
+        discountAmount: '<?= $products['6-month plan']['discount_amount'] ?>',
         subscriptionInterval: '<?= $products['6-month plan']['quantity'] ?>',
         stripePriceId: '<?= $products['6-month plan']['stripe_price_id'] ?>',
         interval: '',
@@ -336,6 +342,8 @@ foreach ($products as $key => $product) {
             checked = '<?= $products['2-month plan']['name'] ?>';
             formattedPrice = '<?= $products['2-month plan']['price'] ?>',
             subscriptionPrice = '<?= $products['2-month plan']['price'] ?>',
+            totalPrice ='<?= $products['2-month plan']['total_price'] ?>',
+            discountAmount = '<?= $products['2-month plan']['discount_amount'] ?>',
             subscriptionInterval = '<?= $products['2-month plan']['quantity'] ?>',
             stripePriceId = '<?= $products['2-month plan']['stripe_price_id'] ?>',
             interval = '',
@@ -375,6 +383,8 @@ foreach ($products as $key => $product) {
             checked = '<?= $products['6-month plan']['name'] ?>';
             formattedPrice = '<?= $products['6-month plan']['price'] ?>',
             subscriptionPrice = '<?= $products['6-month plan']['price'] ?>',
+            totalPrice ='<?= $products['6-month plan']['total_price'] ?>',
+            discountAmount = '<?= $products['6-month plan']['discount_amount'] ?>',
             subscriptionInterval = '<?= $products['6-month plan']['quantity'] ?>',
             stripePriceId = '<?= $products['6-month plan']['stripe_price_id'] ?>',
             interval = '',
@@ -417,6 +427,8 @@ foreach ($products as $key => $product) {
             checked = '<?= $products['4-month plan']['name'] ?>';
             formattedPrice = '<?= $products['4-month plan']['price'] ?>',
             subscriptionPrice = '<?= $products['4-month plan']['price'] ?>',
+            totalPrice ='<?= $products['4-month plan']['total_price'] ?>',
+            discountAmount = '<?= $products['4-month plan']['discount_amount'] ?>',
             subscriptionInterval = '<?= $products['4-month plan']['quantity'] ?>',
             stripePriceId = '<?= $products['4-month plan']['stripe_price_id'] ?>',
             interval = '',
@@ -511,20 +523,24 @@ foreach ($products as $key => $product) {
                                                     </h3>
                                                     <div class="flex justify-between my-4">
                                                         <p class="text-neutralVariant-60 text-body-medium text-center" x-text="checked"></p>
-                                                        <p class="text-neutralVariant-60 text-body-medium text-center" x-text="subscriptionPrice"></p>
+                                                        <p class="text-neutralVariant-60 text-body-medium text-center" x-text="'$' + subscriptionPrice"></p>
                                                     </div>
-                                                    <div class="flex justify-between my-4">
-                                                        <p class="text-neutralVariant-60 text-body-medium text-center">70% introductory offer discount</p>
-                                                        <p class="text-accent text-body-medium text-center">-$69.85</p>
-                                                    </div>
+                                                    <?php if (isset($discount)) : ?>
+                                                        <div class="flex justify-between my-4">
+                                                            <p class="text-neutralVariant-60 text-body-medium text-center"><?= $discount ?>% introductory offer discount</p>
+                                                            <p class="text-accent text-body-medium text-center" x-text="'-$' + discountAmount"></p>
+                                                        </div>
+                                                    <?php endif; ?>
                                                     <hr class="my-4">
                                                     <div class="flex justify-between my-4">
                                                         <h3 class="font-semibold break-all text-label-extra-large">Total:</h3>
-                                                        <h3 class="font-semibold break-all text-label-extra-large" x-text="subscriptionPrice"></h3>
+                                                        <h3 class="font-semibold break-all text-label-extra-large" x-text="'$' + totalPrice"></h3>
                                                     </div>
-                                                    <div>
-                                                        <p class="text-accent text-body-medium text-right">You just saved $69.85 (70% off)</p>
-                                                    </div>
+                                                    <?php if (isset($discount)) : ?>
+                                                        <div>
+                                                            <p class="text-accent text-body-medium text-right" x-text="'You just saved $' + discountAmount + ' (<?= $discount ?>% off)'"></p>
+                                                        </div>
+                                                    <?php endif; ?>
                                                 </div>
                                                 <div class="vertical-line"></div>
                                                 <div class="lg:w-full p-3">
