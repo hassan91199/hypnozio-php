@@ -48,10 +48,10 @@ if ($result->num_rows > 0) {
 
 foreach ($products as $key => $product) {
     $price = $product['price'];
-    $discountedPrice = isset($discount) ? $price - ($price * $discount / 100) : $price;
-    $products[$key]['discounted_price'] = number_format($discountedPrice, 2);
+    $totalPrice = isset($discount) ? $price - ($price * $discount / 100) : $price;
+    $products[$key]['total_price'] = number_format($totalPrice, 2);
 
-    $perMonthPrice = $products[$key]['discounted_price'] / $product['quantity'];
+    $perMonthPrice = $products[$key]['total_price'] / $product['quantity'];
     $products[$key]['per_month_price'] = number_format($perMonthPrice, 2);
 }
 ?>
@@ -353,7 +353,7 @@ foreach ($products as $key => $product) {
                                                             <?php if (isset($discount)) : ?>
                                                                 <div class="line-through text-accent mr-3"><?= "$" . $products['2-month plan']['price'] ?></div>
                                                             <?php endif; ?>
-                                                            <div class="text-neutralVariant-80"><?= "$" . $products['2-month plan']['discounted_price'] ?></div>
+                                                            <div class="text-neutralVariant-80"><?= "$" . $products['2-month plan']['total_price'] ?></div>
                                                         </div>
                                                         <div class="text-neutralVariant-60 text-body-small">Billed every <?= $products['2-month plan']['quantity'] ?> months</div>
                                                     </div>
@@ -392,7 +392,7 @@ foreach ($products as $key => $product) {
                                                             <?php if (isset($discount)) : ?>
                                                                 <div class="line-through text-accent mr-3"><?= "$" . $products['6-month plan']['price'] ?></div>
                                                             <?php endif; ?>
-                                                            <div class="text-neutralVariant-80"><?= "$" . $products['6-month plan']['discounted_price'] ?></div>
+                                                            <div class="text-neutralVariant-80"><?= "$" . $products['6-month plan']['total_price'] ?></div>
                                                         </div>
                                                         <div class="text-neutralVariant-60 text-body-small">Billed every <?= $products['6-month plan']['quantity'] ?> months</div>
                                                         <div class="w-fit bg-accent py-1 px-2 rounded-[14px] text-white font-semibold text-body-small">
@@ -434,7 +434,7 @@ foreach ($products as $key => $product) {
                                                             <?php if (isset($discount)) : ?>
                                                                 <div class="line-through text-accent mr-3"><?= "$" . $products['4-month plan']['price'] ?></div>
                                                             <?php endif; ?>
-                                                            <div class="text-neutralVariant-80"><?= "$" . $products['4-month plan']['discounted_price'] ?></div>
+                                                            <div class="text-neutralVariant-80"><?= "$" . $products['4-month plan']['total_price'] ?></div>
                                                         </div>
                                                         <div class="text-neutralVariant-60 text-body-small">Billed every <?= $products['4-month plan']['quantity'] ?> months</div>
                                                     </div>
