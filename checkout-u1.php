@@ -35,7 +35,12 @@ $email = $_SESSION['EMAIL'] ?? '';
 // Getting all the products
 $conn = getDbConnection();
 
-$sql = "SELECT * FROM products";
+$sql = "
+    SELECT * 
+    FROM products 
+    WHERE type = 'weight_loss';
+";
+
 $result = $conn->query($sql);
 
 $products = [];
