@@ -28,8 +28,8 @@ switch ($discount) {
 }
 
 $ageRange = $_SESSION['AGE_RANGE'] ?? '';
-$overWeightReason = $_SESSION['OVERWEIGHT_REASON'] ?? '';
-$desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
+$timeOnAddiction = $_SESSION['TIME_ON_ADDICTION'];
+$severity = $_SESSION['SEVERITY'];
 $email = $_SESSION['EMAIL'] ?? '';
 
 // Getting all the products
@@ -169,22 +169,22 @@ foreach ($products as $key => $product) {
                         <div class="text-headline-large text-center">Here’s your Natural Neuro Hypnosis program</div>
                     <?php endif; ?>
 
-                    <div class="mt-6 lg:mt-10 max-w-[552px] mx-auto lg:mr-0">
+                    <div class="mt-6 lg:mt-10 max-w-[552px] mx-auto">
                         <div class="rounded shadow overflow-hidden">
                             <div class="bg-primary-95 p-4">
-                                <div class="text-title-large text-center font-semibold text-primary-10">Your weight loss program</div>
+                                <div class="text-title-large text-center font-semibold text-primary-10">Your alcohol addiction recovery program</div>
                                 <div class="space-y-4">
                                     <div class="text-body-medium lg:text-body-large first:mt-6">
                                         <span class="font-semibold">Age range:</span>
                                         <span><?= $ageRange ?></span>
                                     </div>
                                     <div class="text-body-medium lg:text-body-large first:mt-6">
-                                        <span class="font-semibold">Overweight reason:</span>
-                                        <span><?= $overWeightReason ?></span>
+                                        <span class="font-semibold">Time on addiction:</span>
+                                        <span><?= $timeOnAddiction ?></span>
                                     </div>
                                     <div class="text-body-medium lg:text-body-large first:mt-6">
-                                        <span class="font-semibold">Weight goal:</span>
-                                        <span><?= $desiredWeight ?></span>
+                                        <span class="font-semibold">Severity:</span>
+                                        <span><?= $severity ?>/10</span>
                                     </div>
                                 </div>
                             </div>
@@ -197,7 +197,7 @@ foreach ($products as $key => $product) {
                                         <div class="text-body-medium lg:text-body-large font-semibold">
                                             <span>Week 1:</span>
                                         </div>
-                                        <div class="mt-0.5 text-body-medium lg:text-body-large">Changing Outlook</div>
+                                        <div class="mt-0.5 text-body-medium lg:text-body-large">Introduction to positive change</div>
                                     </div>
                                 </div>
                                 <div class="flex items-center">
@@ -208,7 +208,7 @@ foreach ($products as $key => $product) {
                                         <div class="text-body-medium lg:text-body-large font-semibold">
                                             <span>Week 2:</span>
                                         </div>
-                                        <div class="mt-0.5 text-body-medium lg:text-body-large">Visualising New Habits</div>
+                                        <div class="mt-0.5 text-body-medium lg:text-body-large">Visualizing a healthy future</div>
                                     </div>
                                 </div>
                                 <div class="flex items-center">
@@ -219,7 +219,7 @@ foreach ($products as $key => $product) {
                                         <div class="text-body-medium lg:text-body-large font-semibold">
                                             <span>Week 3:</span>
                                         </div>
-                                        <div class="mt-0.5 text-body-medium lg:text-body-large">Solidifying New Practices</div>
+                                        <div class="mt-0.5 text-body-medium lg:text-body-large">Find coping mechanisms for stress</div>
                                     </div>
                                 </div>
                                 <div class="flex items-center">
@@ -230,7 +230,7 @@ foreach ($products as $key => $product) {
                                         <div class="text-body-medium lg:text-body-large font-semibold">
                                             <span>Week 4:</span>
                                         </div>
-                                        <div class="mt-0.5 text-body-medium lg:text-body-large">Changing Views on Unhealthy Foods and Sugary Drinks</div>
+                                        <div class="mt-0.5 text-body-medium lg:text-body-large">Reframing triggers</div>
                                     </div>
                                 </div>
                                 <div class="flex items-center">
@@ -241,7 +241,7 @@ foreach ($products as $key => $product) {
                                         <div class="text-body-medium lg:text-body-large font-semibold">
                                             <span>Week 5:</span>
                                         </div>
-                                        <div class="mt-0.5 text-body-medium lg:text-body-large">Eliminating Binge Eating Patterns</div>
+                                        <div class="mt-0.5 text-body-medium lg:text-body-large">Building self-esteem and confidence</div>
                                     </div>
                                 </div>
                                 <div class="flex items-center">
@@ -252,7 +252,7 @@ foreach ($products as $key => $product) {
                                         <div class="text-body-medium lg:text-body-large font-semibold">
                                             <span>Week 6:</span>
                                         </div>
-                                        <div class="mt-0.5 text-body-medium lg:text-body-large">Managing Caloric Intake Effectively</div>
+                                        <div class="mt-0.5 text-body-medium lg:text-body-large">Rewriting negative thought patterns</div>
                                     </div>
                                 </div>
                                 <div class="flex items-center">
@@ -265,7 +265,7 @@ foreach ($products as $key => $product) {
                                         <div class="text-body-medium lg:text-body-large font-semibold">
                                             <span>Post week 6 program:</span>
                                         </div>
-                                        <div class="mt-0.5 text-body-medium lg:text-body-large">Unlock your ongoing weight loss management plan</div>
+                                        <div class="mt-0.5 text-body-medium lg:text-body-large">Unlock your ongoing alcohol addiction management plan</div>
                                     </div>
                                 </div>
                             </div>
@@ -595,7 +595,7 @@ foreach ($products as $key => $product) {
             <h2 class="text-title-large lg:text-headline-large text-center mb-6 lg:mb-10">
                 Why customers love us?
             </h2>
-            <div class="bg-white w-full">
+            <div class="bg-inherit w-full">
                 <div class="container">
                     <div class="md:hidden pt-5">
                         <div class="flex justify-center relative" x-data="Splide({
@@ -608,29 +608,29 @@ foreach ($products as $key => $product) {
                     }
                 })">
                             <div class="flex flex-col relative max-w-[344px] h-full mx-auto min-h-[480px]">
-                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="/assets/images/client1.png" alt="" />
+                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="../assets/images/client4.jpg" alt="" />
                                 <div class="p-4 pt-2 h-full flex flex-col">
-                                    <img class="w-[102px] mx-auto" src="/assets/icons/all-filled-stars.svg" alt="">
+                                    <img class="w-[102px] mx-auto" src="../assets/icons/all-filled-stars.svg" alt="">
                                     <div class="text-centerfont-normal text-body-medium mt-2">
-                                        &quot;Hypnotherapy for weight loss changed my life. The program helped me control my cravings, overcome emotional eating habits, and lose 20 pounds. I feel more confident and empowered than ever before.&quot;
+                                        &quot;Throughout my hypnotherapy sessions, I&#039;ve discovered profound insights and harnessed an inner strength that has been pivotal in my journey to sobriety.&quot;
                                     </div>
                                 </div>
                             </div>
                             <div class="flex flex-col relative max-w-[344px] h-full mx-auto min-h-[480px]">
-                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="/assets/images/client2.png" alt="" />
+                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="../assets/images/client5.jpg" alt="" />
                                 <div class="p-4 pt-2 h-full flex flex-col">
-                                    <img class="w-[102px] mx-auto" src="/assets/icons/all-filled-stars.svg" alt="">
+                                    <img class="w-[102px] mx-auto" src="../assets/icons/all-filled-stars.svg" alt="">
                                     <div class="text-centerfont-normal text-body-medium mt-2">
-                                        &quot;I was skeptical, but the hypnotherapy program for weight loss helped me address underlying issues like stress and anxiety that were causing me to overeat. I&#039;ve lost over 30 pounds and highly recommend it to anyone struggling with their weight.&quot;
+                                        &quot;The sessions have been transformative, each offering a deeper understanding and shift in my mindset towards alcohol and drugs. I&#039;ve also gained tools that support me daily.&quot;
                                     </div>
                                 </div>
                             </div>
                             <div class="flex flex-col relative max-w-[344px] h-full mx-auto min-h-[480px]">
-                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="/assets/images/client3.png" alt="" />
+                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="../assets/images/client6.jpg" alt="" />
                                 <div class="p-4 pt-2 h-full flex flex-col">
-                                    <img class="w-[102px] mx-auto" src="/assets/icons/all-filled-stars.svg" alt="">
+                                    <img class="w-[102px] mx-auto" src="../assets/icons/all-filled-stars.svg" alt="">
                                     <div class="text-centerfont-normal text-body-medium mt-2">
-                                        &quot;Hypnotherapy is a game-changer for me. The program helped me to address the emotional issues that were contributing to my weight gain. The sessions were relaxing and enjoyable, and I felt a significant difference in my attitude towards food&quot;
+                                        &quot;I was initially skeptical about hypnotherapy, but after experiencing the sessions, my commitment to recovery has solidified. Their compassionate and effective approach has truly made a positive impact on my life.&quot;
                                     </div>
                                 </div>
                             </div>
@@ -640,29 +640,29 @@ foreach ($products as $key => $product) {
                 <div class="container">
                     <div class="hidden md:flex justify-between md:space-x-12 py-8">
                         <div class="flex flex-col">
-                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="/assets/images/client1.png" alt="" />
+                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="../assets/images/client4.jpg" alt="" />
                             <div class="pt-2 flex flex-col space-y-2 px-4">
-                                <img class="w-[120px] mx-auto" src="/assets/icons/all-filled-stars.svg" alt="">
+                                <img class="w-[120px] mx-auto" src="../assets/icons/all-filled-stars.svg" alt="">
                                 <div class="text-center font-normal text-body-medium mb-2 max-w-[343px]">
-                                    &quot;Hypnotherapy for weight loss changed my life. The program helped me control my cravings, overcome emotional eating habits, and lose 20 pounds. I feel more confident and empowered than ever before.&quot;
+                                    &quot;Throughout my hypnotherapy sessions, I&#039;ve discovered profound insights and harnessed an inner strength that has been pivotal in my journey to sobriety.&quot;
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-col">
-                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="/assets/images/client2.png" alt="" />
+                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="../assets/images/client5.jpg" alt="" />
                             <div class="pt-2 flex flex-col space-y-2 px-4">
-                                <img class="w-[120px] mx-auto" src="/assets/icons/all-filled-stars.svg" alt="">
+                                <img class="w-[120px] mx-auto" src="../assets/icons/all-filled-stars.svg" alt="">
                                 <div class="text-center font-normal text-body-medium mb-2 max-w-[343px]">
-                                    &quot;I was skeptical, but the hypnotherapy program for weight loss helped me address underlying issues like stress and anxiety that were causing me to overeat. I&#039;ve lost over 30 pounds and highly recommend it to anyone struggling with their weight.&quot;
+                                    &quot;The sessions have been transformative, each offering a deeper understanding and shift in my mindset towards alcohol and drugs. I&#039;ve also gained tools that support me daily.&quot;
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-col">
-                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="/assets/images/client3.png" alt="" />
+                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="../assets/images/client6.jpg" alt="" />
                             <div class="pt-2 flex flex-col space-y-2 px-4">
-                                <img class="w-[120px] mx-auto" src="/assets/icons/all-filled-stars.svg" alt="">
+                                <img class="w-[120px] mx-auto" src="../assets/icons/all-filled-stars.svg" alt="">
                                 <div class="text-center font-normal text-body-medium mb-2 max-w-[343px]">
-                                    &quot;Hypnotherapy is a game-changer for me. The program helped me to address the emotional issues that were contributing to my weight gain. The sessions were relaxing and enjoyable, and I felt a significant difference in my attitude towards food&quot;
+                                    &quot;I was initially skeptical about hypnotherapy, but after experiencing the sessions, my commitment to recovery has solidified. Their compassionate and effective approach has truly made a positive impact on my life.&quot;
                                 </div>
                             </div>
                         </div>
@@ -726,30 +726,30 @@ foreach ($products as $key => $product) {
                     <div class="audio-player bg-inherit max-w-[552px] mx-auto">
                         <div class="bg-[#F2F4FF] p-4 rounded">
                             <div class="flex justify-between items-center">
-                                <div data-audio-player-button="NbvYIuGp7" class="w-14 h-14 bg-play bg-cover shrink-0 mr-0.5 md:mr-0"></div>
+                                <div data-audio-player-button="uJfLtJcIA" class="w-14 h-14 bg-play bg-cover shrink-0 mr-0.5 md:mr-0"></div>
                                 <div class="text-[18px] leading-6 md:text-title-large sm:text-headline-medium text-primary text-center w-full">
-                                    Self Love
+                                    Introduction to Positive Change
                                 </div>
                             </div>
                             <div class="audio-wrapper">
-                                <audio data-audio-player="NbvYIuGp7" preload="auto" ontimeupdate="updateProgressBar(document.querySelector(`[data-audio-player='NbvYIuGp7']`), null)">
-                                    <source src="https://download.naturalhypnosis.com/a66dbe674428b3882b48a3befebe8af260f9ce9bd736c541a1d135e26c702662/Self%20Belief%20-%20Natural%20Hypnosis.mp3" type="audio/mpeg">
+                                <audio data-audio-player="uJfLtJcIA" preload="auto" ontimeupdate="updateProgressBar(document.querySelector(`[data-audio-player='uJfLtJcIA']`), null)">
+                                    <source src="https://storage.googleapis.com/digital-audio-files/hypnozio-courses/alcohol-addiction/en/courses-hypnozio-alcohol-addiction-program-1.mp3" type="audio/mpeg">
                                 </audio>
                             </div>
                             <div class="player-controls scrubber mt-4">
-                                <progress class="w-full !h-2 !rounded-[4px] overflow-hidden" data-audio-player-progress-bar="NbvYIuGp7" value="0" max="1">
+                                <progress class="w-full !h-2 !rounded-[4px] overflow-hidden" data-audio-player-progress-bar="uJfLtJcIA" value="0" max="1">
                                 </progress>
                                 <div class="flex justify-between text-body-small text-primary-10">
-                                    <div data-audio-player-start-time="NbvYIuGp7"></div>
-                                    <div data-audio-player-end-time="NbvYIuGp7"></div>
+                                    <div data-audio-player-start-time="uJfLtJcIA"></div>
+                                    <div data-audio-player-end-time="uJfLtJcIA"></div>
                                 </div>
                             </div>
                         </div>
                         <script>
                             document.addEventListener("DOMContentLoaded", function() {
                                 initAudioPlayer();
-                                initProgressBar(document.querySelector(`[data-audio-player='NbvYIuGp7']`));
-                                initVolumeBar(document.querySelector(`[data-audio-player='NbvYIuGp7']`));
+                                initProgressBar(document.querySelector(`[data-audio-player='uJfLtJcIA']`));
+                                initVolumeBar(document.querySelector(`[data-audio-player='uJfLtJcIA']`));
                             });
                         </script>
                     </div>
@@ -781,7 +781,7 @@ foreach ($products as $key => $product) {
                                     </svg>
                                 </div>
                             </div>
-                            <div x-show="open" class="text-body-medium mt-4">Certified hypnotherapist Edward Miller, with over 20 years of experience in the field, has created our hypnotherapy course. He has successfully helped thousands of customers with similar problems.</div>
+                            <div x-show="open" class="text-body-medium mt-4">Our hypnotherapy program was created by certified leading experts in the field. One of the leading hypnotherapist, Rachel Moffett, has designed the program with the goal of improving your mindset, addressing the root causes of addiction and reaching your desired state of recovery. She has successfully helped thousands of customers with various problems.</div>
                         </div>
                         <div x-data="{ open: false }" x-on:click="open = !open" class="p-4 rounded shadow-2 bg-white">
                             <div class="flex justify-between">
