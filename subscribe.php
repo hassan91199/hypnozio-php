@@ -14,13 +14,25 @@ if (isset($token) && isset($email) && isset($stripePriceId)) {
     try {
         $user = findRecord('users', ['email' => $email]);
         $product = findRecord('products', ['stripe_price_id' => $stripePriceId]);
-        $existingSubscription = findRecord(
-            'subscriptions',
-            [
-                'user_id' => $user['id'],
-                'status' => 'active'
-            ]
-        );
+
+        $query = "
+            SELECT 
+                *
+            FROM 
+                subscriptions 
+            INNER JOIN
+                products
+            ON
+                subscriptions.product_id = products.id
+            WHERE 
+                subscriptions.user_id = {$user['id']}
+            AND 
+                subscriptions.status = 'active'
+            AND 
+                products.type = '{$product['type']}';
+        ";
+
+        $existingSubscription = runQuery($query) ?: null;
 
         $stripeCustomerId = $user['stripe_customer_id'];
 
@@ -72,7 +84,7 @@ if (isset($token) && isset($email) && isset($stripePriceId)) {
 
             echo json_encode(['success' => true, 'subscription' => $subscription]);
         } else {
-            echo json_encode(['success' => false, 'message' => "Can't subscribe to the plan. You already have active subscription."]);
+            echo json_encode(['success' => false, 'message' => "Can't subscribe. You already have an active subscription for this product type."]);
         }
     } catch (\Stripe\Exception\ApiErrorException $e) {
         echo json_encode(['error' => $e->getMessage()]);
