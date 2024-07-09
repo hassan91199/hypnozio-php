@@ -178,7 +178,7 @@ $customers = runQuery($query);
             spinner.classList.remove('hidden');
 
             const stripeSubscriptionId = button.getAttribute('data-stripe-subscription-id');
-            const url = '<?= $env['BASE_URL'] . 'stripe/cancel-subscription.php' ?>';
+            const url = '/stripe/cancel-subscription.php';
 
             fetch(url, {
                 method: 'POST',
