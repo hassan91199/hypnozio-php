@@ -18,6 +18,7 @@ $query = "
     SELECT 
         users.email,
         products.name,
+        products.type,
         subscriptions.status,
         subscriptions.stripe_subscription_id
     FROM 
@@ -130,6 +131,7 @@ $customers = runQuery($query);
                         <tr>
                             <th>Email</th>
                             <th>Product</th>
+                            <th>Type</th>
                             <th>Subscription Status</th>
                             <th>Actions</th>
                         </tr>
@@ -138,6 +140,7 @@ $customers = runQuery($query);
                             <tr>
                                 <td><?= $customer['email'] ?></td>
                                 <td><?= $customer['name'] ?></td>
+                                <td><?= $customer['type'] ?></td>
                                 <td><?= $customer['status'] ?></td>
                                 <td>
                                     <?php if ($customer['status'] === 'active') : ?>
