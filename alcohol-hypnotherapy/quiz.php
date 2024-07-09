@@ -42,6 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION['PRIMARY_GOAL'] = $data['answer_18'];
     $_SESSION['SEVERITY'] = $data['answer_4'];
 
+    // Setting the email in the session to use it while checking out
+    $_SESSION['EMAIL'] = $email;
+
     $user = null;
 
     // Create or update the user of quiz

@@ -142,7 +142,7 @@ $primaryGoal = $_SESSION['PRIMARY_GOAL'];
                             </div>
                         </div>
 
-                        <a class="cursor-pointer link text-label-extra-large text-center text-white font-bold bg-primary hover:bg-primary-50 hover:shadow-2 py-[17px] rounded min-w-[340px] lg:min-w-[360px] mx-auto mt-6 lg:mt-10" id="" href="/alcohol-hypnotherapy/checkout.php">
+                        <a class="cursor-pointer link text-label-extra-large text-center text-white font-bold bg-primary hover:bg-primary-50 hover:shadow-2 py-[17px] rounded min-w-[340px] lg:min-w-[360px] mx-auto mt-6 lg:mt-10" id="" href="/alcohol-hypnotherapy/checkout-u1.php?d=50">
                             Get my plan
                         </a>
                     </div>
@@ -209,7 +209,7 @@ $primaryGoal = $_SESSION['PRIMARY_GOAL'];
                                 <div class="text-body-medium lg:text-body-large text-neutral-50 text-center">Hypnotherapy improves focus, motivation, and time management, essential for enhanced productivity and performance.</div>
                             </div>
                         </div>
-                        <a class="cursor-pointer link text-label-extra-large text-center text-white font-bold bg-primary hover:bg-primary-50 hover:shadow-2 py-[17px] rounded min-w-[340px] lg:min-w-[360px] mx-auto mt-6 lg:mt-10" id="" href="/alcohol-hypnotherapy/checkout.php">
+                        <a class="cursor-pointer link text-label-extra-large text-center text-white font-bold bg-primary hover:bg-primary-50 hover:shadow-2 py-[17px] rounded min-w-[340px] lg:min-w-[360px] mx-auto mt-6 lg:mt-10" id="" href="/alcohol-hypnotherapy/checkout-u1.php?d=50">
                             Get my plan
                         </a>
                     </div>
@@ -308,7 +308,7 @@ $primaryGoal = $_SESSION['PRIMARY_GOAL'];
                                 </div>
                             </div>
                         </div>
-                        <a class="cursor-pointer link text-label-extra-large text-center text-white font-bold bg-primary hover:bg-primary-50 hover:shadow-2 py-[17px] rounded min-w-[340px] lg:min-w-[360px] mx-auto mt-8 lg:mt-10" id="" href="/alcohol-hypnotherapy/checkout.php">
+                        <a class="cursor-pointer link text-label-extra-large text-center text-white font-bold bg-primary hover:bg-primary-50 hover:shadow-2 py-[17px] rounded min-w-[340px] lg:min-w-[360px] mx-auto mt-8 lg:mt-10" id="" href="/alcohol-hypnotherapy/checkout-u1.php?d=50">
                             Get my plan
                         </a>
                     </div>
