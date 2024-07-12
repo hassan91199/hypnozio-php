@@ -1,3 +1,62 @@
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.card-brand {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+}
+
+.vertical-line {
+    border-left: 1px solid black;
+}
+
+.unlocked-icon {
+    background: url('https://cdn.solidgate.com/ui/images/unlocked.svg') center center / contain no-repeat;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+.close-btn {
+    background-color: #d9d9d98f;
+    border-radius: 50%;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.close-btn:hover {
+    background-color: #d9d9d9e6;
+}
+
 .splide__container {
     box-sizing: border-box;
     position: relative
@@ -1398,7 +1457,7 @@ body {
 .checkbox:checked {
     --tw-bg-opacity: 1;
     background-color: rgb(58 91 169 / var(--tw-bg-opacity));
-    background-image: url(check-62b61eb2.svg)
+    background-image: url(/assets/icons/check-62b61eb2.svg)
 }
 
 .checkbox:focus {
@@ -2359,7 +2418,7 @@ body {
 }
 
 .mt-8 {
-   /* margin-top: 2rem */
+    /* margin-top: 2rem */
 }
 
 .mt-6 {
@@ -3302,6 +3361,10 @@ body {
     width: 100%
 }
 
+.w-1\/2 {
+    width: 50%
+}
+
 .w-\[161px\] {
     width: 161px
 }
@@ -4081,6 +4144,10 @@ body {
 
 .max-w-lg {
     max-width: 32rem
+}
+
+.max-w-md {
+    max-width: 28rem
 }
 
 .max-w-\[340px\] {
@@ -8514,6 +8581,16 @@ progress::-webkit-progress-value {
     color: rgb(27 27 31 / var(--tw-text-opacity))
 }
 
+@media (max-width: 600px) {
+    .xs\:h-full {
+        height: 100%
+    }
+
+    .xs\:w-full {
+        width: 100%
+    }
+}
+
 @media (min-width: 360px) {
     .xs\:min-w-\[343px\] {
         min-width: 343px
@@ -10443,7 +10520,7 @@ progress::-webkit-progress-value {
     }
 
     .md\:w-\[108px\] {
-      /*  width: 108px  */
+        /*  width: 108px  */
     }
 
     .md\:w-8 {

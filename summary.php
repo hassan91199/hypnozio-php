@@ -36,20 +36,20 @@ $siteName = 'Natural Neuro Hypnosis'
     <link rel="icon" type="image/x-icon" href="assets/images/favicons/hypnozio.svg">
     <title><?= $siteName ?>  | Summary</title>
 
-    <link rel="preload" as="style" href="assets/build/app-824c45d5.css" />
-    <link rel="stylesheet" href="assets/build/app-824c45d5.css" data-navigate-track="reload" />
-    <link rel="modulepreload" href="assets/build/app-5f69faf4.js" />
-    <link rel="modulepreload" href="assets/build/bootstrap-214fcc70.js" />
-    <link rel="modulepreload" href="assets/build/jquery-2c3981e2.js" />
-    <link rel="modulepreload" href="assets/build/module.esm-958008ac.js" />
-    <link rel="modulepreload" href="assets/build/_commonjsHelpers-de833af9.js" />
-    <link rel="modulepreload" href="assets/build/jquery-68c15ecd.js" />
-    <script type="module" src="assets/build/app-5f69faf4.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="assets/build/cookies-ee50a713.js" />
-    <script type="module" src="assets/build/cookies-ee50a713.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="assets/build/alpine-js-2881bf21.js" />
-    <link rel="modulepreload" href="assets/build/module.esm-958008ac.js" />
-    <script type="module" src="assets/build/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
+    <link rel="preload" as="style" href="assets/css/app.css" />
+    <link rel="stylesheet" href="assets/css/app.css" data-navigate-track="reload" />
+    <link rel="modulepreload" href="assets/js/app-5f69faf4.js" />
+    <link rel="modulepreload" href="assets/js/bootstrap-214fcc70.js" />
+    <link rel="modulepreload" href="assets/js/jquery-2c3981e2.js" />
+    <link rel="modulepreload" href="assets/js/module.esm-958008ac.js" />
+    <link rel="modulepreload" href="assets/js/_commonjsHelpers-de833af9.js" />
+    <link rel="modulepreload" href="assets/js/jquery-68c15ecd.js" />
+    <script type="module" src="assets/js/app-5f69faf4.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="assets/js/cookies-ee50a713.js" />
+    <script type="module" src="assets/js/cookies-ee50a713.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="assets/js/alpine-js-2881bf21.js" />
+    <link rel="modulepreload" href="assets/js/module.esm-958008ac.js" />
+    <script type="module" src="assets/js/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
     <div>
        
     </div>
@@ -175,7 +175,7 @@ echo date('F, Y', strtotime('+1 month'));
                                     </div>
                                 </div>
                             </div>
-                        </div> <a class="cursor-pointer link text-label-extra-large text-center text-white font-bold bg-primary hover:bg-primary-50 hover:shadow-2 py-[17px] rounded min-w-[340px] lg:min-w-[360px] mx-auto mt-6 lg:mt-10" id="" href="/checkout.php">
+                        </div> <a class="cursor-pointer link text-label-extra-large text-center text-white font-bold bg-primary hover:bg-primary-50 hover:shadow-2 py-[17px] rounded min-w-[340px] lg:min-w-[360px] mx-auto mt-6 lg:mt-10" id="" href="/checkout-u1.php?d=50">
                             Get my plan
                         </a>
                     </div>
@@ -239,7 +239,7 @@ echo date('F, Y', strtotime('+1 month'));
                                 <div class="text-body-medium lg:text-body-large text-onSurface text-center">Hypnotherapy can break the cycle of chronic dieting by addressing emotional and psychological causes, promoting a healthy relationship with food and body.</div>
                             </div>
                         </div>
-                        <a class="cursor-pointer link text-label-extra-large text-center text-white font-bold bg-primary hover:bg-primary-50 hover:shadow-2 py-[17px] rounded min-w-[340px] lg:min-w-[360px] mx-auto mt-6 lg:mt-10" id="" href="/checkout.php">
+                        <a class="cursor-pointer link text-label-extra-large text-center text-white font-bold bg-primary hover:bg-primary-50 hover:shadow-2 py-[17px] rounded min-w-[340px] lg:min-w-[360px] mx-auto mt-6 lg:mt-10" id="" href="/checkout-u1.php?d=50">
                             Get my plan
                         </a>
                     </div>
@@ -402,7 +402,7 @@ echo date('F, Y', strtotime('+1 month'));
                                 </div>
                             </div>
                         </div>
-                        <a class="cursor-pointer link text-label-extra-large text-center text-white font-bold bg-primary hover:bg-primary-50 hover:shadow-2 py-[17px] rounded min-w-[340px] lg:min-w-[360px] mx-auto mt-8 lg:mt-10" id="" href="/checkout.php">
+                        <a class="cursor-pointer link text-label-extra-large text-center text-white font-bold bg-primary hover:bg-primary-50 hover:shadow-2 py-[17px] rounded min-w-[340px] lg:min-w-[360px] mx-auto mt-8 lg:mt-10" id="" href="/checkout-u1.php?d=50">
                             Get my plan
                         </a>
                     </div>

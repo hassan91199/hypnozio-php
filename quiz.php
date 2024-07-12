@@ -6,6 +6,8 @@ session_start();
 require_once __DIR__ . '/utils/functions.php';
 require_once __DIR__ . '/utils/db.php';
 
+unset($_SESSION['PREVIOUS_DISCOUNT']);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $requestData = $_POST;
 
@@ -112,6 +114,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION['AGE_RANGE'] = $data['answer_1'];
     $_SESSION['OVERWEIGHT_REASON'] = $data['answer_6'];
 
+    // Setting the email in the session to use it while checking out
+    $_SESSION['EMAIL'] = $email;
+
     $user = null;
 
     // Create or update the user of quiz
@@ -193,9 +198,9 @@ $siteName = 'Natural Neuro Hypnosis'
 
     <title><?= $siteName ?> | Find &amp; fix root cause of overweight using self-hypnosis</title>
 
-    <link rel="stylesheet" href="assets/build/app-824c45d5.css" data-navigate-track="reload" />
-    <script type="module" src="assets/build/nh-quiz-1f23fa02.js" data-navigate-track="reload"></script>
-    <script type="module" src="assets/build/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
+    <link rel="stylesheet" href="assets/css/app.css" data-navigate-track="reload" />
+    <script type="module" src="assets/js/nh-quiz-1f23fa02.js" data-navigate-track="reload"></script>
+    <script type="module" src="assets/js/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
 </head>
 
 <body class="antialiased bg-surface text-onSurface scroll-auto">

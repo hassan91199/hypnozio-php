@@ -16,27 +16,27 @@ $desiredWeight = $_SESSION['summary']['desired_weight'] ?? '';
     <link rel="icon" type="image/x-icon" href="assets/images/favicons/nh.svg">
     <title>Natural Neuro Hypnosis | Checkout</title>
 
-    <link rel="preload" as="style" href="assets/build/app-824c45d5.css" />
-    <link rel="stylesheet" href="assets/build/app-824c45d5.css" data-navigate-track="reload" />
-    <link rel="modulepreload" href="assets/build/app-824c45d5.js" />
-    <link rel="modulepreload" href="assets/build/bootstrap-214fcc70.js" />
-    <link rel="modulepreload" href="assets/build/jquery-2c3981e2.js" />
-    <link rel="modulepreload" href="assets/build/module.esm-3f6ffe0c.js" />
-    <link rel="modulepreload" href="assets/build/_commonjsHelpers-de833af9.js" />
-    <link rel="modulepreload" href="assets/build/jquery-68c15ecd.js" />
-    <script type="module" src="assets/build/app-5f69faf4.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="assets/build/cookies-ee50a713.js" />
-    <script type="module" src="assets/build/cookies-ee50a713.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="assets/build/alpine-splide-54756862.js" />
-    <link rel="modulepreload" href="assets/build/module.esm-958008ac.js" />
-    <link rel="modulepreload" href="assets/build/alpine-splide.esm-09083027.js" />
-    <script type="module" src="assets/build/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="assets/build/input-validation-36ee9ab8.js" />
-    <script type="module" src="assets/build/input-validation-36ee9ab8.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="assets/build/audio-player.js" />
-    <script type="module" src="assets/build/audio-player.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="assets/build/gtm-tags-e2664de5.js" />
-    <script type="module" src="assets/build/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
+    <link rel="preload" as="style" href="assets/css/app.css" />
+    <link rel="stylesheet" href="assets/css/app.css" data-navigate-track="reload" />
+    <link rel="modulepreload" href="assets/js/app-5f69faf4.js" />
+    <link rel="modulepreload" href="assets/js/bootstrap-214fcc70.js" />
+    <link rel="modulepreload" href="assets/js/jquery-2c3981e2.js" />
+    <link rel="modulepreload" href="assets/js/module.esm-3f6ffe0c.js" />
+    <link rel="modulepreload" href="assets/js/_commonjsHelpers-de833af9.js" />
+    <link rel="modulepreload" href="assets/js/jquery-68c15ecd.js" />
+    <script type="module" src="assets/js/app-5f69faf4.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="assets/js/cookies-ee50a713.js" />
+    <script type="module" src="assets/js/cookies-ee50a713.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="assets/js/alpine-splide-54756862.js" />
+    <link rel="modulepreload" href="assets/js/module.esm-958008ac.js" />
+    <link rel="modulepreload" href="assets/js/alpine-splide.esm-09083027.js" />
+    <script type="module" src="assets/js/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="assets/js/input-validation-36ee9ab8.js" />
+    <script type="module" src="assets/js/input-validation-36ee9ab8.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="assets/js/audio-player.js" />
+    <script type="module" src="assets/js/audio-player.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="assets/js/gtm-tags-e2664de5.js" />
+    <script type="module" src="assets/js/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
     <div>
      
     </div>
