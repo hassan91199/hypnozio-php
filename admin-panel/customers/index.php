@@ -7,7 +7,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit();
 }
 
-$sessionMessage = $_SESSION['SESSION_MESSAGE'];
+$sessionMessage = $_SESSION['SESSION_MESSAGE'] ?? null;
 $showSessionMessage = false;
 if (isset($sessionMessage)) {
     $showSessionMessage = true;
