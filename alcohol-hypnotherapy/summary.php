@@ -18,24 +18,24 @@ $primaryGoal = $_SESSION['PRIMARY_GOAL'];
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicons/hypnozio.svg">
     <title>Hypnozio | Summary</title>
 
-    <link rel="preload" as="style" href="../assets/css/app-b0fb382d.css" />
-    <link rel="modulepreload" href="../assets/js/app-5f69faf4.js" />
-    <link rel="modulepreload" href="../assets/js/bootstrap-214fcc70.js" />
-    <link rel="modulepreload" href="../assets/js/jquery-2c3981e2.js" />
-    <link rel="modulepreload" href="../assets/js/module.esm-958008ac.js" />
-    <link rel="modulepreload" href="../assets/js/module.esm-21387d6f.js" />
-    <link rel="modulepreload" href="../assets/js/_commonjsHelpers-de833af9.js" />
-    <link rel="modulepreload" href="../assets/js/jquery-68c15ecd.js" />
-    <link rel="stylesheet" href="../assets/css/app-b0fb382d.css" data-navigate-track="reload" />
-    <script type="module" src="../assets/js/app-5f69faf4.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="../assets/js/cookies-ee50a713.js" />
-    <script type="module" src="../assets/js/cookies-ee50a713.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="../assets/js/alpine-js-2881bf21.js" />
-    <link rel="modulepreload" href="../assets/js/module.esm-958008ac.js" />
-    <script type="module" src="../assets/js/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
+    <link rel="preload" as="style" href="../assets/app-b0fb382d.css" />
+    <link rel="modulepreload" href="../assets/app-5f69faf4.js" />
+    <link rel="modulepreload" href="../assets/bootstrap-214fcc70.js" />
+    <link rel="modulepreload" href="../assets/jquery-2c3981e2.js" />
+    <link rel="modulepreload" href="../assets/module.esm-958008ac.js" />
+    <link rel="modulepreload" href="../assets/module.esm-21387d6f.js" />
+    <link rel="modulepreload" href="../assets/_commonjsHelpers-de833af9.js" />
+    <link rel="modulepreload" href="../assets/jquery-68c15ecd.js" />
+    <link rel="stylesheet" href="../assets/app-b0fb382d.css" data-navigate-track="reload" />
+    <script type="module" src="../assets/app-5f69faf4.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="../assets/cookies-ee50a713.js" />
+    <script type="module" src="../assets/cookies-ee50a713.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="../assets/alpine-js-2881bf21.js" />
+    <link rel="modulepreload" href="../assets/module.esm-958008ac.js" />
+    <script type="module" src="../assets/alpine-js-2881bf21.js" data-navigate-track="reload"></script>
     <div>
         <script>
             window.fwSettings = {
@@ -67,7 +67,7 @@ $primaryGoal = $_SESSION['PRIMARY_GOAL'];
             showWhiteMode: false,
         }" class="container text-white py-4 md:py-5">
             <div class="flex justify-between items-center">
-                <img src="../assets/icons/logo.svg" class="w-[110px] md:w-[108px]" alt="Hypnozio">
+                <img src="../assets/logo.svg" class="w-[110px] md:w-[108px]" alt="Hypnozio">
                 <div class="flex items-center space-x-4">
                 </div>
             </div>
@@ -92,7 +92,7 @@ $primaryGoal = $_SESSION['PRIMARY_GOAL'];
                                 You can expect a significant decrease in cravings by September 2024.
                             </div>
                             <div class="relative p-4 sm:p-9 bg-white shadow sm:shadow-2 mt-6 max-w-[343px] sm:max-w-[744px] mx-auto rounded">
-                                <img class="w-[311px] sm:w-[672px] mx-auto" src="../assets/images/alc-graph.png" alt="Weight loss graph">
+                                <img class="w-[311px] sm:w-[672px] mx-auto" src="../assets/hypnozio/summary/alc-graph.png" alt="Weight loss graph">
                                 <div class="flex flex-row justify-between ml-4 mr-5 sm:mx-12 mt-2.5 text-neutralVariant-60 text-body-small sm:text-body-large">
                                     <div><?= $currentMonth ?></div>
                                     <div><?= $futureMonth ?></div>
@@ -156,19 +156,19 @@ $primaryGoal = $_SESSION['PRIMARY_GOAL'];
                         </div>
                         <div class="flex space-x-4 sm:space-x-0 sm:justify-between bg-white shadow rounded px-[19px] py-4 lg:px-4 lg:py-6">
                             <div class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-2 items-center">
-                                <img src="../assets/icons/hourglass-red.svg" alt="feature" />
+                                <img src="../assets/hypnozio/summary/hourglass-red.svg" alt="feature" />
                                 <div class="text-body-small lg:text-body-large text-onSurface text-center">
                                     Only 20 minutes a day
                                 </div>
                             </div>
                             <div class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-2 items-center">
-                                <img src="../assets/icons/graph-green.svg" alt="feature" />
+                                <img src="../assets/hypnozio/summary/graph-green.svg" alt="feature" />
                                 <div class="text-body-small lg:text-body-large text-onSurface text-center">
                                     First results after one week
                                 </div>
                             </div>
                             <div class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-2 items-center">
-                                <img src="../assets/icons/approved.svg" alt="feature" />
+                                <img src="../assets/hypnozio/summary/approved.svg" alt="feature" />
                                 <div class="text-body-small lg:text-body-large text-onSurface text-center">
                                     Created by experts
                                 </div>
@@ -179,31 +179,31 @@ $primaryGoal = $_SESSION['PRIMARY_GOAL'];
                         <div class="text-title-large lg:text-headline-large text-center max-w-[744px] mx-auto">You will see <span class="text-tertiary-70 font-semibold md:font-normal">improvement</span> in these areas after completing our hypnotherapy course.</div>
                         <div class="grid md:grid-cols-2 gap-6 lg:gap-10">
                             <div class="flex flex-col items-center bg-white rounded shadow p-6">
-                                <img class="w-12 lg:w-14" src="../assets/icons/jogging.svg" alt="Physical Health Icon" />
+                                <img class="w-12 lg:w-14" src="../assets/hypnozio/summary/jogging.svg" alt="Physical Health Icon" />
                                 <div class="text-[20px] lg:text-title-large text-primary text-center mt-2">Physical Health</div>
                                 <hr class="text-neutral-80 my-4 w-full" />
                                 <div class="text-body-medium lg:text-body-large text-neutral-50 text-center">Hypnotherapy reinforces positive behaviors essential for recovery, leading to improved sleep, energy, and immune function.</div>
                             </div>
                             <div class="flex flex-col items-center bg-white rounded shadow p-6">
-                                <img class="w-12 lg:w-14" src="../assets/icons/money.svg" alt="Financial Stability Icon" />
+                                <img class="w-12 lg:w-14" src="../assets/hypnozio/summary/money.svg" alt="Financial Stability Icon" />
                                 <div class="text-[20px] lg:text-title-large text-primary text-center mt-2">Financial Stability</div>
                                 <hr class="text-neutral-80 my-4 w-full" />
                                 <div class="text-body-medium lg:text-body-large text-neutral-50 text-center">Hypnotherapy addresses addiction root causes, promoting healthier coping mechanisms and better financial decisions.</div>
                             </div>
                             <div class="flex flex-col items-center bg-white rounded shadow p-6">
-                                <img class="w-12 lg:w-14" src="../assets/icons/brain.svg" alt="Mental Health Icon" />
+                                <img class="w-12 lg:w-14" src="../assets/hypnozio/summary/brain.svg" alt="Mental Health Icon" />
                                 <div class="text-[20px] lg:text-title-large text-primary text-center mt-2">Mental Health</div>
                                 <hr class="text-neutral-80 my-4 w-full" />
                                 <div class="text-body-medium lg:text-body-large text-neutral-50 text-center">Hypnotherapy addresses stressors and negative thoughts associated with addiction, decreasing anxiety and depression, and improving mental well-being.</div>
                             </div>
                             <div class="flex flex-col items-center bg-white rounded shadow p-6">
-                                <img class="w-12 lg:w-14" src="../assets/icons/users.svg" alt="Relationships Icon" />
+                                <img class="w-12 lg:w-14" src="../assets/hypnozio/summary/users.svg" alt="Relationships Icon" />
                                 <div class="text-[20px] lg:text-title-large text-primary text-center mt-2">Relationships</div>
                                 <hr class="text-neutral-80 my-4 w-full" />
                                 <div class="text-body-medium lg:text-body-large text-neutral-50 text-center">Hypnotherapy resolves past traumas and improves communication, crucial for rebuilding trust and healthier relationships.</div>
                             </div>
                             <div class="flex flex-col items-center bg-white rounded shadow p-6">
-                                <img class="w-12 lg:w-14" src="../assets/icons/settings.svg" alt="Productivity and Performance Icon" />
+                                <img class="w-12 lg:w-14" src="../assets/hypnozio/summary/settings.svg" alt="Productivity and Performance Icon" />
                                 <div class="text-[20px] lg:text-title-large text-primary text-center mt-2">Productivity and Performance</div>
                                 <hr class="text-neutral-80 my-4 w-full" />
                                 <div class="text-body-medium lg:text-body-large text-neutral-50 text-center">Hypnotherapy improves focus, motivation, and time management, essential for enhanced productivity and performance.</div>
@@ -218,7 +218,7 @@ $primaryGoal = $_SESSION['PRIMARY_GOAL'];
                         <div class="flex flex-wrap [&amp;&gt;*:nth-child(3)]:md:-mt-2">
                             <div class="basis-full md:basis-1/2 h-fit rounded border border-primary-70 p-6 text-primary-10 mb-6 md:mb-0 last:mb-0 md:mt-10 first:md:mt-0 md:max-w-[400px] lg:max-w-[428px] xl:max-w-[448px] md:mx-auto">
                                 <div class="flex items-center">
-                                    <img class="w-12 mr-4" src="../assets/icons/beer.svg" alt="" />
+                                    <img class="w-12 mr-4" src="../assets/hypnozio/summary/beer.svg" alt="" />
                                     <div class="text-[20px] lg:text-title-large text-primary-10">Addiction you would like to overcome</div>
                                 </div>
                                 <hr class="w-full text-primary-70 my-4">
@@ -226,7 +226,7 @@ $primaryGoal = $_SESSION['PRIMARY_GOAL'];
                             </div>
                             <div class="basis-full md:basis-1/2 h-fit rounded border border-primary-70 p-6 text-primary-10 mb-6 md:mb-0 last:mb-0 md:mt-10 first:md:mt-0 md:max-w-[400px] lg:max-w-[428px] xl:max-w-[448px] md:mx-auto">
                                 <div class="flex items-center">
-                                    <img class="w-12 mr-4" src="../assets/icons/calendar.svg" alt="" />
+                                    <img class="w-12 mr-4" src="../assets/hypnozio/summary/calendar.svg" alt="" />
                                     <div class="text-[20px] lg:text-title-large text-primary-10">You engage in your addictive behavior</div>
                                 </div>
                                 <hr class="w-full text-primary-70 my-4">
@@ -234,7 +234,7 @@ $primaryGoal = $_SESSION['PRIMARY_GOAL'];
                             </div>
                             <div class="basis-full md:basis-1/2 h-fit rounded border border-primary-70 p-6 text-primary-10 mb-6 md:mb-0 last:mb-0 md:mt-10 first:md:mt-0 md:max-w-[400px] lg:max-w-[428px] xl:max-w-[448px] md:mx-auto">
                                 <div class="flex items-center">
-                                    <img class="w-12 mr-4" src="../assets/icons/trophy.svg" alt="" />
+                                    <img class="w-12 mr-4" src="../assets/hypnozio/summary/trophy.svg" alt="" />
                                     <div class="text-[20px] lg:text-title-large text-primary-10">Your primary goal is</div>
                                 </div>
                                 <hr class="w-full text-primary-70 my-4">
@@ -242,7 +242,7 @@ $primaryGoal = $_SESSION['PRIMARY_GOAL'];
                             </div>
                             <div class="basis-full md:basis-1/2 h-fit rounded border border-primary-70 p-6 text-primary-10 mb-6 md:mb-0 last:mb-0 md:mt-10 first:md:mt-0 md:max-w-[400px] lg:max-w-[428px] xl:max-w-[448px] md:mx-auto">
                                 <div class="flex items-center">
-                                    <img class="w-12 mr-4" src="../assets/icons/hourglass.svg" alt="" />
+                                    <img class="w-12 mr-4" src="../assets/hypnozio/summary/hourglass.svg" alt="" />
                                     <div class="text-[20px] lg:text-title-large text-primary-10">You&#039;ve been struggling with your addiction for</div>
                                 </div>
                                 <hr class="w-full text-primary-70 my-4">
@@ -256,7 +256,7 @@ $primaryGoal = $_SESSION['PRIMARY_GOAL'];
                         <div class="text-headline-small md:text-headline-medium lg:text-headline-large text-onSurface text-center">Your plan includes:</div>
                         <div class="flex flex-wrap gap-8 md:gap-10">
                             <div class="md:basis-3/12 mx-auto">
-                                <img class="max-w-[178px] md:max-w-[199px]" src="../assets/images/iphone-plan.png" alt="Image of an Iphone playing an audio course">
+                                <img class="max-w-[178px] md:max-w-[199px]" src="../assets/hypnozio/summary/iphone-plan.png" alt="Image of an Iphone playing an audio course">
                             </div>
                             <div class="md:basis-8/12 ">
                                 <div class="flex flex-col space-y-4 lg:space-y-5 ">

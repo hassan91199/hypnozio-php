@@ -189,13 +189,13 @@ $siteName = 'Natural Neuro Hypnosis'
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="assets/favicons/nh.svg">
 
     <title><?= $siteName ?> | Find &amp; fix root cause of overweight using self-hypnosis</title>
 
-    <link rel="stylesheet" href="assets/css/app-824c45d5.css" data-navigate-track="reload" />
-    <script type="module" src="assets/js/nh-quiz-1f23fa02.js" data-navigate-track="reload"></script>
-    <script type="module" src="assets/js/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
+    <link rel="stylesheet" href="assets/build/app-824c45d5.css" data-navigate-track="reload" />
+    <script type="module" src="assets/build/nh-quiz-1f23fa02.js" data-navigate-track="reload"></script>
+    <script type="module" src="assets/build/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
 </head>
 
 <body class="antialiased bg-surface text-onSurface scroll-auto">
@@ -210,7 +210,7 @@ $siteName = 'Natural Neuro Hypnosis'
             showWhiteMode: false,
         }" class="container text-white py-4 md:py-5">
             <div class="flex justify-between items-center">
-                <img src="assets/icons/logo.svg" class="" alt="<?= $siteName ?>">
+                <img src="assets/logo.svg" class="" alt="<?= $siteName ?>">
                 <div class="flex items-center space-x-4">
                 </div>
             </div>
@@ -360,7 +360,7 @@ $siteName = 'Natural Neuro Hypnosis'
                                         <div class="bg-white rounded-3xl shadow-2 pt-2.5 pb-4 px-4 max-w-[343px] sm:max-w-[558px] mx-auto my-4">
                                             <h1 class="text-body-large font-semibold text-center">Expected weight loss journey</h1>
                                             <div class="relative">
-                                                <img src="assets/images/graph2.png" alt="" />
+                                                <img src="assets/quiz/graph2.png" alt="" />
                                                 <div class="absolute top-[13px] sm:top-[15px] left-2 sm:left-[9px]">
                                                     <div class="py-1 px-2 bg-black text-white text-[8px] leading-[9px] font-medium rounded-[4px] w-max">
                                                         Beginning of program
@@ -426,7 +426,7 @@ $siteName = 'Natural Neuro Hypnosis'
                                         <div class="bg-white rounded-3xl shadow-2 pt-2.5 pb-4 px-4 max-w-[343px] sm:max-w-[558px] mx-auto my-4">
                                             <h1 class="text-body-large font-semibold text-center">Expected muscle gain journey</h1>
                                             <div class="relative">
-                                                <img src="assets/images/gain-graph.png" alt="" />
+                                                <img src="assets/quiz/gain-graph.png" alt="" />
                                                 <div class="absolute bottom-6 sm:bottom-[26px] left-2">
                                                     <div class="py-1 px-2 bg-black text-white text-[8px] leading-[9px] font-medium rounded-[4px] w-[94px] text-center">
                                                         Beginning of program

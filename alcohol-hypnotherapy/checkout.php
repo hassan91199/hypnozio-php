@@ -13,31 +13,31 @@ $severity = $_SESSION['SEVERITY'];
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicons/hypnozio.svg">
     <title>Hypnozio | Checkout</title>
 
-    <link rel="preload" as="style" href="../assets/css/app-b0fb382d.css" />
-    <link rel="modulepreload" href="../assets/js/app-5f69faf4.js" />
-    <link rel="modulepreload" href="../assets/js/bootstrap-214fcc70.js" />
-    <link rel="modulepreload" href="../assets/js/jquery-2c3981e2.js" />
-    <link rel="modulepreload" href="../assets/js/module.esm-958008ac.js" />
-    <link rel="modulepreload" href="../assets/js/module.esm-21387d6f.js" />
-    <link rel="modulepreload" href="../assets/js/_commonjsHelpers-de833af9.js" />
-    <link rel="modulepreload" href="../assets/js/jquery-68c15ecd.js" />
-    <link rel="stylesheet" href="../assets/css/app-b0fb382d.css" data-navigate-track="reload" />
-    <script type="module" src="../assets/js/app-5f69faf4.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="../assets/js/cookies-ee50a713.js" />
-    <script type="module" src="../assets/js/cookies-ee50a713.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="../assets/js/alpine-splide-54756862.js" />
-    <link rel="modulepreload" href="../assets/js/module.esm-958008ac.js" />
-    <link rel="modulepreload" href="../assets/js/alpine-splide.esm-09083027.js" />
-    <script type="module" src="../assets/js/alpine-splide-54756862.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="../assets/js/input-validation-36ee9ab8.js" />
-    <script type="module" src="../assets/js/input-validation-36ee9ab8.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="../assets/js/audio-player-c450f4f7.js" />
-    <script type="module" src="../assets/js/audio-player-c450f4f7.js" data-navigate-track="reload"></script>
-    <link rel="modulepreload" href="../assets/js/gtm-tags-e2664de5.js" />
-    <script type="module" src="../assets/js/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
+    <link rel="preload" as="style" href="../assets/app-b0fb382d.css" />
+    <link rel="modulepreload" href="../assets/app-5f69faf4.js" />
+    <link rel="modulepreload" href="../assets/bootstrap-214fcc70.js" />
+    <link rel="modulepreload" href="../assets/jquery-2c3981e2.js" />
+    <link rel="modulepreload" href="../assets/module.esm-958008ac.js" />
+    <link rel="modulepreload" href="../assets/module.esm-21387d6f.js" />
+    <link rel="modulepreload" href="../assets/_commonjsHelpers-de833af9.js" />
+    <link rel="modulepreload" href="../assets/jquery-68c15ecd.js" />
+    <link rel="stylesheet" href="../assets/app-b0fb382d.css" data-navigate-track="reload" />
+    <script type="module" src="../assets/app-5f69faf4.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="../assets/cookies-ee50a713.js" />
+    <script type="module" src="../assets/cookies-ee50a713.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="../assets/alpine-splide-54756862.js" />
+    <link rel="modulepreload" href="../assets/module.esm-958008ac.js" />
+    <link rel="modulepreload" href="../assets/alpine-splide.esm-09083027.js" />
+    <script type="module" src="../assets/alpine-splide-54756862.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="../assets/build/input-validation-36ee9ab8.js" />
+    <script type="module" src="../assets/build/input-validation-36ee9ab8.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="../assets/audio-player-c450f4f7.js" />
+    <script type="module" src="../assets/audio-player-c450f4f7.js" data-navigate-track="reload"></script>
+    <link rel="modulepreload" href="../assets/gtm-tags-e2664de5.js" />
+    <script type="module" src="../assets/gtm-tags-e2664de5.js" data-navigate-track="reload"></script>
     <div>
         <script>
             window.fwSettings = {
@@ -129,7 +129,7 @@ $severity = $_SESSION['SEVERITY'];
             showWhiteMode: false,
         }" class="container text-white py-4 md:py-5">
             <div class="flex justify-between items-center">
-                <img src="../assets/icons/logo.svg" class="w-[110px] md:w-[108px]" alt="Hypnozio">
+                <img src="../assets/logo.svg" class="w-[110px] md:w-[108px]" alt="Hypnozio">
                 <div class="flex items-center space-x-4">
                 </div>
             </div>
@@ -500,7 +500,7 @@ $severity = $_SESSION['SEVERITY'];
                                         Cancel anytime | No hidden fees
                                     </div>
                                     <div class="mt-8 max-w-[359px] mx-auto">
-                                        <img src="../assets/images/safe-checkout-en.png" alt="" />
+                                        <img src="../assets/hypnozio/checkouts/safe-checkout-en.png" alt="" />
                                     </div>
                                 </div>
                             </div>
@@ -526,27 +526,27 @@ $severity = $_SESSION['SEVERITY'];
                     }
                 })">
                             <div class="flex flex-col relative max-w-[344px] h-full mx-auto min-h-[480px]">
-                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="../assets/images/client4.jpg" alt="" />
+                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="../assets/client4.jpg" alt="" />
                                 <div class="p-4 pt-2 h-full flex flex-col">
-                                    <img class="w-[102px] mx-auto" src="../assets/icons/all-filled-stars.svg" alt="">
+                                    <img class="w-[102px] mx-auto" src="../assets/theme/all-filled-stars.svg" alt="">
                                     <div class="text-centerfont-normal text-body-medium mt-2">
                                         &quot;Throughout my hypnotherapy sessions, I&#039;ve discovered profound insights and harnessed an inner strength that has been pivotal in my journey to sobriety.&quot;
                                     </div>
                                 </div>
                             </div>
                             <div class="flex flex-col relative max-w-[344px] h-full mx-auto min-h-[480px]">
-                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="../assets/images/client5.jpg" alt="" />
+                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="../assets/client5.jpg" alt="" />
                                 <div class="p-4 pt-2 h-full flex flex-col">
-                                    <img class="w-[102px] mx-auto" src="../assets/icons/all-filled-stars.svg" alt="">
+                                    <img class="w-[102px] mx-auto" src="../assets/theme/all-filled-stars.svg" alt="">
                                     <div class="text-centerfont-normal text-body-medium mt-2">
                                         &quot;The sessions have been transformative, each offering a deeper understanding and shift in my mindset towards alcohol and drugs. I&#039;ve also gained tools that support me daily.&quot;
                                     </div>
                                 </div>
                             </div>
                             <div class="flex flex-col relative max-w-[344px] h-full mx-auto min-h-[480px]">
-                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="../assets/images/client6.jpg" alt="" />
+                                <img class="w-full rounded-tl-[64px] rounded-br-[64px]" src="../assets/client6.jpg" alt="" />
                                 <div class="p-4 pt-2 h-full flex flex-col">
-                                    <img class="w-[102px] mx-auto" src="../assets/icons/all-filled-stars.svg" alt="">
+                                    <img class="w-[102px] mx-auto" src="../assets/theme/all-filled-stars.svg" alt="">
                                     <div class="text-centerfont-normal text-body-medium mt-2">
                                         &quot;I was initially skeptical about hypnotherapy, but after experiencing the sessions, my commitment to recovery has solidified. Their compassionate and effective approach has truly made a positive impact on my life.&quot;
                                     </div>
@@ -558,27 +558,27 @@ $severity = $_SESSION['SEVERITY'];
                 <div class="container">
                     <div class="hidden md:flex justify-between md:space-x-12 py-8">
                         <div class="flex flex-col">
-                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="../assets/images/client4.jpg" alt="" />
+                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="../assets/client4.jpg" alt="" />
                             <div class="pt-2 flex flex-col space-y-2 px-4">
-                                <img class="w-[120px] mx-auto" src="../assets/icons/all-filled-stars.svg" alt="">
+                                <img class="w-[120px] mx-auto" src="../assets/theme/all-filled-stars.svg" alt="">
                                 <div class="text-center font-normal text-body-medium mb-2 max-w-[343px]">
                                     &quot;Throughout my hypnotherapy sessions, I&#039;ve discovered profound insights and harnessed an inner strength that has been pivotal in my journey to sobriety.&quot;
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-col">
-                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="../assets/images/client5.jpg" alt="" />
+                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="../assets/client5.jpg" alt="" />
                             <div class="pt-2 flex flex-col space-y-2 px-4">
-                                <img class="w-[120px] mx-auto" src="../assets/icons/all-filled-stars.svg" alt="">
+                                <img class="w-[120px] mx-auto" src="../assets/theme/all-filled-stars.svg" alt="">
                                 <div class="text-center font-normal text-body-medium mb-2 max-w-[343px]">
                                     &quot;The sessions have been transformative, each offering a deeper understanding and shift in my mindset towards alcohol and drugs. I&#039;ve also gained tools that support me daily.&quot;
                                 </div>
                             </div>
                         </div>
                         <div class="flex flex-col">
-                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="../assets/images/client6.jpg" alt="" />
+                            <img class="w-[343px] rounded-tl-[64px] rounded-br-[64px]" src="../assets/client6.jpg" alt="" />
                             <div class="pt-2 flex flex-col space-y-2 px-4">
-                                <img class="w-[120px] mx-auto" src="../assets/icons/all-filled-stars.svg" alt="">
+                                <img class="w-[120px] mx-auto" src="../assets/theme/all-filled-stars.svg" alt="">
                                 <div class="text-center font-normal text-body-medium mb-2 max-w-[343px]">
                                     &quot;I was initially skeptical about hypnotherapy, but after experiencing the sessions, my commitment to recovery has solidified. Their compassionate and effective approach has truly made a positive impact on my life.&quot;
                                 </div>
@@ -595,10 +595,10 @@ $severity = $_SESSION['SEVERITY'];
             <div class="container flex flex-wrap items-center">
                 <div class="basis-full sm:basis-10/12 md:basis-8/12 lg:basis-10/12 xl:basis-8/12 mx-auto">
                     <div class="flex items-center justify-between">
-                        <img class="w-[72px] lg:w-[210px]" src="../assets/icons/bloomberg-logo.svg" alt="" />
-                        <img class="w-[74px] lg:w-[125px]" src="../assets/icons/business-insider-logo.svg" alt="" />
-                        <img class="w-[69px] lg:w-[105px]" src="../assets/icons/yahoo-logo.svg" alt="" />
-                        <img class="w-[64px] lg:w-[131px]" src="../assets/icons/cbs-logo.svg" alt="" />
+                        <img class="w-[72px] lg:w-[210px]" src="../assets/hypnozio/checkouts/bloomberg-logo.svg" alt="" />
+                        <img class="w-[74px] lg:w-[125px]" src="../assets/hypnozio/checkouts/business-insider-logo.svg" alt="" />
+                        <img class="w-[69px] lg:w-[105px]" src="../assets/hypnozio/checkouts/yahoo-logo.svg" alt="" />
+                        <img class="w-[64px] lg:w-[131px]" src="../assets/hypnozio/checkouts/cbs-logo.svg" alt="" />
                     </div>
                 </div>
             </div>
@@ -935,7 +935,7 @@ $severity = $_SESSION['SEVERITY'];
                                     Cancel anytime | No hidden fees
                                 </div>
                                 <div class="mt-8 max-w-[359px] mx-auto">
-                                    <img src="../assets/images/safe-checkout-en.png" alt="" />
+                                    <img src="../assets/hypnozio/checkouts/safe-checkout-en.png" alt="" />
                                 </div>
                             </div>
                         </div>
