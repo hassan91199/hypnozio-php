@@ -1,0 +1,28 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/nhspecial/public_html/
+    
+    - /bin/cp -R admin-panel $DEPLOYPATH
+    - /bin/cp -R alcohol-hypnotherapy $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R members-access-avnd1283812381231 $DEPLOYPATH
+    - /bin/cp -R stripe $DEPLOYPATH
+    - /bin/cp -R utils $DEPLOYPATH
+    
+    - /bin/cp .htaccess $DEPLOYPATH
+    - /bin/cp checkout-u1.php $DEPLOYPATH
+    - /bin/cp checkout.php $DEPLOYPATH
+    - /bin/cp composer.json $DEPLOYPATH
+    - /bin/cp composer.lock $DEPLOYPATH
+    - /bin/cp env_example.php $DEPLOYPATH
+    - /bin/cp error_log $DEPLOYPATH
+    - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp quiz.php $DEPLOYPATH
+    - /bin/cp self-belief.mp3 $DEPLOYPATH
+    - /bin/cp stripe-webhook.php $DEPLOYPATH
+    - /bin/cp subscribe.php $DEPLOYPATH
+    - /bin/cp summary.php $DEPLOYPATH
+    
+    - /bin/cd $DEPLOYPATH
+    - /opt/cpanel/composer/bin/composer install
