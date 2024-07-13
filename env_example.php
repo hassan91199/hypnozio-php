@@ -17,5 +17,8 @@ return [
     'STRIPE_PUBLISHABLE_KEY' => '',
     'STRIPE_WEBHOOK_SECRET' => '',
 
+    '50_PERCENT_DISCOUNT_COUPON' => '',
+    '70_PERCENT_DISCOUNT_COUPON' => '',
+
     'BASE_URL', "http://{$_SERVER['HTTP_HOST']}/"
 ];

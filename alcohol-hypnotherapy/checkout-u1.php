@@ -17,10 +17,10 @@ $discountCoupon = null;
 
 switch ($discount) {
     case 50:
-        $discountCoupon = 'LNe9DXbk';
+        $discountCoupon = $env['50_PERCENT_DISCOUNT_COUPON'];
         break;
     case 70:
-        $discountCoupon = '0zq0BDm1';
+        $discountCoupon = $env['70_PERCENT_DISCOUNT_COUPON'];
         break;
 
     default:
